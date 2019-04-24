@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Named Entities</title>
+	<meta name="description" content="Workshop · Named Entities">
+	<meta name="author" content="José Luis Losada">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png"> 
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/simple.css">
+	<link rel="stylesheet" href="css/mychanges.css">
+	<!-- <link rel="stylesheet" href="reveal/css/theme/black.css"> -->
+	
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css">
+<style>
+    .reveal .pre .code {
+                  text-transform: none;
+		  }
+</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			
+			<section> <!-- PORTADA E INDICE-->
+
+				<section id="portada">   <!--PORTADA-->
+					<h2>Named Entities</h2>
+					<h3>Encoding Names, Persons, Places and Dates</h3>
+					<h1 style="font-size:1.5em">
+						<span id="filete">
+							<i class="fas fa-users"></i>
+							<i class="fas fa-map-marked-alt"></i>
+							<i class="fas fa-calendar"></i></span>
+						</h1>
+					</section>  <!--FIN PORTADA-->
+
+
+				<section id="indice">  <!--INDICE--> <!--ID de las secciones para hacer enlaces-->
+						<h3>Content</h3>
+						<div>
+							<ul>
+								<li><a href="#names">Names. Persons</a><span class="weiter">↡(3-21)</span></li>
+								<li><a href="#places">Names. Places</a><span class="weiter">↡(22-28)</span></li>
+								<li><a href="#dates">Dates</a><span class="weiter">↡(29-32)</span></li>
+								<li><a href="#biblio">References</a><span class="weiter">↡(33)</span></li>
+							</ul>
+						</div>
+
+					</section> <!--FIN INDICE-->
+
+				</section> <!--FIN PORTADA E INDICE-->
+
+			<section id="names">
+				<section>
+
+					<h3>TEI NAMES. PERSONS</h3>
+
+				</section>
+
+
+				<section>
+
+				<div class="cita">
+					Identifying what are now often referred to as <span class="resaltado"><i>named entities</i></span> from the rest of a sea of words is just as important a task for today’s computational linguist building a language understanding system, or today’s digital historian tracing social networks within a corpus of 18th century correspondence</div>
+					
+						<div class="fuente">Lou Burnard (2014), </i><a href="http://books.openedition.org/oep/426"><i>What is the Text Encoding Initiative? </i></a>, Marseille: OpenEdition Press.</div>
+				</section>
+
+			<section  data-transition = "none">
+
+						<h3>Persons, Places, Dates</h3>
+
+						<div class="cita">
+
+							<p>“I was born in the year 1632, in the city of York, of a good family, though not of that country, my father being a foreigner of Bremen, who settled first at Hull. He got a good estate by merchandise, and leaving off his trade, lived afterwards at York, from whence he had married my mother, whose relations were named Robinson, a very good family in that country, and from whom I was called Robinson Kreutznaer"</p>  
+						</div>
+						<div class="fuente">Daniel Defoe, <i>The Life and Adventures of Robinson Crusoe</i>, 1719</div>
+				</section>
+
+
+				<section  data-transition = "none">
+
+						<h3><span class="color_red">Persons</span>, <span class="color_sky">Places</span>, <span class="color_orange">Dates</span></h3>
+
+						<div class="cita">
+
+							<p>“I was born in the year <span class="color_orange">1632</span>, in the city of <span class="color_sky">York</span>, of a good family, though not of that country, my father being a foreigner of <span class="color_sky">Bremen</span>, who settled first at <span class="color_sky">Hull</span>. He got a good estate by merchandise, and leaving off his trade, lived afterwards at <span class="color_sky">York</span>, from whence he had married my mother, whose relations were named <span class="color_red">Robinson</span>, a very good family in that country, and from whom I was called <span class="color_red">Robinson Kreutznaer</span>”</p>  
+						</div>
+						<div class="fuente">Daniel Defoe, <i>The Life and Adventures of Robinson Crusoe</i>, 1719</div>
+				</section>
+
+
+				<section id="rs" data-transition = "none">
+
+						<h3><span class="color_green">Referring string</span></h3>
+
+						<div class="cita">
+
+							<p>“<span class="color_green">I</span> was born in the year <span class="color_orange">1632</span>, in the city of <span class="color_sky">York</span>, of a good <span class="color_green">family</span>, though not of that <span class="color_green">country</span>, <span class="color_green">my father</span> being a foreigner of <span class="color_sky">Bremen</span>, <span class="color_green">who</span> settled first at <span class="color_sky">Hull</span>. <span class="color_green">He</span> got a good estate by merchandise, and leaving off <span class="color_green">his</span> trade, lived afterwards at <span class="color_sky">York</span>, from whence <span class="color_green">he</span> had married <span class="color_green">my mother</span>, whose relations were named <span class="color_red">Robinson</span>, a very good <span class="color_green">family</span> in that <span class="color_green">country</span>, and from whom <span class="color_green">I</span> was called <span class="color_red">Robinson Kreutznaer</span>”</p>  
+						</div>
+						<div class="fuente">Daniel Defoe, <i>The Life and Adventures of Robinson Crusoe</i>, 1719</div>
+					</section>
+
+				<section>
+						<h3>Names in TEI</h3>
+						<h4>The TEI provides several ways of marking up names and nominal expressions.</h4>
+						<ul>
+							
+		<a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONA">Core module</a>
+							<li> <span class="color_blue">&lt;rs&gt;</span> contains a string which refers to a person or place: "my mother", "he".</li>
+							<li> <span class="color_blue">&lt;name&gt;</span> contains a proper noun: "Robinson Kreutznaer", "Bremen".</li>
+							<li><span class="color_orange">@type</span> differentiates persons and places.</li>
+							<br>
+		<a href="https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html">More precise (extended module)</a>
+							<li><span class="color_blue">&lt;persName&gt;</span>, <span class="color_blue">&lt;placeName&gt;</span>, <span class="color_blue">&lt;orgName&gt;</span>, <span class="color_blue">&lt;surname&gt;</span>, <span class="color_blue">&lt;forename&gt;</span>.</li>
+
+						</ul>
+				</section>
+
+					<section>
+
+<h3>Encoding of names using the element <span class="color_blue">&lt;name&gt;</span></h3>
+<br>
+						<pre class="xml" style="font-size: 0.8em;"><code style="word-break: keep-all;">I was born in the year 1632, in the city of <name>York</name>, of a good family, though not of that country, my father being a foreigner of <name>Bremen</name>, who settled first at <name>Hull</name>. He got a good estate by merchandise, and leaving off his trade, lived afterwards at <name>York</name>, from whence he had married my mother, whose relations were named Robinson, a very good family in that country, and from whom I was called <name>Robinson Kreutznaer</name></code></pre>
+						</section>
+
+				<section>
+<h3>Add the attribute <span class="color_orange">@type</span> to differenciate types of names</h3>
+<br>
+
+						<pre class="xml" style="font-size: 0.8em;"><code style="word-break: keep-all;">I was born in the year 1632, in the city of <name type="place">York</name>, of a good family, though not of that country, my father being a foreigner of <name type="place">Bremen</name>, who settled first at <name type="place">Hull</name>. He got a good estate by merchandise, and leaving off his trade, lived afterwards at <name type="place">York</name>, from whence he had married my mother, whose relations were named Robinson, a very good family in that country, and from whom I was called <name
+							type="person">Robinson Kreutznaer</name></code></pre>
+						</section>
+			<section>
+
+<h3>More precise tagging: <i>namesdates</i> module</h3>
+<br>
+
+<pre class="xml" style="font-size: 0.8em;"><code style="word-break: keep-all;">He got a good estate by merchandise, and leaving off his trade, lived afterwards at &lt;placeName&gt;York&lt;/placeName&gt;, from whence he had married my mother, whose relations were named Robinson, a very good family in that country, and from whom I was called 
+	&lt;persName&gt;
+		&lt;forename&gt;Robinson&lt;/forename&gt;
+		&lt;surname&gt;Kreutznaer&lt;/surname&gt;
+	&lt;/persName&gt;
+</pre></code>
+
+
+			</section> 
+
+<section>
+
+<h3>Components of personal names</h3>
+
+<ul>
+<li><span class="color_blue">&lt;forename&gt;</span>, a forename or given name.</li>
+<li><span class="color_blue">&lt;surname&gt;</span>, a family name.</li>
+<li><span class="color_blue">&lt;roleName&gt;</span>, role or position in society (President, Queen).</li>
+<li><span class="color_blue">&lt;addName&gt;</span>, nickname, pseudonym, alias.</li>
+<li><span class="color_blue">&lt;nameLink&gt;</span>, connecting phrase or link (de, of, van, von).</li>
+</ul>
+
+<pre class="xml" style="font-size: 0.8em; text-transform: all;"><code>&lt;persName&gt;
+ &lt;forename&gt;Marie-Henri&lt;/forename&gt;
+ &lt;surname&gt;Beyle&lt;/surname&gt;
+ &lt;addName type=&quot;pseudonym&quot;&gt;Stendhal&lt;/addName&gt;
+&lt;/persName&gt;</code></pre>
+
+</section> 
+
+<section>
+
+	
+	<h3>Signs in the text vs. the thing signs refer to</h3>
+	<h4><i>Signifiant</i> (signifier) vs. <i>Signifié</i> (signified)</h4>
+
+<div class="cita"><p>"[...] and from whom I was called <span class="color_red">Robinson Kreutznaer</span>; but, by the usual corruption of words in England, we are now called —<a title="'Or rather' (used to emphasize a more appropriate word than one just used)">nay</a> we call ourselves and write our name— <span class="color_red">Crusoe</span>; and so my companions always called me."</p> </div>
+
+<h3 style="text-align: center;">Robinson Crusoe</h3>
+
+</section>  
+
+<section>
+
+<h3>TEI distintion: <span class="color_blue">&lt;persName&gt;</span> vs. <span class="color_blue">&lt;person&gt;</span></h3>
+
+<h4>Encoding of references</h4>
+
+<pre class="xml" style="font-size: 0.5em;"><code style="word-break: keep-all;">I was called &lt;persName&gt;Robinson Kreutznaer &lt;/persName&gt;; but, by the usual corruption of words in &lt;placeName&gt;England&lt;/placeName&gt;, we are now called &mdash;nay we call ourselves and write our name&mdash; &lt;persName&gt;Crusoe&lt;/persName&gt;</code></pre>
+
+<br>
+
+<h4>Encoding of referenced entities</h4>
+<pre class="xml" style="font-size: 0.6em;"><code>&lt;person&gt;
+ &lt;persName&gt;
+    &lt;forename&gt;Robinson&lt;/forename&gt;
+    &lt;surname xml:lang=&quot;en&quot; type=&quot;corrupted&quot;&gt;Crusoe&lt;/surname&gt;
+    &lt;surname xml:lang=&quot;de&quot; type=&quot;birth&quot;&gt;Kreutznaer&lt;/surname&gt;
+ &lt;/persName&gt;
+ &lt;birth when=&quot;1632&quot;&gt;1632 &lt;placeName&gt;York&lt;/placeName&gt;
+ 	&lt;/birth&gt;
+&lt;/person&gt;</code></pre>
+
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+		### Reason for encoding **entities**
+
+- To standardise references to the same thing: “Robinson Kreutznaer”, “Crusoe”, “castaway”.
+- To facilitate a more detailed encoding of source documents (historical materials).
+- To represent implicit data in a uniform way.
+- To enable fine-grained searching of data-centric projects:
+	- to set references to authority files and gazeteers (INSI, GeoNames, VIAF);
+	- biographical dictionaries;
+	- geographical dictionaries; 
+	- extracted indices.
+
+	</textarea>
+</section>
+
+<section>
+
+		<h3>Organising named entities</h3>
+
+	<ul><li>Usually stored in the <span class="color_blue">&lt;teiHeader&gt;</span></li></ul>
+		<pre class="xml"><code data-line-numbers="5-8, 11-13">&lt;teiHeader&gt;
+      &lt;fileDesc&gt;...&lt;/fileDesc&gt;
+      &lt;profileDesc&gt;
+         &lt;particDesc&gt;
+            &lt;listPerson&gt;
+               &lt;person&gt;...&lt;/person&gt;
+               &lt;person&gt;...&lt;/person&gt;
+            &lt;/listPerson&gt;
+         &lt;/particDesc&gt;
+         &lt;settingDesc&gt;
+            &lt;listPlace&gt;
+               &lt;place&gt;...&lt;/place&gt;
+            &lt;/listPlace&gt;
+         &lt;/settingDesc&gt;
+      &lt;/profileDesc&gt;
+&lt;/teiHeader&gt;</code></pre>
+		<ul><li>Create a separate XML file using <span class="color_blue">&lt;listPerson&gt;</span> entries.</li></ul>
+	
+
+</section>
+
+<section data-background="imagenes/point.png">
+	<h3>Linking the association with <span class="color_orange">@xml:id</span> ← <span class="color_orange">@ref</span> </h3>
+<pre class="xml"><code data-line-numbers="4,11">&lt;profileDesc&gt;
+     &lt;particDesc&gt;
+        &lt;listPerson&gt;
+           &lt;person xml:id=&quot;RC&quot;&gt;
+              &lt;persName&gt;
+                 &lt;forename&gt;Robinson&lt;/forename&gt;
+                 &lt;surname type=&quot;corrupted&quot;&gt;Crusoe&lt;/surname&gt;
+                 &lt;surname type=&quot;birth&quot;&gt;Kreutznaer&lt;/surname&gt;
+              &lt;/persName&gt;
+              &lt;birth when=&quot;1632&quot;&gt;1632&lt;/birth&gt;
+           &lt;/person&gt;
+        &lt;/listPerson&gt;
+     &lt;/particDesc&gt;
+ &lt;/profileDesc&gt;
+</code></pre>
+
+<pre class="xml"><code style="word-break: keep-all;">and from whom I was called &lt;persName ref=&quot;#RC&quot;&gt;Robinson Kreutznaer&lt;/persName&gt;; but, by the usual corruption of words in England, we are now called &mdash;nay we call ourselves and write our name&mdash; &lt;persName ref=&quot;#RC&quot;&gt;Crusoe&lt;/persName&gt;; and so my companions always called me.
+</code></pre>
+
+
+</section>
+<section>
+	<h3>Attribute <span class="color_orange">@ref</span> as pointing mechanism</h3>
+
+<pre class="xml"> Entity defined within the same XML document <code> &lt;persName ref=&quot;#RC&quot;&gt;Robinson Kreutznaer&lt;/persName&gt;</code></pre>
+
+<pre class="xml"> In some other place, refered to by means of an URI<code> &lt;persName ref=&quot;http://www.example.com/fictionalcharacters.xml#RC&quot;&gt;Robinson Kreutznaer&lt;/persName&gt;</code></pre>
+
+<pre class="xml"> Reference an existing authority file<code>&lt;persName ref=&quot;http://www.isni.org/0000000123478267&quot;&gt;Daniel Defoe&lt;/persName&gt;</code></pre>
+
+</section>
+
+<section>
+					
+			<h3>Authority files: catalogs of names</h3>
+			<br>
+						
+			<div class="imagen-texto">
+			
+			<img src="imagenes/BNF_DanielDefoe.png"/>
+				</div>
+						<ul style="width: 55%; float: right;" >
+			
+			<li>VIAF: <a href="http://www.isni.org">Virtual International Authority</a></li>
+			<li>ISNI: <a href=" www.isni.org">International Standard Name Identifier</a> (ISO Standard)</li>
+			<li>Most national libraries: <a href="https://data.bnf.fr">Bibliothèque nationale de France</a>; <a href="http://d-nb.info">Deutsche Nationalbibliothek</a></li>
+			<li>Perseus Digital Library: <a href="http://data.perseus.org">Classic authors</a></li>
+
+			</ul>
+			
+			</section> 
+
+<section>
+
+	<h3>(other way of) Referencing authority files</h3>
+						
+	<h4> Identifier in the <span class="color_blue">&lt;idno&gt;</span> element
+		<pre class="xml"><code data-line-numbers="11">&lt;person xml:id=&quot;S1783&quot;&gt;
+	&lt;persName&gt;
+		 &lt;forename&gt;Marie-Henri&lt;/forename&gt;
+		 &lt;surname&gt;Beyle&lt;/surname&gt;
+		 &lt;addName type=&quot;pseudonym&quot;&gt;Stendhal&lt;/addName&gt;
+	&lt;/persName&gt;
+	&lt;birth when=&quot;1783-01-23&quot;&gt;23-01-1783&lt;/birth&gt;
+	&lt;death when=&quot;1842-03-23&quot;&gt;23-03-1842&lt;/death&gt;
+	&lt;occupation&gt;writer&lt;/occupation&gt;
+	&lt;nationality&gt;French&lt;/nationality&gt;
+	&lt;idno type=&quot;ISNI&quot;&gt;0000000120981326&lt;/idno&gt;
+&lt;/person&gt;
+</code></pre>
+</section>
+
+<section>
+	<h3>more info for person?</h3>
+
+	<span class="color_blue">&lt;birth&gt;, &lt;death&gt;, &lt;event&gt;, &lt;langKnowledge&gt;, &lt;faith&gt;, &lt;nationality&gt;, &lt;sex&gt;, &lt;age&gt;, &lt;occupation&gt;, &lt;note&gt;</span>, ...
+
+</section>
+
+
+</section>	
+
+<section>
+
+<section id="places">
+
+<h2>TEI PLACES</h2>
+
+</section> 
+
+<section>
+
+<h3>TEI distintion: <span class="color_blue">&lt;placeName&gt;</span> vs. <span class="color_blue">&lt;place&gt;</span></h3>
+
+<h4>Encoding of references</h4>
+
+<pre class="xml" style="font-size: 0.5em;"><code style="word-break: keep-all;">I was born in the year 1632, in the city of &lt;placeName&gt;York&lt;/placeName&gt;, of a good family, though not of that &lt;rs&gt;country&lt;/rs&gt;</code></pre>
+
+<h4>Encoding of referenced entities</h4>
+<pre class="xml" style="font-size: 0.5em;"><code>&lt;profileDesc&gt;
+	&lt;particDesc&gt;
+		&lt;listPerson&gt;...&lt;/listPerson&gt;
+	&lt;/particDesc&gt;
+	&lt;settingDesc&gt;
+		&lt;listPlace&gt;
+			&lt;place xml:id=&quot;york&quot;&gt;
+				&lt;placeName&gt;York&lt;/placeName&gt;
+				&lt;location&gt;
+				 	&lt;!--lat, long--&gt;
+					&lt;geo&gt;53.95767,-1.082304&lt;/geo&gt;
+				&lt;/location&gt;
+				&lt;idno type=&quot;GeoNames&quot;&gt;2633352&lt;/idno&gt;
+			&lt;/place&gt;               
+		&lt;/listPlace&gt;
+	&lt;/settingDesc&gt;
+&lt;/profileDesc&gt;</code></pre>
+
+</section>
+<section data-background="imagenes/Europa_Buentig.jpg">
+	<h3><p class="cita-background">Geo-political place names</p> </h3>
+</br>
+        </br>
+       
+     </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+     
+</section>
+
+<section>
+
+	<h3>Components of place names</h3>
+	<br>
+<ul><li><span class="color_blue">&lt;bloc&gt;</span> geo-political unit containing two or more nation states: <b>Europe</b>.</li> 
+<li><span class="color_blue">&lt;country&gt;</span> geo-political unite: <b>Italy</b>.</li> 
+<li><span class="color_blue">&lt;region&gt;</span> administrative unite: <b>Lazio</b>. </li>
+<li><span class="color_blue">&lt;settelment&gt;</span> name of a settlement: <b>Rome</b>. </li>
+<li><span class="color_blue">&lt;district&gt;</span>  subdivision of a settlement: <b>Trastevere</b>.</li></ul>
+
+</section>
+
+<section>
+	<h3>Components of place names</h3>
+	<br>
+<ul>
+	<li><span class="color_blue">&lt;location&gt;</span>
+		<ul><li>geographical coordinates
+			<ul><li><span class="color_blue">&lt;geo&gt;</span></li></ul></li>
+	<li>place name components</li>
+	<li>an address<ul><li><span class="color_blue">&lt;address&gt;</span></li></ul></li>
+</ul>
+</ul>
+
+</section>
+<section>
+	
+	<h3>Gazetteers: catalogs of places</h3>
+	<img src="imagenes/geonames_CH.png"/>
+	 <ul>
+	 	<li><a href="https://www.geonames.org">GeoNames</a></li>
+	 	<li><a href="https://pleiades.stoa.org">Pleiades</a> (ancient places)</li>
+	 	<li><a href="https://peripleo.pelagios.org">Peripleo</a> (hub of gazetteers)</li>
+	 	<li><a href="http://europa.eu/webtools/rest/gisco/batchgeocoding/index_en.htm">European Comision</a> (batch geocoding)</li>
+<li>Geolocation via gazetteers APIs</li>
+	 </ul>
+
+
+</section>
+
+<section>
+	
+	<h3>Fictional places</h3>
+
+	<pre><code>&lt;place type=&quot;fictional&quot;&gt;
+&lt;placeName&gt;Atlantis&lt;/placeName&gt;
+	&lt;location&gt;
+	&lt;offset&gt;fifty leagues beyond&lt;/offset&gt;
+	&lt;placeName&gt;The Pillars of &lt;persName&gt;Hercules&lt;/persName&gt;&lt;/placeName&gt;
+	&lt;/location&gt;
+&lt;/place&gt;</code></pre>
+
+
+				
+				<img src="imagenes/Atlantis_Kircher.png"/>
+				
+				<div><span class="fuente" style="font-size: 0.4em">Kircher, <a href="https://archive.org/details/mundussubterrane00unse">Mundus Subterraneus</a>, 1665</span></div>
+</section>
+
+</section>
+
+<section>
+<section id="dates">
+
+<h2>TEI DATES</h2>
+
+</section>
+<section>
+<ul><h4>Core module:  <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONADA">3.5.4 Dates and Times</a></h4>
+	<li><span class="color_blue">&lt;date&gt;</span> a date in any format</li> 
+<li><span class="color_blue">&lt;time&gt;</span> a phrase defining a time of day in any format </li> 
+
+<br>
+
+<pre class="xml"><code>I was born in the year &lt;date when=&quot;1632&quot;&gt;1632&lt;/date&gt;, in the city of &lt;placeName ref=&quot;#york&quot;&gt;York&lt;/placeName&gt;, of a good family, though not of that country</code></pre>
+
+</section>
+
+<section>
+
+<h3>Attributes for date</h3>
+
+
+<ul>
+<h4>To normalize elements that contain dates, times, etc. <b>in standard form (jjjj-mm-dd)</b>:</h4>
+<li><span class="color_orange">@when</span> value of the date or time.</li>
+<li><span class="color_orange">@notBefore</span> the earliest possible date.</li>
+<li><span class="color_orange">@notAfter</span> the latest possible date.</li>
+<li><span class="color_orange">@from</span> indicates the starting point of a period.</li>
+<li><span class="color_orange">@to</span> indicates the ending point of a period.</li>
+</ul>
+
+</section>
+
+<section>
+
+<h3><span class="color_orange">@when</span> a useful way of normalizing or disambiguating</h3> 
+
+<br>
+
+<pre class="xml"><code>	&lt;birth when=&quot;1788-02-22&quot;&gt;22 February 1788&lt;/birth&gt;
+	&lt;birth when=&quot;1788-02-22&quot;&gt;22 de febrero de 1788&lt;/birth&gt;
+	&lt;birth when=&quot;1788-02-22&quot;&gt;22 f&eacute;vrier 1788&lt;/birth&gt;
+	&lt;birth when=&quot;1788-02-22&quot;&gt;22/02/1788&lt;/birth&gt;</code></pre>
+
+</section>
+
+
+</section>
+
+<!--
+*****References****   
+-->
+
+<section id="biblio">
+
+<h3>References</h3>
+<ul style="font-size: 0.7em;">
+<li><i>A Gentle Introduction to XML, </i><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html">Guidelines for Electronic Text Encoding and Interchange</a>, TEI P5: Version 3.5.0. </li>
+<li><i>digital.humanities @ Oxford, </i><a href="http://tei.it.ox.ac.uk/Talks/">TEI @ Oxford Teaching Pages</a>.</li>
+<li>Lou Burnard (2014), </i><a href="http://books.openedition.org/oep/426"><i>What is the Text Encoding Initiative? How to add intelligent markup to digital resources </i></a>, Marseille: OpenEdition Press.</li>
+<li>Christof Schöch (2014), <i>Digitale Textedition mit TEI</i>, <a href="https://de.dariah.eu/tei-tutorial">DARIAH TEI-Tutorial</a>.</li>
+<li>Martina Scholger (2017), <a href="http://gams.uni-graz.at/o:dhoxss-2017-tei-names">Names, dates, people and places</a>.</li>
+
+
+
+</ul>
+
+</section>
+
+<!--
+										*****************
+										*****CREDITOS****   
+										*****************
+									-->
+									<section id="impressum">
+
+										<div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, <i>Named Entities.
+Encoding Names, Persons, Places and Dates</i>, <a href="http://editio.github.io/presentations/named-entities.html">&lt;http://editio.github.io/presentations/named-entities.html&gt;</a>, 2019.</div>			 
+										<h2 id="filete"><a href="http://editio.github.io/presentations/xml-tei?print-pdf" title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
+
+										<div ><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
+									</div>	
+
+								</section>  <!--impressum-->
+
+							</div> <!--End of slides container-->
+
+						</div>
+
+						<script src="reveal/lib/js/head.min.js"></script>
+						<script src="reveal/js/reveal.js"></script>
+
+						<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+
+Reveal.configure({ slideNumber: "c/t" });
+
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+
+				dependencies: [
+				{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/highlight/highlight.js', async: false, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal/plugin/notes/notes.js', async: true }
+
+				]
+			});
+
+		</script>
+
+		<!--ESQUINAS MENU en TODAS DIAS-->
+
+		<div class="footer">
+
+			<p>José Luis Losada Palenzuela · 2019</p>
+			
+		</div> <!--FIN FOOTER FIRMA-->
+
+		<div id="menu">
+			<a href="#/indice" title="Content">☰</a> 
+		</div>   <!--FIN INDICE-->
+
+		<div id="logo">
+			<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="Universty of Wrocław"/></a> 
+		</div> <!--FIN LOGO-->
+
+	</body>
+	</html>

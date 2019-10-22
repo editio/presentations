@@ -21,7 +21,7 @@
   }
 
 
-.reveal section img {
+/*.reveal section img {
   margin: 15px 0px;
   border: 1px solid #c6bfbf;
   border-color: #ddd #ccc #ccc #ddd;
@@ -32,7 +32,7 @@
   -moz-box-shadow: 4px 4px 12px #ccc;
   -webkit-box-shadow: 4px 4px 12px #ccc;
   box-shadow: 4px 4px 12px #ccc; }
-
+*/
 
 .reveal .slide-number {
   color: #0072a7; 
@@ -407,6 +407,9 @@ ul.menu_none {
 	
 ul li {
 			/*font-size: 4em;*/
+
+    margin: 10px 0;
+
 	}
 
 
@@ -453,6 +456,12 @@ div.izquierda {
 
 float: left;
 
+}
+
+span.weiter {
+		font-size: 50%;
+		color: gray;
+		padding-left: 5px
 }
 
 div.izquierda ul, .derecha ul {

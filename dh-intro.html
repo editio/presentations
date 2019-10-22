@@ -10,6 +10,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png"> 
 <link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
 
@@ -219,20 +221,21 @@
 		<h3>Internet & WWW</h3> 
 			
 		<ul>
-			<li>Impacto inesperado de la WEB · 1989 </li>
-			<li>HyperText Markup Language (HTML)</li>
+			<li>Impacto inesperado de la WEB · 1989 · <a href="https://www.w3.org/People/Berners-Lee/" target="_blank">Tim Berners-Lee</a></li>
+			<li>HyperText Markup Language (<a href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank">HTML</a>)</li>
 		</ul>				
 		</section>
 		
 		
 		<section>	
-		<h3>HTML como problema (procesadores de texto, <i>wysiwyg</i>).</h3>
+		<h3>HTML como problema</h3>
+		<h3>Procesadores de texto: <i>wysiwyg</i></h3>
 		<br />
 		<br />
 		<pre contenteditable=""><code>
 <h3>Internet & WWW</h3> 
 <ul>
-<li>Impacto inesperado de la WEB · 1989 </li>
+<li>Impacto inesperado de la WEB · 1989 · <a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> </li>
 <li>HyperText Markup Language (HTML)</li>
 </ul></code></pre>
 		</section>
@@ -248,6 +251,8 @@
 				</div>	
 <br />		
 		<ul style="width: 55%; float: right;">
+		<li><i>datum</i> (latín: “lo que se da”); “datos en bruto” (raw data) ≠ disponible y listo para su uso.</li>	
+		<li>Necesidad de ser localizados, generados, sistematizados e interpretados.</li>
 		<li>Datos no estructurados, estructurados, semiestructurados.</li>
 		<li><i>Datos inteligentes</i>.</li>
 		<li>Gran cantidad de datos: <i>big data</i>.</li>
@@ -256,11 +261,14 @@
 
 <section data-markdown style="font-size: 60%">
 	<textarea data-template >
-| **Tipos** | **Definición** | **Formatos de archivos** |
-| --- | --- | --- |
-| Datos no estructurados | Datos sin una organización en  unidades semánticas, separadas y distintas | Suele almacenarse en formatos de archivo plano, por ejemplo, TXT. |
-| Datos semiestructurados | Datos con una estructura formal parcial —lenguaje de marcado— para marcar unidades  distintas | Suele almacenarse en archivos XML o HTML. El vocabulario TEI es también XML. |
-| Datos estructurados | Datos que siguen un modelo concreto de datos que los define de forma explícita | Archivos en formato de tabla como CSV, así como hojas de cálculo de los formatos de Excel o OpenOffice. Los formatos .BiBTeX para datos bibliográficos. |
+|segment|language         |glotta  |character |character |character           |character|character|FIELD9|
+|-------|-----------------|--------|----------|----------|--------------------|---------|---------|------|
+|1      |lengua moscovita |diegetic|Eustorgio |Rugiel    |Pigmerio            |Alberto  |Capitán  |      |
+|2      |lengua indígena  |diegetic|Eustorgio |Pigmerio  |Agustinos españoles |Bárbaros |NA       |      |
+|3      |lengua moscovita |diegetic|Clorilene |Eustorgio |Pigmerio            |Camila   |Placida  |      |
+|4      |español          |diegetic|Eustorgio |Rugiel    |Pigmerio            |Cericea  |Mesonero |      |
+|5      |lengua moscovita |diegetic|Eustorgio |Clarelio  |Clorilene           |Clodoveo |Pigmerio |      |
+|6      |lengua moscovita |diegetic|Celidora  |Nomberto  |Arzobispo de Suecia |Crisanto |         |NA    |
 		
 	</textarea>
 </section>
@@ -273,7 +281,7 @@
 
 <section style="font-size: 1.7em">
 
-<pre contenteditable=""><code><persName>Miguel de Cervantes</persName> publicó la primera parte del <title>Quijote</title> en <date>1605</date>
+<pre contenteditable=""><code>&#x3C;persName&#x3E;Miguel de Cervantes&#x3C;/persName&#x3E; public&#xF3; la primera parte del &#x3C;title&#x3E;Quijote&#x3C;/title&#x3E; en &#x3C;date&#x3E;1605&#x3C;/date&#x3E;
 </code></pre>
 		
 </section>
@@ -294,6 +302,8 @@
 <h3><i>distant reading vs. close reading </i></h3>
 
 <iframe src="https://books.google.com/ngrams/interactive_chart?content=novela%2Cteatro%2Cpoes%C3%ADa&amp;year_start=1850&amp;year_end=2000&amp;corpus=21&amp;smoothing=3&amp;share=&amp;direct_url=t1%3B%2Cnovela%3B%2Cc0%3B.t1%3B%2Cteatro%3B%2Cc0%3B.t1%3B%2Cpoes%C3%ADa%3B%2Cc0" width="1000" height="350" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"> </iframe>
+<div><span style="font-size: 0.3em">refresh the browser <i class="fas fa-redo-alt"></i> if you don't see the graphics</span></div>
+
 <div>
 <span class="fuente">Losada, <a href="http://corpus.hypotheses.org/271">Las fronteras del canon: <i>distant reading</i></a>, 2016.</span></div>
 

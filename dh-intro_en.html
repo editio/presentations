@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Digital humanities · Introduction</title>
+<meta name="description" content="Digital humanities · Introduction">
+<meta name="author" content="José Luis Losada">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png"> 
+<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+<!-- Hojas de estilo-->
+
+<link rel="stylesheet" href="reveal/css/reveal.css">
+<link rel="stylesheet" href="reveal/css/theme/simple.css">
+<link rel="stylesheet" href="css/mychanges.css">
+<!-- <link rel="stylesheet" href="reveal/css/theme/black.css"> -->
+	
+<!-- code syntax highlighting -->
+<link rel="stylesheet" href="css/github.css">
+
+<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+			
+		<section>
+<!--PORTADA-->
+			<section id="portada">  
+				<h2 class="portada">     
+					<p>Digital humanities</p><h3>Short Intro</h3>
+				</h2><h1><span id="filete">☷</span></h1>
+			</section>  <!--FIN PORTADA-->
+			
+<!--INDICE-->
+			<section id="indice">  <!--ID de las secciones para hacer enlaces-->
+				<h3>Contenido</h3>
+				<div class="izquierda">
+					<ul>
+						<li><a href="#/portada">Start</a><span class="weiter">↡(1-2)</span></li>
+						<li><a href="#/studia"><i>Studia humanitatis</i></a><span class="weiter">↡(3-6)</span></li>
+						<li><a href="#/historia">First steps: Busa</a><span class="weiter">↡(7-12)</span></li>
+						<li><a href="#/tei"><i>Text encoding</i></a><span class="weiter">↡(13-15)</span></li>        
+					</ul>
+				</div>
+				<div class="derecha">
+					<ul>
+						<li><a href="#/internet">Internet & WWW</a><span class="weiter">↡(16-17)</span></li>
+						<li><a href="#/datos">HD & data</a><span class="weiter">↡(18-20)</span></li>
+						<li><a href="#/ciencia">HD as discipline</a><span class="weiter">↡(21-24)</span></li>
+						<li><a href="#/biblio">References</a><span class="weiter">↡(25)</span></li>
+					</ul>
+				</div>
+			</section> <!--FIN INDICE-->
+			
+		</section> <!--FIN PORTADA E INDICE-->
+		
+		<section>  <!--STUDIA-->
+		<section id="studia">
+			
+			<h3><em>Studia humanitatis</em></h3>
+			
+			<ul>
+				<li><p>Study and teaching of classical languages, literature, art; recovery and interpretation of the classics.</p></li>
+				<li><p><em>Ratio Studiorum</em>: mathematics, logic, grammar, rhetoric, humanities...</p></li>
+								<li><p>Humanists</p></li>
+			</ul>
+		</section>
+		
+		<section data-background="https://blogs.getty.edu/iris/files/2015/07/Volvelle.gif">
+		
+		<div class="imagen-texto">
+		
+		<img src="imagenes/DH-Llul-ars_brevis.tiff"/>
+		
+		<div style="background-color: white ; font-size: 0.5em;"> <b>Ramon Llul</b> (1232-1316), <i>Ars brevis;  Ars Combinatoria</i>, 1511, <a href="http://bdh.bne.es/bnesearch/detalle/bdh0000198524"> BNE </a></div>
+		
+		<p style="background-color: white ; font-size: 0.3em;">Background image: Astronomical Volvelle, 1386, <a href="http://blogs.getty.edu/iris/decoding-the-medieval-volvelle/">The J. Paul Getty Museum</a></p>
+	
+	
+		</div>	
+
+			
+		</section>
+		
+		<section>
+
+		<h3>Digital, cyfrowy, numérique</h3>
+
+<div class="imagen-texto">
+	
+	<img src="imagenes/DH-LampFlowchart.png"/>
+	
+	<div class="caption"><a href="https://upload.wikimedia.org/wikipedia/commons/9/91/LampFlowchart.svg"> Simple flowchart</a>, Wikicommons, CC BY-SA 3.0</div>
+	
+		</div>	
+<br/>
+<br/>
+		<li><p>Digits, calculation, mathematics, but also computation (algorithm):</p></li>
+<p>Ordered and finite set of operations that makes it possible to find the solution to a problem.</p>
+								
+		</section>
+		
+		<section>
+	
+		<h3>Digital Humanities</h3>
+		<p><i>Naturwissenschaften</i> vs. <i>Geisteswissenschaften</i>? </p>
+				
+		</section>
+						
+		</section>		
+		
+		<section>
+		
+		<section id="historia">
+		<h3>([<span style="font-size: 0.7em;">Humanities Computing</span>] <br /> Digital Humanities)</h3>
+
+		<h5>First Steps</h5>
+		</section>  
+			
+		<section>
+			<h3>1) <i>Lexical Text Analysis</i></h3>
+			<h5>Roberto Busa (1913–2011), Tomás de Aquino &amp; IBM: 1949</h5>
+			
+			<div class="imagen-sola">
+			
+			<img src="imagenes/DH-Busa.jpeg"/>
+			
+			<div style="text-align: right ;" class="caption"> S.E. Jones, <i>Roberto Busa, S. J., and the Emergence of Humanities Computing</i>,  Routledge, 2016</div>
+			</div>	
+			
+		</section>
+		
+		<section>
+					<h3><i>Index verborum/thomisticus</i></h3>
+<ul>
+<li><p>Index (printed) of all the words in Aquinas' works with reference to their location (11 million words in Medieval Latin).</p></li>
+			<li> Input data: <a href="http://www.masswerk.at/keypunch">Punch card</a></p></li>
+			<li><p>Concordance program with lemmatized entries</p></li>
+			
+</ul>		</section>
+		
+		<section>
+			<h3>Concordance, lemma, to lemmatize</h3>
+			<h5>Contemporary examples</h5>
+			
+		<ul>
+<li>Concordances in <a href="http://www.cervantesvirtual.com/concordancias/el-heroe--1"><i>Héroe</i></a> de Baltasar Gracián</li>
+<li>Concordances and lemmata <a href="http://www.corpusthomisticum.org/it/index.age"><i>corpus thomisticum</i></a></li>
+<li>Search by lemma  <a href="https://iedra.es" target="_blank">IEDRA</a>; <a href="https://www.dwds.de" target="_blank">DWDS – Digitales Wörterbuch der deutschen Sprache</a></li>
+
+</ul>
+		</section>
+		
+		<section>
+			<div class="cita">"The main innovation was Busa’s insight that commercial accounting machines could be used for humanities purposes with good results."  <span class="fuente">[Vanhoutte 2013: 127]</span></div>
+		</section>
+		
+		<section>
+	
+<h3>2) <i>Machine Translation & Computational linguistics</i>:  1953</h3>
+	
+	 <ul>
+<li>Word lists, vocabularies, lexicography, ... </li>
+<li><i>Introduction to Computers in the Humanities</i> (IBM, 1971); <i>Literary Data Processing</i> (IBM, 1971); <i>Computers in Anthropology and Archaeology</i> (IBM, 1971).</li>
+<li>Today: Relational lexico-semantic dictionary <a href="http://plwordnet.pwr.wroc.pl/wordnet/about" target="_blank"  >WordNet/Słowosieć</a></li>
+</ul>
+	
+	
+	</section>
+		
+		<section id="tei">
+				
+				<h3>3) <i>Text encoding</i></h3>
+				
+				   <div class="cita"> "[O]ne of the main problems since the earliest uses of computers and computational techniques in the humanities was the representation of data for input, processing, and output"  <span class="fuente">[Vanhoutte 2013: 132]</span>
+				</div>
+				
+
+				
+			</section>
+
+			<section>
+
+				<h4>Character encoding</h4>
+				
+			<div class="cita" style="font-size: 0.8em";>In the end, computers are dealing with bits and bytes, i.e. binary coded numbers only. In order to store, process, or display text, there needs to be some convention on how <span class="resaltado">to map each character (letter, digit, special character) to a number</span> and vice versa. Such a number <-> character mapping is called an encoding. So, for a computer, a text file is just a row of numbers that by accident represents text in some specific encoding 
+			</div>	
+
+
+			<span class="fuente" ><a href="http://jkorpela.fi/chars.html" target="_blank">A tutorial on character code issues</a>; <a href="http://www.eki.ee/letter/" target="_blank">An online character database</a></span>
+
+
+			</section>
+		
+		<section>
+
+			<h4>From character encoding To text encoding</h4>
+
+<div class="cita" style="font-size: 0.8em;"> Because <span class="resaltado">different computer systems</span> used <span class="resaltado">different character sets</span> with a different number of characters, texts <span class="resaltado">first had to be transcribed</span> into that proprietary character set. All characters, punctuation marks, diacritics, and signicant changes of type style had to be encoded with an inadequate budget of characters. This resulted in a <span class="resaltado">complex set of ‘flags’</span> for distinguishing upper-case and lower-case letters, for coding accented characters, the start of a new chapter, paragraph, sentence, or word. These ‘flags’ were also used for adding analytical information to the text such as word classes, morphological, syntactic, and lexical information. <span class="fuente">[Vanhoutte 2013: 132]</span></div>
+
+			</section>
+			
+		<section>
+			<h4>Need of a standard code for machine-readable texts for scientific research </h4>
+<ul>				 
+				 <li><i>TEI (<a href="http://www.tei-c.org" target="_blank">Text Encoding Iniciative</a>) Guidelines</i>: 1 version in 1990.</li>
+
+				 <span class="cita" style="font-size: 0.7em">The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form</span>
+
+
+				<ul> <li>Generalized Markup language (SGML) · 1986 as ISO (International Organization for Standardization)</li>
+				<li> eXtensible Markup Language (XML) · 1996 </li></ul>	</ul>
+
+
+
+
+				</section>
+						
+		</section>  <!--Historia-->
+
+<section>		
+
+		<section>
+		<h3>Internet vs. WWW</h3> 
+		
+		
+
+		<ul>
+			<li>Internet is the network of connected computers that the web works on. (Arpanet 60')</li>
+			<li>Unexpected impact of the WWW (web)· 1989 · <a href="https://www.w3.org/People/Berners-Lee/" target="_blank">Tim Berners-Lee</a></li>
+			<li>HyperText Markup Language (<a href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank">HTML)</a>: a language for describing the structure of Web pages.</li>
+		</ul>				
+		</section>
+		
+		
+		<section>	
+		<h3>HTML as a problem</h3>
+		<h3>Word processors: <i>wysiwyg</i> (book paradigma)</h3>
+		<br />
+		<br />
+		<pre contenteditable=""><code>
+<h3>Internet vs. WWW</h3> 
+<ul>
+<li>Internet is the network of connected computers that the web works on</li>
+<li>Unexpected impact of the WWW · 1989 · <a href="https://www.w3.org/People/Berners-Lee/" target="_blank">Tim Berners-Lee</a></li>
+<li>HyperText Markup Language (<a href="https://www.w3.org/standards/webdesign/htmlcss" target="_blank">HTML</a>)</li>
+</ul></code></pre>
+		</section>
+</section>
+
+	<section>
+		<section id="datos"><h3>Digital Humanities & data</h3>
+		
+			<div class="imagen-texto"> <img src="imagenes/DH-infographic.jpg"/>
+			
+			<div class="caption"><a href="http://www.hotbutterstudio.com/#/alps"> "What is an Infographic?"</a>, Hot butter studio</div>
+			
+				</div>	
+<br />		
+		<ul style="width: 55%; float: right;">
+		<li><i>datum</i> (latín: “what is given”); raw data ≠ ready to use.</li>	
+		<li>Need to be located, generated, systematised and interpreted.</li>
+		<li>Unstructured, structured, semi-structured data.</li>	
+		<li>Big data.</li>
+		</ul>
+			</section>
+
+
+
+
+<section>
+	
+<code>1605 Miguel de Cervantes published the first part of Don Quixote. </code> 
+		
+</section>
+
+<section style="font-size: 1.7em">
+
+<pre contenteditable=""><code>&#x3C;date&#x3E;1605&#x3C;/date&#x3E; &#x3C;persName&#x3E;Miguel de Cervantes&#x3C;/persName&#x3E; published the first part of &#x3C;title&#x3E;Don Quixote&#x3C;/title&#x3E; 
+</code></pre>
+		
+</section>
+
+<section data-markdown style="font-size: 60%">
+	<textarea data-template >
+
+| Item.Type | Author | Title | Year | Place |
+| --- | --- | --- | --- | --- |
+| book | Franco Moretti | Graphs, Maps and Trees | 2007 | London |
+| book | Miguel de Cervantes | El ingenioso hidalgo don Quijote de la Mancha | 1605 | Madrid |
+| book | Riccardo Mazza | Introduction to information visualization | 2009 | London |
+
+</textarea>
+</section>
+</section>
+
+		<section>
+
+<h3><i>distant reading vs. close reading </i></h3>
+
+<iframe src="https://books.google.com/ngrams/interactive_chart?content=novela%2Cteatro%2Cpoes%C3%ADa&amp;year_start=1850&amp;year_end=2000&amp;corpus=21&amp;smoothing=3&amp;share=&amp;direct_url=t1%3B%2Cnovela%3B%2Cc0%3B.t1%3B%2Cteatro%3B%2Cc0%3B.t1%3B%2Cpoes%C3%ADa%3B%2Cc0" width="1000" height="350" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"> </iframe>
+<div><span style="font-size: 0.4em">refresh the browser <i class="fas fa-redo-alt"></i> if you don't see the graphics</span></div>
+
+<div>
+<span class="fuente">See in context, <a href="https://books.google.com/ngrams" target="_blank"> Google Books Ngram Viewer</a>; <a href="https://books.google.com/ngrams/info" target="_blank">More info about search</a></span></div>
+
+</section>
+
+		<section> <h3>Data & preservation</h3>
+		
+		<div class="cita">Common myths about the digital environment are that it is stable, even archival (e.g. permanent) and that it is “immaterial” (e.g. not instantiated in analogue reality). Every actual engagement with digital technology demonstrates the opposite." <span class="fuente">[Drucker 2014: 9]</span></div>
+		</section>
+
+		</section>		
+								
+		<section>
+			
+<section id="ciencia"><h3>DH as academic discipline: recap</h3>	
+
+<h5><b>Textual media</b></h5>
+<ul>
+<li>Computational analysis of texts, <a href="https://collatex.net/demo/">automatic collation</a>, concordances, <a href="https://computationalstylistics.github.io/projects/" target="_blank">stylometry</a>.</li>
+<li><a href="https://dig-ed-cat.acdh.oeaw.ac.at" target="_blank">Scholarly digital editions</a> (literature, history, correspondence,...).</li>
+<li>Corpus linguistics, <a href="http://nlp.lsi.upc.edu/freeling/demo/demo.php" target="_blank">NLP: Natural Language Processing</a> ⊃ NLU: Natural Language Understanding; NLG: Natural Language Generation.</li>
+
+</ul>
+
+</section>
+
+<section>
+<h5><b>non-textual media</b></h5>
+<ul>
+<li>Digital Image Processing of Manuscripts</li>
+<li><a href="https://uclab.fh-potsdam.de/fw4/vis/" target="_blank">Data visualization</a>.</li>
+<li>Art history, archaeology, cinema. <a href="
+https://biblhertz.github.io/atlas">Digital Atlas of Gesture.</a></li>
+<li>Sounds, scores (<i><a href="http://music-encoding.org" target="_blank">Music Encoding Initiative</a></i>, MEI).</li>
+</ul>
+
+</section>
+						
+<section>
+<h5><b>Texts and images as a source</b></h5>
+<ul>
+<li>
+Development of databases, ontologies, digital libraries
+</li>
+<li>OCR & HCR <a href="https://readcoop.eu/de/transkribus/">Transkibus</a></li>
+<li>
+Data <a href="https://editio.github.io/mapping.literature" target="_blank"> in a geographical environment</a> GIS (<i>Geographic information system</i>).
+</li>
+
+</ul>
+
+
+</section>						
+						
+						<section>
+						<h5><b>DH as theory</b></h5>
+						<ul>
+						<li>
+Impact of new digital media on society
+						</li>
+						<li>
+Theoretical and methodological reflection on DH
+						</li>
+						<li>
+Political reflection on DH
+						</li>
+
+
+						</ul>
+						
+						
+						</section>		
+						
+<section><h3>DH: tools or methods?</h3>
+						
+<ul>
+<li>
+Not only new techniques and tools.
+</li>
+<li>
+New hypotheses and methods.
+</li>
+
+</ul>
+						</section>
+		</section>
+						
+				<!--
+				*****References****   
+				-->
+				
+			<section id="biblio">
+				
+				<h3>Referencias</h3>
+				<ul style="font-size: 0.7em;">
+
+				<li><p>J. Drucker (ed.), <i>DH101. Intro to Digital Humanities</i></a>, 2014.</p></li>
+
+				<li><p>S. Hockey, </i><i>The History of Humanities Computing</i>, en: S. Schreibman, R. Siemens, J. Unsworth, <a href="http://www.digitalhumanities.org/companion"><i> A Companion to Digital Humanities</i></a>, Oxford, Blackwell, 2004.</p></li>
+				
+				<li><p>F. Jannidis, et alii (ed.), <i>Digital Humanities. Eine Einführung</i>, 2017.</p></li>
+	
+				<li><p>E. Vanhoutte et alii (ed.), <i>Defining Digital Humanities. A Reader</i>, Ashgate, 2013.</p></li>
+				
+</ul>
+				
+				
+			</section>
+													
+														<!--
+														*****************
+														*****CREDITOS****   
+														*****************
+														-->
+		<section id="impressum">
+		
+			 <div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, <i>Digital Humanities - Short Intro</i>, <a href="http://editio.github.io/presentations/dh-intro_en">&lt;http://editio.github.io/presentations/dh-intro_en&gt;</a>, 2021</div>			 
+			
+
+			<h2 id="filete"><a  style = "border-bottom: none" href="http://editio.github.io/presentations/dh-intro_en.html?print-pdf" title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
+
+			<div ><a  style = "border-bottom: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
+			
+			</div>	
+				
+		 </section>  <!--impressum-->
+		
+	</div> <!--End of slides container-->
+
+</div>
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.js"></script>
+
+<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+
+			Reveal.configure({ slideNumber: "c/t" });
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+
+				dependencies: [
+			{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+			{ src: 'reveal/plugin/notes/notes.js', async: true }
+
+		]
+			});
+
+</script>
+
+<!--ESQUINAS MENU en TODAS DIAS-->
+
+<div class="footer">
+
+<p>José Luis Losada Palenzuela · 2021</p>
+			
+</div> <!--FIN FOOTER FIRMA-->
+
+<div id="menu">
+<a href="#/indice" title="Content">☰</a> 
+</div>   <!--FIN INDICE-->
+
+<div id="logo">
+<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="Universty of Wrocław"/></a> 
+</div> <!--FIN LOGO-->
+
+</body>
+</html>

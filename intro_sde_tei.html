@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>Intro to TEI</title>
+<meta name="description" content="Intro to TEI">
+<meta name="author" content="José Luis Losada">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png"> 
+<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+<!-- Hojas de estilo-->
+
+<link rel="stylesheet" href="reveal/css/reveal.css">
+<link rel="stylesheet" href="reveal/css/theme/simple.css">
+<link rel="stylesheet" href="css/mychanges.css">
+<!-- <link rel="stylesheet" href="reveal/css/theme/black.css"> -->
+	
+<!-- code syntax highlighting -->
+<link rel="stylesheet" href="css/github.css">
+
+<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
+			
+<section id="portada"> <!--PORTADA-->
+<h2 class="portada">
+<p>Markup, XML, TEI</p>
+</h2>
+<br>
+<br>
+
+	<h4 style="color: orange;">Humanistyka cyfrowa dla przyszłości</h5>	
+
+		<a style="border-bottom: none" href="http://phc.uni.wroc.pl/interreg/"><img style="width: 50%; box-shadow: none; border-bottom: none" src="imagenes/interreg_logo.png"/></a>
+
+</section>			
+			
+<section data-markdown>
+	<textarea data-template>
+## What is mark-up language?
+
+- To encode, to tag texts;
+- To make explicit (to a machine) what is implicit (to a person);
+- To add value by supplying multiple annotations.		
+</textarea>
+</section>
+	
+		
+<section data-markdown>
+	<textarea data-template>
+
+## Procedural Markup: HTML
+- Visual, typographic, representation;
+- WYSWYG: What You See is ALL you Get.
+
+## Descriptive Markup: XML
+- Semantic, funcional, structured;
+- Meaning before format.
+		
+</textarea>
+</section>
+
+		<section>
+	
+		<h5>"<b>Miguel de Cervantes</b> wrote <i>Don Quixote</i>"</h5>	
+		</br>
+		<h3>Procedural</h3>
+<pre><code><bold>Miguel de Cervantes</bold> wrote <italic>Don Quixote</italic></code></pre>
+		<h3>Descriptive</h3>
+<pre> Markup<code><name>Miguel de Cervantes</name> wrote <title>Don Quixote</title></code></pre>
+<pre> Visualization<code>name {font-weight: bold;} title {font-style: italic;} </code></pre>
+<pre> Process<code>&lt;xsl:for-each select="//name"&gt;</code></pre>
+		
+		</section>
+		
+		
+		<section>
+			
+			<h3>XML Golden Rules </h3>
+			
+<pre class="xml"> An element consists of a <b>start-tag</b>, optional <b>content</b>, and an <b>end-tag</b>.<code> &lt;persName&gt;Miguel de Cervantes&lt;/persName&gt;</code></pre>
+
+<pre class="xml"> An element may have <b>attributes</b>, each consisting of a name and a value.<code> <name type="person">Miguel de Cervantes</name></code></pre>
+
+<pre class="xml"> An XML document may contain <b>processing</b> instructions or <b>comments</b>.<code> &lt;? xml-stylesheet type="text/css" href="visualize-tei-xml.css"?></code>
+<code><!-- This is a comment: here starts the first sonnet --></code></pre>
+<pre class="xml"> Elements and attributes are <b>case sensitive</b>.<code> &lt;name&gt; ≠ &lt;Name&gt;</code></pre>			
+<pre class="xml"> <b>Empty elements</b> can use a minimized tag syntax.<code> &lt;pb/&gt; = <pb></pb>  </code></pre>			
+			
+														
+		</section>
+			
+<section data-markdown>
+	<textarea data-template>
+## Well-formed (syntax)
+- A single root element (first node) contains the XML document: 
+	- ```<ROOT>``` _Everything in here_ ```</ROOT>```
+
+- Each element is nested within the root element in a hierarchical structure: <a href="imagenes/matrioszka_tei.html">no overlapping</a>.
+	- ✅ ```<ROOT><text>``` _Everything in here_ ```</text></ROOT>```
+	- ❌ ```<ROOT><text>``` _Everything in here_ ```</ROOT></text>```
+- ...
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+##  Valid (grammar)
+- Which elements and attributes are used.
+- Which elements and attributes can appear where.
+- ...		
+</textarea>
+</section>
+
+
+<section data-markdown>
+<textarea data-template>
+## TEI: Text Encoding Iniciative 	
+<img style="width: 50%; box-shadow: none; border-bottom: none" src="imagenes/interreg_markup-xml-tei.png"/>		
+</textarea>
+</section>			
+		
+			
+		</section>		<!--end terminology-->
+		
+		<section>
+		
+		<section id="tei">
+
+		<div class="imagen-texto">
+		<img style="box-shadow: none; border: none" src="imagenes/marginalia-tei-logo.jpg"/>
+			<div class="caption"><a class="fuente" href="http://www.tei-c.org">TEI: Text Encoding Initiative</a></div>
+			</div>
+		
+		<ul style="width: 50%; float: right;" >
+			<span class="cita">"The Text Encoding Initiative (TEI) is a consortium which collectively develops and maintains a standard for the representation of texts in digital form."			</span>
+				<li>Platform independence;</li>				
+				<li>TEI P5: Version 4.2.2. Last updated on 9th April 2021</li>
+				</ul>
+		
+		</section>  <!--End TEI definition-->
+			
+		
+		<section>
+			<h3>TEI basic structure (root element = &lt;TEI&gt;)</h3>
+			<img style="box-shadow: none; border: none" src="imagenes/editio-tei_basic-1.png"/>
+		</section>
+		
+		<section>
+			<h3>TEI basic structure</h3>
+			<h5>&lt;teiHeader&gt;</h5>
+			<img style="box-shadow: none; border: none" src="imagenes/editio-tei_basic-2.png"/>
+		</section>
+		
+		<section>
+			<h3>TEI basic structure</h3>
+			<h5>&lt;teiHeader&gt;</h5>
+			<img style="box-shadow: none; border: none" src="imagenes/editio-tei_basic-3.png"/>
+		</section>
+
+<section data-markdown>
+	<textarea data-template>
+## Content in the `<teiHeader>`
+```
+<teiHeader>
+  <fileDesc>
+	<titleStmt>
+		<title>Bym złożył sonet, Violente mię prosi</title>
+		<author>Lope de Vega Carpio</author>
+	 </titleStmt>
+	<publicationStmt>
+		<publisher>University of Wrocław</publisher>
+		<date when="2021-05-17">17/05/2021</date>
+	 </publicationStmt>
+	<sourceDesc>
+		<bibl>Sonety hiszpańskie, Jan Winczakiewicz (tłumacz), Londyn, Oficyna Poetów i Malarzy, 1965.</bibl>
+	 </sourceDesc>
+  </fileDesc>
+</teiHeader>
+```
+
+</textarea>
+</section>
+
+	
+			<section>
+				<h3>TEI basic structure</h3>
+				<h5>&lt;text&gt;</h5>
+				<img style="box-shadow: none; border: none" src="imagenes/editio-tei_basic-4.png"/>
+			</section>
+		
+			<section>
+				<h3>TEI basic structure</h3>
+				<h5>&lt;text&gt;</h5>
+				<img style="box-shadow: none; border: none" src="imagenes/editio-tei_basic-5.png"/>
+			</section>
+			
+			<section>
+				<h3>TEI basic structure</h3>
+				<h5>&lt;text&gt;</h5>
+				<img style="box-shadow: none; border: none" src="imagenes/editio-tei_basic-6.png"/>
+			</section>
+			
+			
+<section data-markdown>
+	<textarea data-template>
+```
+<text>
+    <body>
+      <div>
+         <head>AVERTISSEMENT</head>
+         <p>Je demande pardon aux lecteurs français d'avoir choisi, parmi le nombreuses pièces de Lope de Vega, celle-ci, où le précepte des trois unités semble avoir été plus scandaleusement violé</p>
+      </div>
+    </body>
+ </text>		
+```	
+</textarea>
+</section>
+
+			
+			<section>
+				<h3>Classes of elements</h3>
+				
+				<li>grouped semantically: names, places, titles, ...</li>
+				<li>grouped structurally: divisions, paragraphs, verses,...</li>
+			</section>
+			
+			<section>
+			<h3>Verse and name annotation</h3>
+<pre><code>&lt;body&gt;
+<lg>
+  <l>&lt;persName&gt;Doris&lt;/persName&gt;, qui sait qu'aux vers quelquefois je me plais,</l>
+  <l>Me demande un sonnet, et je m'en désespère:</l>
+  <l>Quatorze vers, grand Dieu! Le moyen de les faire?</l>
+  <l>En voilà cependant déjà quatre de faits.</l>
+</lg>
+&lt;/body&gt;
+</code></pre>
+			</section>
+			
+<section>
+	<h3>Atributtes inside of elements</h3>
+	
+<div style="font-size: 1.2em;"><pre> Provides a unique identifier for any element:<code>  @xml:id </code></pre>
+
+<pre> Provides a name or number for any element:<code>  @n </code></pre>
+
+<pre> Specifies the language of any element:<code>  @xml:lang </code></pre>
+
+<pre> Characterizes the element in some sense:<code>  @type </code></pre>
+
+<pre> Specifies the visual appearance (rendition):<code>  @rend, @style, @rendition </code></pre></div>
+
+</section>
+
+<section>
+			<h3>Atributtes and elements</h3>
+<pre><code>&lt;body&gt;
+   <lg type="quatrain">
+      <l n="1">Doris, qui ſait qu'aux vers quelquefois je me plais,</l>
+      <l n="3">Me demande un Sonnet; &amp; je m'en deſeſpere:</l>
+      <l n="4">Quatorze vers, grand Dieu! le moyen de les faire!</l>
+      <l n="5">En voilà cependant desja quatre de faits.</l>
+  </lg>
+&lt;/body&gt;
+</code></pre>
+			</section>
+	
+			<section>
+		<h3>Metatextual markup for editions</h3>
+		<h5>Enriched with corrections, regularizations, expansions</h5>
+		
+	<div style="font-size: 1.2em;"><pre class="xml" style="text-align:center ;"> Groups alternative encodings: <code>  <choice> </code></pre>
+	
+<pre class="xml"> Apparent error:<code> <sic> </code></pre>
+	
+<pre class="xml"> Corrected error: <code> <corr> </code></pre>
+	
+<pre class="xml"> Original form: <code> <orig> </code></pre>
+	
+<pre class="xml"> Regularized form: <code> <reg> </code></pre></div>
+	
+	</section>		
+	
+	<section>
+				<h3>Markup for corrections</h3>
+<pre><code data-line-numbers="7-10">&lt;body&gt;
+<lg type="quatrain">
+      <l n="1">Doris, qui ſait qu'aux vers quelquefois je me plais,</l>
+      <l n="3">Me demande un Sonnet; &amp; je m'en deſeſpere:</l>
+      <l n="4">Quatorze vers, grand Dieu! le moyen de les faire!</l>
+      <l n="5">En voilà cependant 
+		<choice>
+			<orig>desja</orig>
+			<reg>déjà</reg>
+		</choice> 
+            quatre de faits.</l>
+</lg>
+&lt;/body&gt;</code></pre>
+				</section>
+	
+	<section>
+	
+	<h3>Critical Apparatus, Dictionaries, Manuscript Description, Bibliographies, ...</h3>
+	<h5>nearly 500 elements </h5>
+	
+	</section>
+	
+			
+		</section>  <!--End TEI structure-->
+						
+	
+			<section id="guidelines">
+				<h3><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html" target="_blank">Guidelines</a></h3>
+				<img src="imagenes/editio-tei-guidelines-1.png"/>
+			</section>		
+			
+		
+						
+				<!--
+				*****References****   
+				-->
+				
+			<section id="biblio">
+				
+				<h3>References</h3>
+				<ul style="font-size: 0.7em;">
+				<li><i>A Gentle Introduction to XML, </i><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html">Guidelines for Electronic Text Encoding and Interchange</a>, TEI P5: Version 4.2.2. </li>
+				<li>Lou Burnard (2014), </i><a href="http://books.openedition.org/oep/426"><i>What is the Text Encoding Initiative? How to add intelligent markup to digital resources </i></a>, Marseille: OpenEdition Press.</li>
+				</ul>
+				
+			</section>
+													
+<!--
+										*****************
+										*****CREDITOS****   
+										*****************
+																						-->
+		<section id="impressum">
+		
+			 <div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, <i>Markup, XML, TEI.</i>, <a href="http://editio.github.io/presentations/intro_sde_tei">&lt;http://editio.github.io/presentations/intro_sde_tei&gt;</a>, 2021.</div>			 
+            <h2 id="filete"><a style="box-shadow: none; border: none" href="http://editio.github.io/presentations/xml-tei?print-pdf" title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
+
+			 <div ><a style="box-shadow: none; border: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
+			</div>	
+				
+		 </section>  <!--impressum-->
+		
+	</div> <!--End of slides container-->
+
+</div>
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.js"></script>
+
+<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+
+			Reveal.configure({ slideNumber: "c/t" });
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+
+				dependencies: [
+			{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+			{ src: 'reveal/plugin/notes/notes.js', async: true }
+
+		]
+			});
+
+</script>
+
+<!--ESQUINAS MENU en TODAS DIAS-->
+
+<div class="footer">
+
+<p>José Luis Losada Palenzuela · 2021</p>
+			
+</div> <!--FIN FOOTER FIRMA-->
+
+<div id="logo">
+<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="Universty of Wrocław"/></a> 
+</div> <!--FIN LOGO-->
+
+</body>
+</html>

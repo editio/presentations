@@ -1,0 +1,329 @@
+ <!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Intro to DSE · Interreg 2021</title>
+	<meta name="description" content="Intro to DSE · Interreg 2021">
+	<meta name="author" content="José Luis Losada Palenzuela">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/simple.css">
+	<link rel="stylesheet" href="css/mychanges.css">
+	<!-- <link rel="stylesheet" href="reveal/css/theme/black.css"> -->
+
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+
+	<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+
+<section id="portada"> <!--PORTADA-->
+<h2 class="portada">
+<p>Introduction to Digital Editions</p>
+</h2>
+<h3>Principles, Models, Examples</h3>
+<br>
+<br>
+
+	<h4 style="color: orange;">Humanistyka cyfrowa dla przyszłości</h5>	
+
+		<a style="border-bottom: none" href="http://phc.uni.wroc.pl/interreg/"><img style="width: 50%; box-shadow: none; border-bottom: none" src="imagenes/interreg_logo.png"/></a>
+
+</section>
+
+<section>
+		
+	<img style="width: 70%;" src="imagenes/interreg_hamlet.png"/>
+	
+	<p><span style="width: 60%;" class="fuente"> Image from The Bodleian First Folio: Bodleian Arch. G c.7. URL: <a href="http://firstfolio.bodleian.ox.ac.uk/">http://firstfolio.bodleian.ox.ac.uk</a></span></p>
+
+</section>
+
+<section>
+
+	<img style="width: 99%; box-shadow: none; border-bottom: none" src="imagenes/interreg_dracor_hamlet.png"/>
+
+</section>
+
+<section>
+
+	<img style="width: 99%; box-shadow: none; border-bottom: none" src="imagenes/interreg_hamlet_xml.png"/>
+
+</section>
+
+<section>
+	<img style="width: 99%; box-shadow: none; border-bottom: none" src="imagenes/interreg_prism.png"/>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+
+## Digital Edition of Texts
+
+<br>
+
+- General <span class="circle-sketch-highlight">Textual</span> Discipline: **Philology**
+- Subdiscipline: **Textual Criticism**
+- New subdiscipline: **(Scholarly) Digital Editing**
+
+</textarea>
+
+</section>
+
+<section data-markdown>
+<textarea data-template>
+
+## Philology
+
+- Philology as a discipline was born to ensure the correct transmission of written texts, to preserve, correct or improve them.
+
+- Greek _phílos_ (friend) and _lógos_ (word): it means affection and love of words. The role of the philologist is to verify that the transmission of the text is correct.
+
+- Philology can be defined in origin as the <span class="resaltado
+">science of text authentication</span>.
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+## Textual Criticism
+
+- Different methods of practising this authentication of the text.
+- Lachmann’s method, _Bon manuscrit_, Copy-text theory, genetics, Documentary methods,...
+- Different traditions: _Edición crítica_, _naukowa edycja krytyczna_, Scholarly Edition, Critical edition, _Historisch-kritische Ausgabe_, ... 
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Scholarly Edition
+				
+- The basic task is to present a <span class="resaltado">reliable text</span>
+
+### It usually contains:
+
+- A **general introduction**, either historical or interpretive.
+
+- **Statements** concerning the history and composition of the text.
+
+- **Textual apparatus** or notes documenting possible <a href="http://phc.uni.wroc.pl/interreg/w/losada/intro.html#textual-criticism" target="_blank">witnesses</a>, alterations and variant readings.
+		
+</textarea>
+</section>
+
+<section >
+	<h2>Digital Editig</h2>
+	<h3>A digital edition follows the requirements of a scholarly edition in consideration of the digital paradigm</h3>
+	
+	<p class="cita" style="font-size: 60% ;line-height: 1em;"> "Eine digitale Edition ist dadurch bestimmt, dass sie die allgemeinen
+		Anforderungen an eine wissenschaftliche Edition durch die Berücksichtigung
+		der gegenwärtigen technischen Möglichkeiten und ihrer methodischen
+		Implikationen erfüllt. Sie folgt einem «digitalen Paradigma»"</p>
+	<div class="fuente"> (Sahle 2016/2: 148)</div>
+</section>  
+
+<section >
+
+	<h3>Digital scholarly editions are not just scholarly editions in digital media:</h3>
+	<br>
+	<h3><b>digital</b> <span style="color: red;">≠</span> <b>digitized</b></h3>
+	<br>
+	<p class="cita" style="font-size: 60% ;line-height: 1em;">"Wiedergabe ohne Erschließung ist keine Edition. Eine bloße Reproduktion, ein  einfaches Faksimile, eine digitale Bibliothek ist keine Edition"</p>
+	
+	<p class="cita" style="font-size: 60%; line-height: 1em;">"Deshalb kann eine digitale Edition nicht einfach die digitale Fassung einer auch im Druck realisierbaren Edition sein – zu ihrem Wesen gehört, dass sie über die Beschränkungen der typografischen Edition hinweggeht"</p>
+	<div class="fuente"> (Sahle 2016/2: 141-142; 149)</div>                                                                                 
+</section>   
+
+<section data-markdown>
+	<textarea data-template>
+## Editorial criteria 
+- Philological scope: Scholarly edition, documentary edition,...
+- Common standards: XML-TEI **`<TEI>`**
+- Text as data: Documented data model (schema).
+- Interface, metadata, indices, license...
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+## General criteria 
+
+- Longevity (digital preservation): infrastructure, open standards.
+- Facilitating data sampling, reuse, and remix (F.A.I.R.)
+- Transparency with respect to data, methods.
+- Usability of the edition within the digital paradigm.		
+</textarea>
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+
+### Text as data. F.A.I.R. principles		
+<img style="width: 99%; box-shadow: none; border-bottom: none" src="imagenes/interreg_fair.jpg"/>
+
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+## Catalogue of Digital Editions
+
+<a style="box-shadow: none; border-bottom: none" href="https://dig-ed-cat.acdh.oeaw.ac.at" target="_blank"><img style="width: 80%" src="http://phc.uni.wroc.pl/interreg/w/losada/images/catalog_schopenhauer.gif"/></a>
+
+</textarea>
+</section>
+
+<section id="model" >
+				
+	<h3>Reference model for digital editing</h3>	
+	<div class="imagen-sola">
+		
+		<img style="box-shadow: none; border: none" src="http://editio.github.io/manual/imagen/marginalia-bigpicture_0.png"/>
+		<div class="caption">"The Role of Markup in the Digital Humanities", Desmond Schmidt, Queensland University of Technology, 2012</div>
+	</div>	
+</section>  <!-- Big picture Schmidt-->
+						
+<section>
+	<h3>Document <span style="font-size: 1.5 ; color: red;">⤑</span> Digital Edition</h3>	
+	<div class="imagen-sola">
+		
+		<img style="box-shadow: none; border: none" src="http://editio.github.io/slides/imagenes/editio-reference-model-DSH.png"/>
+		<div class="caption"> Christof Schöch: Digitale Textedition mit TEI. <a class="fuente" href="https://de.dariah.eu/tei-tutorial">DARIAH TEI-Tutorial</a>
+		</div>
+	</div>	
+	
+</section>  <!-- Reference Model Schöch -->
+
+
+<section data-markdown>
+	<textarea data-template>
+## Workflow		
+- **Analysis**: document properties.
+- **Modelling**: formal model of the document.
+- **Transcription**: the text in a linear form.
+- <span class="circle-sketch-highlight">**Encoding**</span>: transcript improvement. 
+- **Visualization**: represent for a reader.
+- **Publication**: available for the public.
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+<a style="box-shadow: none; border-bottom: none" href="http://phc.uni.wroc.pl/interreg/w/losada/" target="_blank"><img style="width: 90%; box-shadow: none; border-bottom: none" src="imagenes/interreg_project.png"/></a>
+</textarea>
+</section>
+
+<!-- *******CREDITOS********** -->
+
+
+<section id="impressum">
+
+	<div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José
+			Luis Losada Palenzuela</a>, <i>Introduction to Digital Editions. Principles, Models, Examples</i>, <a
+			href="http://editio.github.io/presentations/intro_sde">&lt;http://editio.github.io/presentations/intro_sde&gt;</a>,
+		2021</div>
+
+	<h2 id="filete"><a style="border-bottom: none"
+			href="http://editio.github.io/presentations/zotero.html?print-pdf"
+			title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i
+				style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
+
+	<div><a style="border-bottom: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
+				class="licencia" alt="License Creative Commons"
+				src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
+
+</div>
+
+</section>
+
+	</div>
+	<!--End of slides container-->
+
+	</div>
+
+	<script src="reveal/lib/js/head.min.js"></script>
+	<script src="reveal/js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+
+		Reveal.configure({ slideNumber: "c/t" });
+
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+			// More info https://github.com/hakimel/reveal.js#dependencies
+
+			dependencies: [
+				{ src: 'reveal/lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'reveal/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'reveal/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'reveal/plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal/plugin/notes/notes.js', async: true }
+
+			]
+		});
+
+	</script>
+
+	<!--ESQUINAS MENU en TODAS DIAS-->
+
+	<div class="footer">
+
+		<p>José Luis Losada Palenzuela · 2021</p>
+
+	</div>
+	<!--FIN FOOTER FIRMA-->
+
+	<div id="logo">
+		<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="Universty of Wrocław" /></a>
+	</div>
+	<!--FIN LOGO-->
+
+</body>
+
+</html>

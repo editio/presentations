@@ -58,6 +58,7 @@
 
 </section>			
 			
+			<section>
 <section data-markdown>
 	<textarea data-template>
 ## What is mark-up language?
@@ -136,19 +137,21 @@
 </textarea>
 </section>
 
+	
+		
+			
+		</section>		<!--end terminology-->
 
-<section data-markdown>
+
+	
+
+<section>
+	<section data-markdown>
 <textarea data-template>
 ## TEI: Text Encoding Iniciative 	
 <img style="width: 50%; box-shadow: none; border-bottom: none" src="imagenes/interreg_markup-xml-tei.png"/>		
 </textarea>
-</section>			
-		
-			
-		</section>		<!--end terminology-->
-		
-		<section>
-		
+</section>		
 		<section id="tei">
 
 		<div class="imagen-texto">
@@ -329,16 +332,167 @@
 	<h5>nearly 500 elements </h5>
 	
 	</section>
-	
-			
-		</section>  <!--End TEI structure-->
-						
-	
+		
 			<section id="guidelines">
 				<h3><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html" target="_blank">Guidelines</a></h3>
 				<img src="imagenes/editio-tei-guidelines-1.png"/>
-			</section>		
+			</section>	
 			
+</section>  <!--End TEI structure-->
+						
+<section><section data-markdown>
+		<textarea data-template>
+	## Exercise
+	<img style="width: 85%; box-shadow: none; border-bottom: none" src="imagenes/interreg_1.0-Lope-Soneto-scan-PL-1965.png"/>		
+	</textarea>
+	</section>	
+			
+<section data-markdown>
+		<textarea data-template>
+```
+Bym złożył sonet, Violente mię prosi;
+nierazem znoił w takowym rygorze:
+czternaście wierszów sonet pojąć może.
+Trzy z przodka fraszka ze śmiechem unosi.
+
+Trapiąc się, jaki rym tutaj położę,
+do drugiej strofy dobiegam w rozpędzie.
+Niech mi tercyna z odsieczą przybędzie,
+a oną strofą nic się nie zatrwożę.
+
+W pierwszą tercynę wchodzę i chociażem
+za próg przełożył, zda się, jedną nogę,
+już tę tercynę gładko zamknąć mogę.
+
+Drugiej dostawszy, z jednakim kurażem
+- chocia naprzeciw wiersz trzynasty bieży -
+czternasty-m skroił! Licz kto mi nie wierzy!
+```
+<span class="fuente">
+			<i>Sonety hiszpańskie</i>, Jan Winczakiewicz (tłumacz), Londyn, Oficyna Poetów i Malarzy, 1965.</span>			
+	</textarea>
+	</section>	
+
+<section data-markdown>
+	<textarea data-template>
+```{html}
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" 
+type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<!-- 👆 these are the processing instructions -->  
+
+<!-- 👇  Here starts the TEI structure, with the <TEI> element, so called root element -->
+  
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  
+  <teiHeader>  <!-- 👈 where the metadata goes -->
+      <fileDesc>
+         <titleStmt>
+            <title>Empty XML File</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Information about the publication</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+  </teiHeader>
+  
+  <text>  <!-- 👈 where the actual text goes -->
+      <body>
+         <p>Some text here.</p>
+      </body>
+  </text>
+  
+</TEI>
+```		
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<?xml-stylesheet type="text/css" href="visualize-tei-xml.css"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>           
+            <title>Bym złożył sonet, Violente mię prosi</title>
+            <author>Lope de Vega Carpio</author>
+            <editor>José Luis Losada</editor>
+         </titleStmt>
+         
+         <publicationStmt>         
+            <publisher>University of Wrocław</publisher>
+            <date>17/05/2021</date>
+         </publicationStmt>
+         
+         <sourceDesc>
+            <bibl>               
+               <title>Sonety hiszpańskie</title>
+               <editor role="tłumacz">Jan Winczakiewicz</editor>
+               <pubPlace>Londyn</pubPlace>
+               <publisher>Oficyna Poetów i Malarzy</publisher>
+               <date>1965</date>               
+            </bibl>
+         </sourceDesc>
+         
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <lg type="soneto">
+            <lg type="cuarteto">
+               <l n="1"><hi rend="bold">B</hi>ym złożył sonet, <choice>
+                     <sic>Violente</sic>
+                     <corr>Violante</corr>
+                  </choice> mię prosi;</l>
+               <l n="2">nierazem znoił w takowym rygorze:</l>
+               <l n="3">czternaście wierszów sonet pojąć może.</l>
+               <l n="4">Trzy z przodka fraszka ze śmiechem unosi.</l>
+            </lg>
+
+            <lg type="cuarteto">
+               <l n="5">Trapiąc się, jaki rym tutaj położę,</l>
+               <l n="6">do drugiej strofy dobiegam w rozpędzie.</l>
+               <l n="7">Niech mi tercyna z odsieczą przybędzie,</l>
+               <l n="8">a oną strofą nic się nie zatrwożę.</l>
+            </lg>
+
+            <lg type="terceto">
+               <l n="9">W pierwszą tercynę wchodzę i chociażem</l>
+               <l n="10">za próg przełożył, zda się, jedną nogę,</l>
+               <l n="11">już tę tercynę gładko zamknąć mogę.</l>
+            </lg>
+
+            <lg type="terceto">
+               <l n="12">Drugiej dostawszy, z jednakim kurażem</l>
+               <l n="13">– chocia naprzeciw wiersz trzynasty bieży –</l>
+               <l n="14">czternasty-m skroił! Licz kto mi nie wierzy!</l>
+            </lg>
+         </lg>
+      </body>
+   </text>
+</TEI>
+```		
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+	
+<a style="box-shadow: none; border: none" href="http://phc.uni.wroc.pl/interreg/w/losada/TEI_bootstrap/" target="_blank"><img style="width: 80%; box-shadow: none; border: none" src="imagenes/interreg_bootsrap.png"/></a>
+
+</textarea>
+</section>
+
+</section>
 		
 						
 				<!--
@@ -362,7 +516,7 @@
 																						-->
 		<section id="impressum">
 		
-			 <div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, <i>Markup, XML, TEI.</i>, <a href="http://editio.github.io/presentations/intro_sde_tei">&lt;http://editio.github.io/presentations/intro_sde_tei&gt;</a>, 2021.</div>			 
+			 <div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, <i>Markup, XML, TEI</i>, <a href="http://editio.github.io/presentations/intro_sde_tei">&lt;http://editio.github.io/presentations/intro_sde_tei&gt;</a>, 2021.</div>			 
             <h2 id="filete"><a style="box-shadow: none; border: none" href="http://editio.github.io/presentations/intro_sde_tei?print-pdf" title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
 
 			 <div ><a style="box-shadow: none; border: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>

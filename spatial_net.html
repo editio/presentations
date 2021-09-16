@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Spatial Networks</title>
+	<meta name="description" content="Spatial Networks">
+	<meta name="author" content="José Luis Losada">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png"> 
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/simple.css">
+	<link rel="stylesheet" href="css/mychanges.css">
+	<!-- <link rel="stylesheet" href="reveal/css/theme/black.css"> -->
+	
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css">
+<style>
+    .reveal .pre .code {
+                  text-transform: none;
+		  }
+</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			
+			
+
+				<section id="portada">   <!--PORTADA-->
+					<h3>Core and periphery in Spanish Byzantine novels. Exploration of literary places with spatial networks</h3>
+					<h1 style="font-size:1.5em">
+						<span id="filete">
+							
+							<i class="fas fa-map-marked-alt"></i>
+							</span>
+						</h1>
+						<h5>Spatial Humanities 2021 NOVA-FCSH, Universidade Nova de Lisboa</h5>
+
+					</section>  <!--FIN PORTADA-->
+
+
+			
+
+<section data-markdown>
+	<textarea data-template>
+
+### Digital mapping of fictional places
+
+[https://editio.github.io/mapping.literature](https://editio.github.io/mapping.literature)
+
+</textarea>
+</section>
+	
+<section data-markdown>
+	<textarea data-template>
+## Core and periphery
+- Interdisciplinary distribution.
+- Heterogeneous character in literary analysis.
+- Y. Lotman: Semiosphere and artistic space.
+- Cervantes' _Persiles_: Barbarian North (periphery) vs. Rome (center).
+- Heliodorus', _Aethiopica_: Barbarian South (periphery) vs _oikouménē_ (center).
+
+</textarea>
+</section>
+	
+
+<section>
+
+<div class="cita">
+the identification of what is "near" with what is understandable, one's own and familiar, and the identification of what is "distant" with what is not understood and alien — all these things are couched in models of the world invested with distinctly spatial features</div>
+
+<div class="fuente">Lotman, <i>Structure of artistic text</i>, 1977, 218</div>
+</section>
+	
+
+<section data-markdown>
+	<textarea data-template>
+## Corpus and Places
+
+- _El peregrino en su patria_, 1604
+- _Persiles y Sigismunda_, 1617
+- _Semprilis y Genorodano_, 1629
+- _Eustorgio y Clorilene_, 1629
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+## Extraction and geolocation
+
+- NLP/NER tools: FreeLing
+- Geolocation: R package (Pelagios APIs infrastructure): ["editio/georeference"](https://github.com/editio/georeference)
+- Geolocation of fictional places (limitations)
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Methodology
+
+The geolocated places mentioned in the novels are converted into spatial networks in order to apply measures of centrality (eigenvector values)
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Steps
+
+- The places (converted to spatial points) have been connected with a Delaunay triangulation
+- The resulted TIN (Triangulated Irregular Network) gets weighted edges based on euclidean distances, so that the value of the weighted edge depends on the distance between points.
+- We applied eigenvector centralities to the graph, resulting in the lowest eigenvector value to the closest points, the highest to the furthest.
+
+</textarea>
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+
+- Pebesma (2013): Geo functions in R.
+- `deldir` (Turner 2019) and `ggvoronoi` (Garrett 2018): R packages for spatial networks.
+- `igraph` (Csardi 2019): Network analysis and metrics.
+- `ggplot2` (Wickham 2016) and `leaflet` (Cheng 2018): Data and maps visualization.
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+Delaunay triangulation of places mentioned in Persiles
+![](https://editio.github.io/mapping.literature/spatialnet_files/figure-html/unnamed-chunk-4-2.png)
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+Graph from a Triangulated Irregular Network (TIN)
+![](https://editio.github.io/mapping.literature/spatialnet_files/figure-html/fig1-1.png)
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+![](imagenes/persiles_metrics.png)
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Results
+
+![](imagenes/all_places.png)
+
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+
+## Conclusions
+
+</textarea>
+</section>
+
+							</div> <!--End of slides container-->
+
+						</div>
+
+						<script src="reveal/lib/js/head.min.js"></script>
+						<script src="reveal/js/reveal.js"></script>
+
+						<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+
+Reveal.configure({ slideNumber: "c/t" });
+
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+
+				dependencies: [
+				{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/highlight/highlight.js', async: false, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal/plugin/notes/notes.js', async: true }
+
+				]
+			});
+
+		</script>
+
+		<!--ESQUINAS MENU en TODAS DIAS-->
+
+		<div class="footer">
+
+			<p>José Luis Losada Palenzuela · 2021</p>
+			
+		</div> <!--FIN FOOTER FIRMA-->
+
+		<div id="logo">
+			<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="Universty of Wrocław"/></a> 
+		</div> <!--FIN LOGO-->
+
+	</body>
+	</html>

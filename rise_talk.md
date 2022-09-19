@@ -170,6 +170,12 @@ Calvo Tello, José (2021): _The Novel in the Spanish Silver Age: A Digital Analy
 
 - Validation of metadata for genre (novel) and subgenre (historical novel, ...)
 
+## Conclusion: 
+
+> The journal seeks to expand the spectrum of computational methods for the analysis of literary texts and their (cultural, social, historical, performative) contexts with innovative methods appropriate to the subject. It provides a forum to address issues such as building literary corpora, identifying peculiarities of literary texts, domain adaptation of methods, operationalization of concepts, annotation of texts, evaluation of measures, interpretability and transparency of results, and reproducibility of research.
+
+- From the new [_Journal of Computational Literary Studies_](https://jcls.io)
+
 ## References
 
 Calvo Tello, José (2021): _The Novel in the Spanish Silver Age: A Digital Analysis of Genre Using Machine Learning_, Bielefeld, transcript Verlag / Bielefeld University Press, <https://doi.org/10.14361/9783839459256>.

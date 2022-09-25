@@ -31,7 +31,7 @@ Digital Literary Studies, Literary Computing, Computational Literary Studies
 **Digital and/or statistical component; computational**:
 - **Authors and writing**: Stylometry (how to recognize computationally the literaty style in a text); intertextuality, text-reuse (literary, historical, modern texts);  sentiment analysis. 
 - **Space**: literary space, geographical features in texts (GIS), literary/historical maps;
-- **Visualization**: data visualization; network analysis (iterary characters, metadata, stylometry): visual and mathematical approaches (metrics);
+- **Visualization**: data visualization; network analysis (literary characters, metadata, stylometry): visual and mathematical approaches (metrics);
 - **Distant analysis**: historical evolution of genre; literary canon.
 
 ☞ Statistics:
@@ -170,7 +170,7 @@ Calvo Tello, José (2021): _The Novel in the Spanish Silver Age: A Digital Analy
 
 - Validation of metadata for genre (novel) and subgenre (historical novel, ...)
 
-## Conclusion: 
+## Conclusion
 
 > The journal seeks to expand the spectrum of computational methods for the analysis of literary texts and their (cultural, social, historical, performative) contexts with innovative methods appropriate to the subject. It provides a forum to address issues such as building literary corpora, identifying peculiarities of literary texts, domain adaptation of methods, operationalization of concepts, annotation of texts, evaluation of measures, interpretability and transparency of results, and reproducibility of research.
 

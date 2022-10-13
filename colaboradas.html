@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Reutilización textual en colaboradas</title>
+	<meta name="description" content="Text Reuse, Spanish Drama, Tracer">
+	<meta name="author" content="José Luis Losada Palenzuela">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png"> 
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/simple.css">
+	<link rel="stylesheet" href="css/mychanges.css">
+	<!-- <link rel="stylesheet" href="reveal/css/theme/black.css"> -->
+	
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css">
+<style>
+    .reveal .pre .code {text-transform: none;}
+</style>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+</head>
+
+<body>
+
+<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+
+<div class="slides">
+			
+	<section> <!-- PORTADA  -->
+
+		<section id="portada"> 
+		<h2>Análisis cuantitativo de la reutilización textual en las comedias colaboradas (Moreto)</h2>	<br>
+		<h5 style="font-size:1.5em">			
+				<i class="fas fa-file-alt" style="font-size:1.5em; color:tomato"></i> <i class="fas fa-long-arrow-alt-right" style="font-size:1em; color:tomato"></i>  <i class="far fa-file-alt" style="font-size:1.5em; color:tomato"></i>				
+			</h5>
+			<br>
+			
+		<h4 style="color: grey">La práctica teatral colaborativa en el Siglo XVII (Alicante, 13-15 de octubre 2022)</h5>
+
+			</section>  <!--FIN PORTADA-->
+
+	</section>
+<!-- Comienzo SLIDES -->
+<section>
+	
+	<section data-markdown>
+		<textarea data-template >
+	### Distinción: cadena de texto conocida o desconocida
+	</textarea>
+	</section>
+
+	<section data-markdown>
+		<textarea data-template >
+			<img style="box-shadow: none;" src="imagenes/cola_antcont.png"/>
+	</textarea>
+	</section>
+
+	<section data-markdown>
+		<textarea data-template >
+			<img style="box-shadow: none;" src="imagenes/cola_dispersionPlot.png"/>
+	</textarea>
+	</section>
+
+
+	<section data-markdown>
+		<textarea data-template >
+	### Desconozco la cadena de texto
+	
+		- Fuente en destino (p. ej., Biblia en un corpus teatral) 
+		- Fuente y destino intercambiables.
+	</textarea>
+	</section>
+
+
+</section>
+
+<section>	
+		<section data-markdown>
+			
+			<textarea data-template >
+		## Reutilización
+		#### Repetición significativa de un texto
+		
+		<br>
+
+		### Taxonomías teatrales
+			
+		- refundición, reelaboración, reconstrucción, adaptación, reutilización <span class="fuente">(Ruano 1998)</span>
+		- auto-reescritura, hetero-reescritura <span class="fuente">(Vitse 1998; Vega 1998)</span>
+		- inter- e intratextualidad, autoplagio, reciclaje, etc. <span class="fuente">(Sánchez 2014; Sáez 2013)</span>
+		- versión <span class="fuente">(Pinillos 2002)</span>
+
+			</textarea>
+		</section>
+
+
+<section data-markdown>
+	<textarea data-template >
+		### Sistemas de recuperación de información
+		<!-- - _Topic modeling_, _TF-IDF_, _Word Embeddings_ -->
+
+		- Eliminación de redundancia
+		- Investigación (plagio, cita)
+		- Literatura, Historia (alusión, paráfrasis, intertextualidad)
+		- Periodismo (republicación)
+
+</textarea>
+</section>
+
+<section data-markdown >
+	<textarea data-template >
+	### Operacionalización	
+
+	<div class="cita" style="font-size: 80%">	"[M]ost literary concepts are emphatically not designed to be quantified" <span class="fuente">(Moretti 2013: 114)</span></div>
+
+	### reutilización, _reuse_
+
+	<div class="cita" style="font-size: 80%">"[L]a «reutilización» consiste en el <span class="resaltado">aprovechamiento de una escena o pasaje textual en diferentes piezas teatrales</span> […], pero también se podrían incluir en esta categoría las canciones, versos y otros tipos de textos literarios injertados en una comedia con fines diferentes a los que tenían originalmente" <span class="fuente">(Ruano 1998: 36)</span></div>
+	
+	<div class="cita" style="font-size: 80%">“Text re-use concerns the recycling of complex textual information which contains a <span class="resaltado">statistically significant number of words in common</span> between a source document and a target document” <span class="fuente">(Büchler et <i>alii</i> 2014: 225)</span></div>
+
+	</textarea>
+	</section>
+
+</section>
+
+<section>
+
+<section data-markdown>
+	<textarea data-template >
+## Metodología
+- Simplificado: Computación de frecuencias de unidades léxicas
+- TF-IDF, Coeficiente de similitud Jaccard, Algoritmo de Smith-Waterman
+- _Passim_, _Textreuse_, _TRACER_ 
+			
+</textarea>
+</section>
+
+</section>	
+<section>	
+
+	<section data-markdown>
+	<textarea data-template>
+## Corpus 
+<br>
+
+<div class="cita" style="font-size: 100%">“Il soggetto dei componimenti drammatici scritti de consuno <span class="resaltado">non è mai originale</span>” <span class="fuente">(Alviti 2006:17)</span></div>
+
+</textarea>
+</section>
+
+<section data-background-iframe="imagenes/cola_moreto_colaboradas.html" data-background-interactive>
+	<!-- grafo moreto colaboradas -->
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+### Corpus 
+
+- Lope, Tirso y Calderón + Moreto + Moreto colaboradas
+- Distribución: 509 obras y 4 autores (+)
+- Sin metadatos, sin didascalias, sin puntuación
+- Esticomitia: restauración de versos partidos
+
+<br>
+
+</textarea>
+</section>
+
+<section data-markdown style="font-size: 53%">
+	<textarea data-template >
+
+### Preproceso: tabla unidades de comparación
+
+</br>
+
+| |id |texto_verso |date|obra|
+|--- |--- |---|---|---|
+| 1|<span style="color: orange">01</span>0000<span style="color: blue">1</span>| <span style="color: green">hipogrifo violento</span> |null|calderon_LaVidaEsSueno_C6011_CANON|
+| 2|0100002|que corriste parejas con el viento|null|calderon_LaVidaEsSueno_C6011_CANON|
+| 3|0100003|¿dónde rayo sin llama|null|calderon_LaVidaEsSueno_C6011_CANON|
+| 4|0100004|pájaro sin matiz, pez sin escama|null|calderon_LaVidaEsSueno_C6011_CANON|
+|... |||||
+|... |||||
+|1 409 516|50904166|yo soy si acaso os agrada|null|tirso_villana_vallecas_COMED|
+|1 409 517|50904167|la villana de vallecas|null|tirso_villana_vallecas_COMED|
+|<span style="color: tomato" class="resaltado">1 409 518</span>|<span style="color: orange">509</span>04168|mas si no no sere nada.|null|tirso_villana_vallecas_COMED|
+
+	</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+### Selección de parámetros en TRACER
+<i>Brute Force vs. Feature-Based Linking</i>
+
+Unidad de reutilización (<i>reuse unit</i>): versos
+
+- <i>Featuring</i>: palabras, n-gram (bigrams, trigrams) (2ª tokenización)
+- <i>Selection</i>: palabras vacías, baja frecuencia (Ley de Zipf)
+- <i>Linking</i>: interno, externo.
+- <i>Scoring</i>: [■■■■■■■□□□] ~ [■□■■■■■□□■] : 60% = _reuse_
+	</textarea>
+</section>
+
+</section>
+
+<section>
+
+	<!-- Resultados -->
+
+			<section data-background-image="imagenes/cola_grafo1.png" data-background-size="1000px">
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<h3 style="color: gray">Grafo de reutilización (aristas = suma total)</h3>
+				</section>
+		<section data-background-image="imagenes/cola_grafo2.png" data-background-size="800px">
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<h3 style="color: gray">Rango: 0.6 <b>- 25 - 1080</b></h3>
+				</section>
+
+		<section data-background-iframe="reuse_subset/index.html" data-background-interactive>
+				</section>
+	
+	<section data-markdown style="font-size: 60%">
+	<textarea data-template>
+	<img style="width: 19%; box-shadow: none; float: left;" src="imagenes/reuse_CalderonTirso.png"/>
+	<img style="width: 19%; box-shadow: none; float: center;" src="imagenes/reuse_CalderonTirso.png"/>
+	<img style="width: 19%; box-shadow: none; float: right;" src="imagenes/reuse_CalderonTirso.png"/>
+	
+	</textarea>
+		</section>
+
+
+	
+	<section data-markdown>
+	<textarea data-template>
+	Calderón / Calderón
+	
+	_El príncipe constante_ / _Amor, honor y poder_
+	
+	- décima compartida <span class="fuente">(Vila 2017: 736-737)</span>
+
+	Calderón / Tirso 
+
+	_Los cabellos de Absalón_ / _La venganza de Tamar_
+
+	- Comparten un acto completo <span class="fuente">(Sloman 1958: 95)</span>
+	</textarea>
+	</section>
+	
+	
+		<section data-markdown style="font-size: 60%">
+					<textarea data-template>
+	
+	<img style="width: 17%; box-shadow: none; float: left;" src="imagenes/reuse_CalderonDecima.png"/>
+	
+	<br><br>
+	### Tabla de reutilizaciones (_output_)
+	
+	| valor |  |  | 
+	| :----- | :----- | :----- | 
+	| 1 | lisonjera libre ingrata | lisonjera libre ingrata | 
+	| 1 | de cristal y undosa plata | de cristal y undosa plata | 
+	| 1 | porque hablaba y no sentia | porque hablaba y no sentia | 
+	| 1 | suave porque fingia | suave porque fingia | 
+	| 1 | libre porque murmuraba | libre porque murmuraba | 
+	| 1 | dulce porque lisonjeaba | dulce porque lisonjeaba | 
+	| 0.6666 | ingrata porque corria | ~~y~~ ingrata porque corria | 
+	| 0.5 | ~~como esta~~ el rey mi senor | el rey mi senor ~~baste~~ |  
+	|... | | |
+	
+			</textarea>
+			</section>
+			
+	
+	
+	
+	</section>
+	
+	
+					
+				
+			</section>
+
+</section>
+
+
+<section>
+		
+	<section data-markdown style="font-size: 55%">
+		<textarea data-template>
+		### Reutilizaciones totales (504 obras)
+		|n|  score|obra.x                                        |obra.y                                            |
+		|:------|--:|:---------------------------------------------|:---------------------------------------------|
+		|1  |  1|que soy nino y solo y nunca en tal me vi      |que soy nino y solo y nunca en tal me vi      |
+		|2  |  1|pues si un dia es el siglo de las flores      |pues si un dia es el siglo de las flores      |
+		|3  |  1|senal que es noble el alma que esta en ella   |senal que es noble el alma que esta en ella   |
+		|4  |  1|mas para que lo que es tan cierto he puesto   |mas para que lo que es tan cierto he puesto   |
+		|5 |  1|que es muerto el rey entre el confuso y vario |que es muerto el rey entre el confuso y vario |
+		|... |  | ||
+		|37 346 |  1|que es esto cielos que es esto |que es esto cielos que es esto |
+		|37 347 |  1|que es esto cielos que es esto |que es esto cielos que es esto |
+		|37 348 |  1|todos los cuatro elementos |todos los cuatro elementos |
+		|... |  | ||
+		|237 344 |  0.6|en la frente de un ~~traidor~~ |en la frente de un ~~aspid~~ |
+		|237 345 |  0.6|en las aras de su ~~templo~~ |en las aras de su ~~altar~~ |
+		|<span class="resaltado">**237 346**</span> |  0.6|que es esto cielos que escucho |que es esto cielos que es esto |
+			</textarea>
+			</section>
+
+<section data-markdown style="font-size: 55%">
+		<textarea data-template>
+			### Reutilizaciones (sin duplicados), coincidencia = 100% (_top_ 15)
+			|obra.x                       |obra.y                       |    n|
+			|:----------------------------|:----------------------------|----:|
+			|que es esto                  |que es esto                  | 2577|
+			|ay de mi                     |ay de mi                     | 1631|
+			|ay infelice de mi            |ay infelice de mi            |  927|
+			|arma arma guerra guerra      |arma arma guerra guerra      |  717|
+			|valgame el cielo que es esto |valgame el cielo que es esto |  593|
+			|deme los pies vuestra alteza |deme los pies vuestra alteza |  520|
+			|eso como puede ser           |eso como puede ser           |  320|
+			|deme vuestra majestad        |deme vuestra majestad        |  317|
+			|valgame el cielo que escucho |valgame el cielo que escucho |  295|
+			|la naturaleza humana         |la naturaleza humana         |  286|
+			|vuestra majestad senor       |vuestra majestad senor       |  284|
+			|no me puedo detener          |no me puedo detener          |  276|
+			|la misma naturaleza          |la misma naturaleza          |  275|
+			|venid mortales venid         |venid mortales venid         |  251|
+			|por muchos anos y buenos     |por muchos anos y buenos     |  249|
+			|valgame el cielo             |valgame el cielo             |  249|
+</textarea>
+	</section>
+
+
+		
+			
+
+</section>
+
+
+			<section data-markdown>
+				<textarea data-template >
+			### Conclusiones
+			</textarea>
+			</section>
+
+
+	<!-- creditos -->
+	<section id="impressum">
+
+		<div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, "Análisis cuantitativo de la reutilización textual en las comedias colaboradas (Moreto)", <a href="http://editio.github.io/presentations/textreuse.html">&lt;http://editio.github.io/presentations/colaboradas&gt;</a>, 2022</div>			 
+		<h2 id="filete"><a style = "border-bottom: none" href="http://editio.github.io/presentations/colaboradas.html?print-pdf" title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
+
+		<div ><a style = "border-bottom: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
+	</div>	
+
+	</section>
+
+				</div> <!--End of slides container-->
+
+						</div>
+
+						<script src="reveal/lib/js/head.min.js"></script>
+						<script src="reveal/js/reveal.js"></script>
+						<script>
+
+// More info https://github.com/hakimel/reveal.js#configuration
+
+Reveal.configure({ slideNumber: "c/t" });
+
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				// More info https://github.com/hakimel/reveal.js#dependencies
+
+				dependencies: [
+				{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'reveal/plugin/highlight/highlight.js', async: false, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'reveal/plugin/notes/notes.js', async: true }
+
+				]
+			});
+
+		</script>
+
+		<!-- Logo & footer for all slides -->
+
+		<div id="logo">
+			<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="University of Wrocław"/></a> 
+		</div>
+
+		<div class="footer">
+			<p>José Luis Losada Palenzuela · 2022</p>
+		</div>
+
+	</body>
+	</html>

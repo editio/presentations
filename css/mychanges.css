@@ -145,7 +145,7 @@ font-size: 1.3em;
 
 #logo {
 	 	top: -7px;
-	 	right: -12px;
+	 	right: -14px;
 	 	padding-right: 5px;
 	 	position: absolute;
 		 } 
@@ -167,7 +167,7 @@ font-size: 1.3em;
 
 #logo img {
 	border: 0;  /*puesto solo para IE*/
-	
+
  	max-height: 70px;
 	
 }
@@ -176,7 +176,38 @@ font-size: 1.3em;
   	opacity: 0.48;
 }
 
+#logo2 {
+	top: 60px;
+	right: -28px;
+	padding-right: 5px;
+	position: absolute;
+	} 
+ 
 
+#logo2 a {
+color: #8F8F8F;
+display: inline-block;
+padding: 0.5em;
+text-shadow: 0 1px 0 #EDEDED;
+text-decoration: none;
+}
+
+#logo2 a:hover {
+
+color: #8e0905;
+}
+
+
+#logo2 img {
+border: 0;  /*puesto solo para IE*/
+
+max-height: 70px;
+
+}
+
+#logo2 img:hover {
+ opacity: 0.48;
+}
 
 
 

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Scholarly Digital Editions: APIs and Reuse Scenarios</title>
+	<!-- Dublin Core tags for better indexing -->
+	<meta name="DC.Title" content="Scholarly Digital Editions: APIs and Reuse Scenarios">
+	<meta name="DC.Description" content="In this paper, we study data reuse in scholarly editing, providing insights into the current panorama and imagining future developments. We will focus on the reuse of data, leaving aside the reuse of code and models, which would require a separate enquiry; and would concentrate on machine-actionable reuse, as opposed to human consumption.">
+	<meta name="DC.Creator" content="José Luis Losada" />
+	<meta name="DC.Creator" content="Elena Spadini" />
+	<meta name="DC.Date" content="2023-07-13" />
+	<meta name="DC.Rights" content="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" />
+	<meta name="DC.Format" content="text/html" />
+	<meta name="DC.Type" content="Presentation"/>
+	<meta name="DC.publisher" content='DH2023 "Collaboration as Opportunity", Graz'>
+	<!-- portable devices -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+	<link rel="stylesheet" href="reveal.js-4.5.0/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js-4.5.0/dist/reveal.css">
+	<link rel="stylesheet" href="reveal.js-4.5.0/dist/theme/simple.css" id="theme">
+	<link rel="stylesheet" href="css/mychanges.css">
+
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css" id="highlight-theme">
+	<!-- <link rel="stylesheet" href="reveal.js-4.5.0/plugin/highlight/monokai.css" id="highlight-theme"> -->
+
+	<!-- <style>
+		.reveal .pre .code {
+			text-transform: none;
+		}
+	</style> -->
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/ss/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+
+		<div class="slides">
+			<section>
+				<!-- PORTADA  -->
+				<section id="portada">
+					<h2>Scholarly Digital Editions: APIs and Reuse Scenarios</h2> <br>
+					<h4>Elena Spadini, José Luis Losada Palenzuela</h4>
+					<br>
+					<h4 style="color: grey">DH2023 "Collaboration as Opportunity", Graz, 13.07.2023</h5>
+				</section>
+				<!--FIN PORTADA-->
+				<!-- INDEX -->
+				<section data-markdown>
+					<textarea data-template>
+## TOC
+
+- Intro
+- Obtaining data: APIs
+- Reusing data: scenarios
+- Conclusions
+					 </textarea>
+				</section>
+			</section>
+
+
+			<!-- SLIDES -->
+<section>
+	<section data-markdown>
+	
+	<textarea data-template>
+	
+	## Intro
+	
+	</textarea>
+	</section>
+	<section data-markdown>
+	
+		<textarea data-template>
+		
+		elaborate...
+		
+		</textarea>
+		</section>
+</section>
+
+
+<section>
+	<section data-markdown>
+	
+	<textarea data-template>
+	## Obtaining data
+	
+	
+	</textarea>
+	</section>
+	<section data-markdown style="font-size: 0.70em">
+		<textarea data-template>
+			## API
+
+			### Future?
+			  
+			### It looks like ...
+			- See for example: 
+				- Witt, Jeffrey C. 2018. "Digital Scholarly Editions and API Consuming Application". In *Digital Scholarly Editions as Interfaces*. Norderstedt: Schriften des Instituts für Dokumentologie und Editorik
+			  
+			### ... already out there for sometime
+			  
+			- See for example:
+				- Guéret, Christophe. 2015. "Stop Making Tools! Nobody Likes Them Anyway..." Presented at the eHumanities.nl. [https://www.ehumanities.nl/christophe-gueret-ehg-dans-vu](https://www.ehumanities.nl/christophe-gueret-ehg-dans-vu)
+				- Boot, Peter, and Joris van Zundert. 2011. "The Digital Edition 2.0 and the Digital Library: Services, Not Resources". *Digitale Edition Und Forschungsbibliothek*, 44: 141-52.
+
+		</textarea>
+
+		</section>
+		<section data-markdown style="font-size: 0.7em">
+		<textarea data-template>
+			## Some available APIs
+
+			- TEI Publisher
+			- Distributed Text Services (DTS) - *Perseus Project*
+			- DaSCH Service Platform (DSP) - *Gustave Roud. Textes & Archives*
+			- *CorrespSearch*
+			- *Carl Maria von Weber Gesamtausgabe*
+			- *edition humboldt digital*
+			- *Registres de la Comédie-Française*
+			- *Sandrart.net*
+			- *The Folger Shakespeare*
+			- *The Proceedings of the Old Bailey*
+		
+
+Thanks to: Franzini, Greta. 2012. [*Catalogue of Digital Editions*](https://dig-ed-cat.acdh.oeaw.ac.at)
+
+
+
+		</textarea>
+
+
+
+		</section>
+		<section data-markdown style="font-size: 0.7em">
+		<textarea data-template>
+			## Generic or specific to an edition
+
+			| API                               | Type     |
+			| --------------------------------- | -------- |
+			| DSP                               | Generic  |
+			| DTS                               | Generic  |
+			| TEI Publisher                     | Generic  |
+			| *CorrespSearch*                   | Specific |
+			| *Carl Maria von Weber Gesamtausgabe* | Specific |
+			| *edition humboldt digital*        | Specific |
+			| *Registres de la Comédie-Française* | Specific |
+			| *Sandrart.net*                    | Specific |
+			| *The Folger Shakespeare*          | Specific |
+			| *The Proceedings of the Old Bailey* | Specific |
+			
+
+		</textarea>
+
+		</section>
+		<section data-markdown style="font-size: 0.7em">
+			<textarea data-template>
+				## Documentation
+		
+				| Service                               | Documentation                                    |
+				| ------------------------------------- | ------------------------------------------------ |
+				| DSP                                   | [doc](https://docs.dasch.swiss/2022.09.01/DSP-API/03-apis/api-v2/) |
+				| DTS                                   | [doc](https://distributed-text-services.github.io/specifications/) |
+				| TEI Publisher                         | [doc](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api) \| [open API doc](https://teipublisher.com/exist/apps/tei-publisher/api.html) |
+				| *CorrespSearch*                       | [doc](https://correspsearch.net/en/api.html) |
+				| *Carl Maria von Weber Gesamtausgabe*  | [doc](https://weber-gesamtausgabe.de/en/Help/API_Documentation.html) \| [open API doc](https://weber-gesamtausgabe.de/api/v1/index.html) |
+				| *edition humboldt digital*            | [doc](https://edition-humboldt.de/about/index.xql?id=api&l=en) |
+				| *Registres de la Comédie-Française*   | [doc](https://hack.cfregisters.org/fr/) \| [Postman collection](https://hack.cfregisters.org/en/receipts/api#postman) |
+				| *Sandrart.net*                        | [doc](http://ta.sandrart.net/en/info/services/rest/) |
+				| *The Folger Shakespeare*              | [doc](https://www.folgerdigitaltexts.org/api) |
+				| *The Proceedings of the Old Bailey*   | [doc](https://www.oldbaileyonline.org/static/DocAPI.jsp) |
+				
+			</textarea>
+		</section>
+		
+		<section>
+			<h4>Weber Open API <span style="color: gray; font-size: 60%">1/2</span></h4>
+			<img style="width: 80%; box-shadow: none; border-bottom: none" src="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220926_editions_GREN/images/weberOpenAPI1.png"/>	
+		</section>
+
+		<section>
+			<h4>Weber Open API <span style="color: gray; font-size: 60%">2/2</span></h4>
+			<img style="width: 60%; box-shadow: none; border-bottom: none" src="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220926_editions_GREN/images/weberOpenAPI2.png"/>
+		</section>
+
+
+		<section data-markdown style="font-size: 0.5em">
+			<textarea data-template>
+		## Data and metadata formats
+
+|                          | API                                   | on page                  | dump                     |
+| ------------------------ | ------------------------------------- | ------------------------ | ------------------------ |
+| DSP and DSP-APP          | Data and metadata (xml-tei, json-ld, xml-rdf, turtle) | no                       | no                       |
+| DTS                      | Data and metadata (xml-tei, json)      | n/a                      | n/a                      |
+| TEI Publisher            | Data and metadata (tei-xml, html, pdf, tex, epub) | Data and metadata (tei-xml, pdf, tex, epub) | n/a                      |
+| *CorrespSearch*          | Metadata (xml-tei, json-tei, beacon, csv) | n/a                      | Metadata (xml-tei, json-tei, beacon, csv) |
+| *Carl Maria von Weber Gesamtausgabe* | Data and metadata (xml-tei, json-ld, beacon, html, txt) | Data and metadata (xml-tei, txt) | no                       |
+| *edition humboldt digital* | Metadata (oai-dc, xml, beacon)         | Data and metadata (xml-tei) | Data and metadata (xml-tei) |
+| *Registres de la Comédie-Française* | Metadata (json)                     | no                       | Metadata (PostgreSQL)    |
+| *Sandrart.net*           | Metadata (xml, json)                   | no                       | Data and metadata (xml-tei, rdf) |
+| *The Folger Shakespeare* | Data and metadata (txt, html)          | Data and metadata (xml-tei, html, txt, pdf, doc) | Data and metadata (xml-tei, html, txt, pdf, doc) |
+| *The Proceedings of the Old Bailey* | Data and metadata (xml-tei, json, zip) | Data and metadata (xml-tei, print) | Data and metadata (xml-tei) |
+
+			
+			</textarea>
+			
+			
+			
+			</section>
+			<section data-markdown style="font-size: 0.75em">
+				<textarea data-template>
+					## API requests
+
+					|                          | scope within text document       | parameters |
+					| ------------------------ | -------------------------------- | ---------- |
+					| DSP                      | content and structure (elements) | yes        |
+					| DTS                      | structure (anchors)              | yes        |
+					| TEI Publisher            | content                          | yes        |
+					| *CorrespSearch*          | content                          | yes        |
+					| *Carl Maria von Weber Gesamtausgabe* | content and structure (elements) | yes        |
+					| *edition humboldt digital* | content                          | yes        |
+					| *Registres de la Comédie-Française* | content                      | yes        |
+					| *Sandrart.net*           | content                          | no         |
+					| *The Folger Shakespeare* | content                          | yes        |
+					| *The Proceedings of the Old Bailey* | content                    | yes        |
+					
+				
+				</textarea>
+				
+				
+				
+				</section>
+
+				<section data-markdown style="font-size: 0.60em">
+					<textarea data-template>
+						## Accepted IDs
+
+|                          | Accepted IDs                                                                                   |
+| ------------------------ | ---------------------------------------------------------------------------------------------- |
+| DSP                      | internal                                                                                       |
+| DTS                      | internal                                                                                       |
+| TEI Publisher            | internal                                                                                       |
+| *CorrespSearch*          | GND, VIAF, BNF, LC, NDL, Geonames                                                              |
+| *Carl Maria von Weber Gesamtausgabe* | internal, GND, VIAF, Wikidata                                                               |
+| *edition humboldt digital* | internal                                                                                       |
+| *Registres de la Comédie-Française* | internal                                                                                    |
+| *Sandrart.net*           | Arachne, BritishMuseum, Census, GeoNames, GKD, GoogleBooks, KHM, NationalGallery, PND, Rijksmuseum, SWD, TGN, ULAN, VD16, VD17, VIAF, VKK |
+| *The Folger Shakespeare* | internal                                                                                       |
+| *The Proceedings of the Old Bailey* | internal                                                                                    |
+
+						
+					
+					</textarea>
+					
+					
+					
+					</section>
+
+
+</section>
+
+
+	<section>
+		<section data-markdown>
+		<textarea data-template>
+		## Reusing data
+	
+		</textarea>
+	
+	
+	
+		</section>
+		<section data-markdown>
+			<textarea data-template>
+			## Scenario 1
+			
+			</textarea>
+			</section>
+			
+			<section data-markdown>
+			<textarea data-template>
+			## Scenario 2
+			
+			<div class="cita" style="font-size: 120%">“Il soggetto dei componimenti drammatici scritti de consuno <span class="resaltado">non è mai originale</span>” <span class="fuente">(Alviti 2006:17)</span></div>
+			
+			</textarea>
+			</section>
+</section>
+	
+<section>
+	<section data-markdown>
+		<textarea data-template>
+			### Conclusions
+			- 1
+			- 2
+			- 3
+		</textarea>
+	</section>
+	<section data-markdown>
+		<textarea data-template>
+			### forthcoming publication
+	
+			Elena Spadini, José Luis Losada Palenzuela, "Reusing data from editions", in James O'Sullivan (ed.), _Digital Editing & Publishing in the Twenty-First Century_ [2023].
+	
+		</textarea>
+	</section>
+</section>
+
+	</div>
+	<!--End of slides container-->
+
+	</div>
+
+	<script src="reveal.js-4.5.0/dist/reveal.js"></script>
+		<script src="reveal.js-4.5.0/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js-4.5.0/plugin/notes/notes.js"></script>
+		<script src="reveal.js-4.5.0/plugin/search/search.js"></script>
+		<script src="reveal.js-4.5.0/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js-4.5.0/plugin/highlight/highlight.js"></script>
+		<script src="reveal.js-menu-2.1.0/menu.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			slideNumber: 'c/t',
+			
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu],
+
+			// Preferencias del menu 
+			menu: {
+				numbers: 'c',
+				openSlideNumber: true,
+				themes:
+					[
+        { name: 'Black', theme: 'reveal.js-4.5.0/dist/theme/black.css', highlightTheme: 'reveal.js-4.5.0/plugin/highlight/monokai.css'},
+        { name: 'White', theme: 'reveal.js-4.5.0/dist/theme/simple.css', highlightTheme: 'css/github.css'},
+    ]
+					,
+				themesPath: 'reveal.js-4.5.0/dist/theme/',
+				transitions: false,
+				markers: false,
+				custom: [
+					{
+					title: 'download',  // debe estar online 
+					icon: '<i class="fa fa-bookmark">',
+					src: 'DH2023_Graz_download.html'
+					},
+
+					{
+        title: 'About',
+        icon: '<i class="fa fa-info">',
+        content: '<p>Presentation by Elena Spadini & José Luis Losada. Check their repos at <a href="https://github.com/elespdn">https://github.com/elespdn</a> and <a href="https://github.com/editio">https://github.com/editio</a></p>'
+      }
+
+					
+				]
+	}
+		});
+
+	</script>
+
+	<!-- Logo & footer for all slides -->
+
+	<div id="logo">
+		<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="University of Wrocław" /></a>
+	</div>
+
+	<div id="logo2">
+		<a href="http://www.unibas.ch"><img src="imagenes/Logo_Unibas_BraPan_EN.png" title="University of Basel" /></a>
+	</div>
+
+	<div class="footer">
+		<p>Elena Spadini, José Luis Losada Palenzuela · 2023</p>
+	</div>
+
+</body>
+</html>

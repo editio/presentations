@@ -227,11 +227,26 @@
 			<textarea data-template>
 				## Documentation
 
-				| API                               | Documentation     |
+				| API                               | Documentation and testing     |
+				| --------------------------------- | -------- |
+				| TEI Publisher API | [doc](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api ) \| [open API doc](https://teipublisher.com/exist/apps/tei-publisher/api.html)
+				| TextAPI   | [doc](https://subugoe.pages.gwdg.de/emo/text-api/) \| [open API doc](https://gitlab.gwdg.de/subugoe/emo/text-api/-/blob/main/openapi_3.0.2_specification.yml)
+				| *Carl Maria von Weber Gesamtausgabe*  | [doc](https://weber-gesamtausgabe.de/en/Help/API_Documentation.html) \| [open API doc](https://weber-gesamtausgabe.de/api/v1/index.html) |
+				| *Registres de la Comédie-Française*   | [doc](https://hack.cfregisters.org/fr/) \| [Postman collection](https://hack.cfregisters.org/en/receipts/api#postman) |
+				
+				
+				
+			</textarea>
+		</section>
+
+
+		<!--
+
+			| API                               | Documentation and testing     |
 				| --------------------------------- | -------- |
 				| Canonical Text Services | [doc](http://cite-architecture.github.io/) (CTS)
 				| Distributed Text Services | [doc](https://distributed-text-services.github.io/specifications/) (DTS)
-				| EventSearch API | [doc]https://edition.onb.ac.at/o:ode.EventSearchInfo)
+				| EventSearch API | [doc](https://edition.onb.ac.at/o:ode.EventSearchInfo)
 				| OAI-PMH | [doc](https://www.openarchives.org/pmh/)
 				| TEI Publisher API | [doc](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api ) \| [open API doc](https://teipublisher.com/exist/apps/tei-publisher/api.html)
 				| TextAPI   | [doc](https://subugoe.pages.gwdg.de/emo/text-api/) \| [open API doc](https://gitlab.gwdg.de/subugoe/emo/text-api/-/blob/main/openapi_3.0.2_specification.yml)
@@ -248,10 +263,7 @@
 				| *The Folger Shakespeare*              | [doc](https://www.folgerdigitaltexts.org/api) |
 				| *The Proceedings of the Old Bailey*   | [doc](https://www.oldbaileyonline.org/static/DocAPI.jsp) |
 				| *The School of Salamanca*                    | [doc](https://github.com/digicademy/svsal/blob/master/docs/API.md) |
-				
-				
-			</textarea>
-		</section>
+		-->
 		
 		<section>
 			<h4>Weber Open API <span style="color: gray; font-size: 60%">1/2</span></h4>
@@ -266,20 +278,29 @@
 
 		<section data-markdown style="font-size: 0.5em">
 			<textarea data-template>
-		## Data and metadata formats
+		## Formats
 
-|                          | API                                   | on page                  | dump                     |
-| ------------------------ | ------------------------------------- | ------------------------ | ------------------------ |
-| DSP and DSP-APP          | Data and metadata (xml-tei, json-ld, xml-rdf, turtle) | no                       | no                       |
-| DTS                      | Data and metadata (xml-tei, json)      | n/a                      | n/a                      |
-| TEI Publisher            | Data and metadata (tei-xml, html, pdf, tex, epub) | Data and metadata (tei-xml, pdf, tex, epub) | n/a                      |
-| *CorrespSearch*          | Metadata (xml-tei, json-tei, beacon, csv) | n/a                      | Metadata (xml-tei, json-tei, beacon, csv) |
-| *Carl Maria von Weber Gesamtausgabe* | Data and metadata (xml-tei, json-ld, beacon, html, txt) | Data and metadata (xml-tei, txt) | no                       |
-| *edition humboldt digital* | Metadata (oai-dc, xml, beacon)         | Data and metadata (xml-tei) | Data and metadata (xml-tei) |
-| *Registres de la Comédie-Française* | Metadata (json)                     | no                       | Metadata (PostgreSQL)    |
-| *Sandrart.net*           | Metadata (xml, json)                   | no                       | Data and metadata (xml-tei, rdf) |
-| *The Folger Shakespeare* | Data and metadata (txt, html)          | Data and metadata (xml-tei, html, txt, pdf, doc) | Data and metadata (xml-tei, html, txt, pdf, doc) |
-| *The Proceedings of the Old Bailey* | Data and metadata (xml-tei, json, zip) | Data and metadata (xml-tei, print) | Data and metadata (xml-tei) |
+		|                          | API                                   | on page                  | dump                     |
+		| ------------------------ | ------------------------------------- | ------------------------ | ------------------------ |
+		| CTS                     | Data and metadata (xml/tei)  | n/a | n/a |
+		| DTS                      | Data and metadata (xml/tei, json)      | n/a                      | n/a                      |
+		| EventSearch API | Data and metadata (json)      | n/a                      | n/a                      |
+		| OAI-PMH | Metadata (xml) | n/a | n/a |
+		| TEI Publisher            | Data and metadata (xml/tei, html, pdf, tex, epub) | Data and metadata (xml/tei, pdf, tex, epub) | n/a                      |
+		| TextAPI 				 |  Data and metadata (jsonld)   | n/a | n/a | 
+		| *Carl Maria von Weber Gesamtausgabe* | Data and metadata (xml/tei, jsonld, html, txt) | Data and metadata (xml/tei, txt) | no                       |
+		| *CorrespSearch*          | Metadata (xml/tei, json/tei, csv) | n/a                      | Metadata (xml/tei, json/tei, csv) |	
+		| *Der Sturm*              | Data and metadata (xml/tei, json/tei) | Data and metadata (xml/tei) |     |	
+		| *edition humboldt digital* | Metadata (oai-dc, xml)         | Data and metadata (xml/tei) | Data and metadata (xml/tei) |
+		| *Epigraphic Database Heidelberg*     | Data and metadata (json)                     | Data and metadata (xml/epidoc, json)          | Data and metadata (csv, xml/epidoc, cml/cidocCrm, bib, json, rdf)   |
+		| *Inscriptions of Israel and Palestine*  |  Data and metadata (xml/tei, json)                    | Data and metadata (xml/tei)                       |            |
+		| *Katabase*       			   | Data and metadata (json, xml/tei)                     | Data and metadata (xml/tei)                       |          |		
+		| *Registres de la Comédie-Française* | Metadata (json)                     | no                       | Metadata (PostgreSQL)    |
+		| *Sandrart.net*           | Metadata (xml, json)                   | no                       | Data and metadata (xml/tei, rdf) |
+		| *SCTA (Scholastic commentaries and Texts Archive)* | Data and metadata (rdf) |  |  |
+		| *The Folger Shakespeare* | Data and metadata (txt, html)          | Data and metadata (xml/tei, html, txt, pdf, doc) | Data and metadata (xml/tei, html, txt, pdf, doc) |
+		| *The Proceedings of the Old Bailey* | Data and metadata (xml/tei, json, zip) | Data and metadata (xml/tei, print) | Data and metadata (xml-tei) |
+		| *The School of Salamanca* | Data and metadata (xml/tei, txt, rdf, html) | Data and metadata (xml/tei, txt, rdf, pdf) | Data and metadata (xml/tei, txt) |
 
 			
 			</textarea>
@@ -287,23 +308,31 @@
 			
 			
 			</section>
-			<section data-markdown style="font-size: 0.75em">
+			<section data-markdown style="font-size: 0.5em">
 				<textarea data-template>
-					## API requests
+					## API endpoints
 
-					|                          | scope within text document       | parameters |
-					| ------------------------ | -------------------------------- | ---------- |
-					| DSP                      | content and structure (elements) | yes        |
-					| DTS                      | structure (anchors)              | yes        |
-					| TEI Publisher            | content                          | yes        |
-					| *CorrespSearch*          | content                          | yes        |
-					| *Carl Maria von Weber Gesamtausgabe* | content and structure (elements) | yes        |
-					| *edition humboldt digital* | content                          | yes        |
-					| *Registres de la Comédie-Française* | content                      | yes        |
-					| *Sandrart.net*           | content                          | no         |
-					| *The Folger Shakespeare* | content                          | yes        |
-					| *The Proceedings of the Old Bailey* | content                    | yes        |
-					
+					|         API                 |  Scope of endpoints |
+					| ------------------------ | ------------------------------------- | 
+					| CTS                     | structure (down to fragment) |
+					| DTS                      | structure (down to fragment) |
+					| EventSearch API 			| content |
+					| OAI-PMH | structure (down to document) |
+					| TEI Publisher            | structure (down fragment) and content |
+					| TextAPI 				 | structure (down to textual item)  |
+					| *Carl Maria von Weber Gesamtausgabe* | structure (down to elements) and content  |
+					| *CorrespSearch*          | content |
+					| *Der Sturm*              | content |
+					| *edition humboldt digital* |  content |
+					| *Epigraphic Database Heidelberg*     | content  |
+					| *Inscriptions of Israel and Palestine*  |  content |
+					| *Katabase*       			   |   content |		
+					| *Registres de la Comédie-Française* |  content |
+					| *Sandrart.net*           | content |
+					| *SCTA (Scholastic commentaries and Texts Archive)* | structure (down to fragment)  |
+					| *The Folger Shakespeare* |  content |
+					| *The Proceedings of the Old Bailey* |  content |
+					| *The School of Salamanca* |  structure (down to page and fragment) |					
 				
 				</textarea>
 				
@@ -311,22 +340,31 @@
 				
 				</section>
 
-				<section data-markdown style="font-size: 0.60em">
+				<section data-markdown style="font-size: 0.5em">
 					<textarea data-template>
 						## Accepted IDs
 
-|                          | Accepted IDs                                                                                   |
-| ------------------------ | ---------------------------------------------------------------------------------------------- |
-| DSP                      | internal                                                                                       |
-| DTS                      | internal                                                                                       |
-| TEI Publisher            | internal                                                                                       |
-| *CorrespSearch*          | GND, VIAF, BNF, LC, NDL, Geonames                                                              |
-| *Carl Maria von Weber Gesamtausgabe* | internal, GND, VIAF, Wikidata                                                               |
-| *edition humboldt digital* | internal                                                                                       |
-| *Registres de la Comédie-Française* | internal                                                                                    |
-| *Sandrart.net*           | Arachne, BritishMuseum, Census, GeoNames, GKD, GoogleBooks, KHM, NationalGallery, PND, Rijksmuseum, SWD, TGN, ULAN, VD16, VD17, VIAF, VKK |
-| *The Folger Shakespeare* | internal                                                                                       |
-| *The Proceedings of the Old Bailey* | internal                                                                                    |
+						|         API                 |  Accepted IDs |
+						| ------------------------ | ------------------------------------- | 
+						| CTS                     | internal |
+						| DTS                      |  internal |
+						| EventSearch API 			|  internal |
+						| OAI-PMH |  internal |
+						| TEI Publisher            |  internal |
+						| TextAPI 				 |  internal |
+						| *Carl Maria von Weber Gesamtausgabe* | internal, GND, VIAF, Wikidata  |
+						| *CorrespSearch*          | GND, VIAF, BNF, LC, NDL, Geonames |
+						| *Der Sturm*              | internal |
+						| *edition humboldt digital* |  internal |
+						| *Epigraphic Database Heidelberg*     | internal, Pleiades, Geonames |
+						| *Inscriptions of Israel and Palestine*  |  internal |
+						| *Katabase*       			   |   internal |
+						| *Registres de la Comédie-Française* |  internal |
+						| *Sandrart.net*           | Arachne, BritishMuseum, Census, GeoNames, GKD, GoogleBooks, KHM, NationalGallery, PND, Rijksmuseum, SWD, TGN, ULAN, VD16, VD17, VIAF, VKK |
+						| *SCTA (Scholastic commentaries and Texts Archive)* | internal |
+						| *The Folger Shakespeare* |  internal |
+						| *The Proceedings of the Old Bailey* |  internal |
+						| *The School of Salamanca* | internal |
 
 					</textarea>
 

@@ -143,7 +143,7 @@ XML validated with corresponding schemas; scripts for manipulation and transform
 
 - [Dracor](https://dracor.org): co-occurrence networks of characters.
 - Centrality metrics, eigenvector, betweenness, etc.
-- [Showcase of networks](https://github.com/editio/dataviz_gephi#showcase)
+- [Showcase of networks](https://github.com/RISE-UNIBAS/networks_gephi#showcase)
 - [Paratexts](https://editio.github.io/grafos/paratextos/)
 
 ## Distant reading

@@ -48,6 +48,7 @@ Character-space by Woloch: the space of the character within the narrative struc
 In short:
 
 ![](imagenes/Salgaro_2018p55.png)
+
 Image source: Salgaro 2018, 55.
 
 ## Further readings 

@@ -63,7 +63,7 @@ Digital Literary Studies, Literary Computing, Computational Literary Studies
     
 > "most literary concepts are emphatically not designed to be quantified" (Moretti 2013: 114).
 
-To be able to use digital quantitative methods, it is necessary to convert a literary concept into a quantifiable unit. 
+To be able to use digital quantitative methods, it is necessary to convert a literary concept into a quantifiable unit. [Moretti's paper in detail](operationalization_Moretti2013.md)
 
 ☞ protagonist
 

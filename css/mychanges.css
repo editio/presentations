@@ -32,8 +32,10 @@
  *********************************************/
 .reveal .progress {
     background: rgba(0, 0, 0, 0.2);
-    color: #D20537;
+    color: #A5D7D2;
+	height: 12px;
 }
+
 
 /*.reveal section img {
   margin: 15px 0px;
@@ -163,7 +165,7 @@ font-size: 1.3em;
     height: 70px; /* Match the height of the logo image */
     padding: 4px 6px;
     position: absolute;
-    background-color: #A5D7D2; /* Add your desired background color here */
+    /*background-color: #A5D7D2; !* Add your desired background color here *!*/
     text-align: right; /* Align the logo to the right */
 }
 	  

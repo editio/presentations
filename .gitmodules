@@ -7,3 +7,6 @@
 [submodule "reveal.js-4.5.0"]
 	path = reveal.js-4.5.0
 	url = https://github.com/hakimel/reveal.js
+[submodule "reveal.js-5.1.0"]
+	path = reveal.js-5.1.0
+	url = https://github.com/hakimel/reveal.js

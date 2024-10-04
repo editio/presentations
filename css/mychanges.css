@@ -1,12 +1,20 @@
 /*Mis cambios*/
 
-/*#0072a7 :: color corporativo de la Universidad para cambiar en el theme (serif) correspondiente   */
+/*#0072a7 :: color corporativo de la Universidad de Wroclaw para cambiar en el theme (serif) correspondiente   */
+/*#A5D7D2 :: color corporativo de la Universidad de Basel para cambiar en el theme (serif) correspondiente   */
+
 
 /*Copio y modifico aquí algunos de los elementos del css del them serif.   miscambios.css overwrites it porque está el úlitmo en el header*/
 
-
-
-
+.reveal .controls .controls-arrow {
+    color: #A5D7D2;
+}
+.reveal .controls .controls-arrow:hover {
+    color: #A5D7D2;
+}
+.reveal .controls .controls-arrow:active {
+    color: #A5D7D2;
+}
 .reveal section img {
   border: none;
 }
@@ -14,12 +22,18 @@
   font-size: 35px;
 }
 
+/*.reveal .slide-number {*/
+/*  color: #2D373C;*/
+/*  background-color: green;*/
+/*  }*/
 
-.reveal .slide-number {
-  color: #0072a7; 
-  background-color: green;
-  }
-
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.2);
+    color: #D20537;
+}
 
 /*.reveal section img {
   margin: 15px 0px;
@@ -35,7 +49,7 @@
 */
 
 .reveal .slide-number {
-  color: #0072a7; 
+  color: #A5D7D2;
   background-color: inherit;
   }
 
@@ -54,7 +68,7 @@ border-bottom: 1px gray dotted;
 }
 
 .reveal a:not(.image):hover {
-  color: #0072a7;
+  color: #A5D7D2;
   text-shadow: none;
   border: none;
 }
@@ -94,7 +108,6 @@ white-space: pre\9; /* IE7+ */
 
 
 }
-
 
 
 /* el theme serif tiene un tono de gris*/
@@ -144,17 +157,21 @@ font-size: 1.3em;
 
 
 #logo {
-	 	top: -7px;
-	 	right: -14px;
-	 	padding-right: 5px;
-	 	position: absolute;
-		 } 
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 70px; /* Match the height of the logo image */
+    padding: 4px 6px;
+    position: absolute;
+    background-color: #A5D7D2; /* Add your desired background color here */
+    text-align: right; /* Align the logo to the right */
+}
 	  
 
 #logo a {
   color: #8F8F8F;
   display: inline-block;
-  padding: 0.5em;
+  /*#padding: 0.5em;*/
   text-shadow: 0 1px 0 #EDEDED;
   text-decoration: none;
 }
@@ -167,8 +184,7 @@ font-size: 1.3em;
 
 #logo img {
 	border: 0;  /*puesto solo para IE*/
-
- 	max-height: 70px;
+ 	max-height: 60px;
 	
 }
 

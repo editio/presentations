@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Investigación en HH.DD basada en datos</title>
+	<!-- Dublin Core tags for better indexing -->
+	<meta name="DC.Title" content="Panorama de la investigación en Humanidades basada en datos">
+	<meta name="DC.Description" content="Slides for the presentation on Research Data in the Humanities for the conference 'Entre lo social y lo digital', Basel, 10-11 October 2004 ">
+	<meta name="DC.Creator" content="José Luis Losada Palenzuela" />
+	<meta name="DC.Date" content="2024-10-11" />
+	<meta name="DC.Rights" content="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" />
+	<meta name="DC.Format" content="text/html" />
+	<meta name="DC.Type" content="Presentation"/>
+	<meta name="DC.publisher" content='RISE (Research and Infrastructure Support), University of Basel'>
+	<!-- portable devices -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+	<link rel="stylesheet" href="reveal.js-5.1.0/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js-5.1.0/dist/reveal.css">
+	<link rel="stylesheet" href="reveal.js-5.1.0/dist/theme/simple.css" id="theme">
+	<link rel="stylesheet" href="css/mychanges.css">
+
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css" id="highlight-theme">
+	<!-- <link rel="stylesheet" href="reveal.js-5.1.0/plugin/highlight/monokai.css" id="highlight-theme"> -->
+
+	<!-- <style>
+		.reveal .pre .code {
+			text-transform: none;
+		}
+	</style> -->
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js-5.1.0/css/print/pdf.scss' : 'reveal.js-5.1.0/css/print/paper.scss';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+
+		<div class="slides">
+			
+<!-- PORTADA  -->
+<section>
+	<h2>Panorama de la investigación en Humanidades basada en datos</h2> <br>
+	<h4>José Luis Losada Palenzuela (RISE, Universität Basel)</h4>
+	<br>
+	<h4 style="color: grey">«Entre lo social y lo digital. Encuentro de jóvenes investigadores del Hispanismo Suizo», Basel, 11.10.2024</h4>
+</section>
+				<!--FIN PORTADA-->
+
+<!-- INDICE -->
+<section data-markdown>
+<textarea data-template>
+## Índice
+
+- Intro
+- Obtaining data: APIs
+- Reusing data: scenarios
+- Conclusions
+ </textarea>
+</section>
+
+<!-- INTRO -->
+<section data-markdown>
+<textarea data-template>
+
+## Introducción
+
+Reusing content, reusing data: new forms of an old practice
+
+This paper is about
+
+- data reuse (no code and models reuse)
+- machine consumption (no human consumption)
+
+</textarea>
+</section>
+
+<!------------------------ OBTAINING DATA ------------------------------>
+
+	<section data-markdown>
+	
+	<textarea data-template>
+	## Obtaining data
+	
+	
+	</textarea>
+	</section>
+	<section data-markdown>
+	
+		<textarea data-template>
+		## How to retrieve data
+		- whole dataset
+			- web scraping
+			- accessible dump (most common)
+		- selection of data
+			- API
+			- other query endpoints: sparql
+		</textarea>
+		</section>
+	<section data-markdown style="font-size: 0.70em">
+		<textarea data-template>
+			## API
+
+			### Future?
+			  
+			### It looks like ...
+			- See for example: 
+				- Witt, Jeffrey C. 2018. "Digital Scholarly Editions and API Consuming Application". In *Digital Scholarly Editions as Interfaces*. Norderstedt: Schriften des Instituts für Dokumentologie und Editorik
+			  
+			### ... already for sometime
+			  
+			- See for example:
+				- Guéret, Christophe. 2015. "Stop Making Tools! Nobody Likes Them Anyway..." Presented at the eHumanities.nl. [https://www.ehumanities.nl/christophe-gueret-ehg-dans-vu](https://www.ehumanities.nl/christophe-gueret-ehg-dans-vu)
+				- Boot, Peter, and Joris van Zundert. 2011. "The Digital Edition 2.0 and the Digital Library: Services, Not Resources". *Digitale Edition Und Forschungsbibliothek*, 44: 141-52.
+
+		</textarea>
+
+		</section>
+		<section data-markdown style="font-size: 0.5em">
+		<textarea data-template>
+			## Editions (and editions related projects) with APIs
+
+			- *Ahiqar*			
+			- *Carl Maria von Weber Gesamtausgabe*
+			- *CorrespSearch*
+			- *Der Sturm*
+			- *Die Tagebücher von Andreas Okopenko*
+			- *Digital Athenaeus*
+			- *Edition Humboldt Digital*
+			- *Epigraphic Database Heidelberg*
+			- *Inscriptions of Israel and Palestine*
+			- *Katabase*
+			- *Perseus Project*
+			- *Registres de la Comédie-Française*
+			- *Sandrart.net*
+			- *School of Salamanca*
+			- *SCTA (Scholastic commentaries and Texts Archive)*
+			- *The Folger Shakespeare*
+			- *The Proceedings of the Old Bailey*		
+			- *The School of Salamanca*
+			
+		</textarea>
+
+
+
+		</section>
+		<section data-markdown style="font-size: 0.7em">
+		<textarea data-template>
+			
+
+			## Generic APIs for (or applicable to) scholarly editions
+
+			- [Canonical Text Services](http://cite-architecture.github.io/) (CTS)
+			- [Distributed Text Services](https://distributed-text-services.github.io/specifications/) (DTS)
+			- [EventSearch API](https://edition.onb.ac.at/o:ode.EventSearchInfo)
+			- [OAI-PMH](https://www.openarchives.org/pmh/)
+			- [TEI Publisher API](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api )
+			- [TextAPI](https://subugoe.pages.gwdg.de/emo/text-api/)
+			
+			</textarea>
+			</section>
+
+		<section data-markdown style="font-size: 0.5em">
+		<textarea data-template>
+			## Generic or specific to an edition
+
+
+			| API                               | Type     |
+			| --------------------------------- | -------- |
+			| *Ahiqar*                                      | Generic (TextAPI)  |
+			| *Carl Maria von Weber Gesamtausgabe*         | Specific  |
+			| *CorrespSearch*                            | Specific  |
+			| *Der Sturm*                				   | Specific |
+			| *Die Tagebücher von Andreas Okopenko* 		| Generic (EventSearch)  |
+			| *Digital Athenaeus*    		   				 | Generic (CTS) |
+			| *Edition Humboldt Digital*		 			| Specific |
+			| *Epigraphic Database Heidelberg*     | Specific + generic (DTS) |
+			| *Inscriptions of Israel and Palestine*  | Specific |
+			| *Katabase*                             | Specific |
+			| *Perseus Project*                     | Generic (CTS, DTS) |
+			| *Registres de la Comédie-Française*    | Specific |
+			| *Sandrart.net*                     | Specific |
+			| *SCTA (Scholastic commentaries and Texts Archive)* | Specific + generic (DTS, OAI-PMH) |
+			| *The Folger Shakespeare*                          | Specific |
+			| *The Proceedings of the Old Bailey*		| Specific |
+			| *The School of Salamanca*                    | Specific |
+			
+
+		</textarea>
+
+		</section>
+		<section data-markdown style="font-size: 0.7em">
+			<textarea data-template>
+				## Documentation
+
+				| API                               | Documentation and testing     |
+				| --------------------------------- | -------- |
+				| TEI Publisher API | [doc](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api ) \| [open API doc](https://teipublisher.com/exist/apps/tei-publisher/api.html)
+				| TextAPI   | [doc](https://subugoe.pages.gwdg.de/emo/text-api/) \| [open API doc](https://gitlab.gwdg.de/subugoe/emo/text-api/-/blob/main/openapi_3.0.2_specification.yml)
+				| *Carl Maria von Weber Gesamtausgabe*  | [doc](https://weber-gesamtausgabe.de/en/Help/API_Documentation.html) \| [open API doc](https://weber-gesamtausgabe.de/api/v1/index.html) |
+				| *Registres de la Comédie-Française*   | [doc](https://hack.cfregisters.org/fr/) \| [Postman collection](https://hack.cfregisters.org/en/receipts/api#postman) |
+				
+				
+				
+			</textarea>
+		</section>
+
+
+		<!--
+
+			| API                               | Documentation and testing     |
+				| --------------------------------- | -------- |
+				| Canonical Text Services | [doc](http://cite-architecture.github.io/) (CTS)
+				| Distributed Text Services | [doc](https://distributed-text-services.github.io/specifications/) (DTS)
+				| EventSearch API | [doc](https://edition.onb.ac.at/o:ode.EventSearchInfo)
+				| OAI-PMH | [doc](https://www.openarchives.org/pmh/)
+				| TEI Publisher API | [doc](https://teipublisher.com/exist/apps/tei-publisher/doc/documentation.xml?odd=docbook.odd&id=api ) \| [open API doc](https://teipublisher.com/exist/apps/tei-publisher/api.html)
+				| TextAPI   | [doc](https://subugoe.pages.gwdg.de/emo/text-api/) \| [open API doc](https://gitlab.gwdg.de/subugoe/emo/text-api/-/blob/main/openapi_3.0.2_specification.yml)
+				| *Carl Maria von Weber Gesamtausgabe*  | [doc](https://weber-gesamtausgabe.de/en/Help/API_Documentation.html) \| [open API doc](https://weber-gesamtausgabe.de/api/v1/index.html) |
+				| *CorrespSearch*                       | [doc](https://correspsearch.net/en/api.html) |
+				| *Der Sturm*                				   | [doc](https://sturm-edition.de/ressourcen/schnittstellen.html) |
+				| *edition humboldt digital*            | [doc](https://edition-humboldt.de/about/index.xql?id=api&l=en) |
+				| *Epigraphic Database Heidelberg*     | [doc](https://edh.ub.uni-heidelberg.de/data/api) |
+				| *Inscriptions of Israel and Palestine*  | [doc](https://www.inscriptionsisraelpalestine.org/apis/) |
+				| *Katabase*                             | [doc](https://katabase.huma-num.fr/Katapi_documentation) |
+				| *Registres de la Comédie-Française*   | [doc](https://hack.cfregisters.org/fr/) \| [Postman collection](https://hack.cfregisters.org/en/receipts/api#postman) |
+				| *Sandrart.net*                        | [doc](http://ta.sandrart.net/en/info/services/rest/) |
+				| *SCTA (Scholastic commentaries and Texts Archive)* | [doc](http://community.scta.info/pages/technical-overview.html) |
+				| *The Folger Shakespeare*              | [doc](https://www.folgerdigitaltexts.org/api) |
+				| *The Proceedings of the Old Bailey*   | [doc](https://www.oldbaileyonline.org/static/DocAPI.jsp) |
+				| *The School of Salamanca*                    | [doc](https://github.com/digicademy/svsal/blob/master/docs/API.md) |
+		-->
+		
+		<section>
+			<h4>Weber Open API <span style="color: gray; font-size: 60%">1/2</span></h4>
+			<img style="width: 70%; box-shadow: none; border-bottom: none" src="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220926_editions_GREN/images/weberOpenAPI1.png"/>	
+		</section>
+
+		<section>
+			<h4>Weber Open API <span style="color: gray; font-size: 60%">2/2</span></h4>
+			<img style="width: 50%; box-shadow: none; border-bottom: none" src="https://raw.githubusercontent.com/elespdn/elespdn.github.io/master/talks/20220926_editions_GREN/images/weberOpenAPI2.png"/>
+		</section>
+
+
+		<section data-markdown style="font-size: 0.37em">
+			<textarea data-template>
+		## Formats
+
+		|                          | API                                   | on page                  | dump                     |
+		| ------------------------ | ------------------------------------- | ------------------------ | ------------------------ |
+		| CTS                     | Data and metadata (xml/tei)  | n/a | n/a |
+		| DTS                      | Data and metadata (xml/tei, json)      | n/a                      | n/a                      |
+		| EventSearch API | Data and metadata (json)      | n/a                      | n/a                      |
+		| OAI-PMH | Metadata (xml) | n/a | n/a |
+		| TEI Publisher            | Data and metadata (xml/tei, html, pdf, tex, epub) | Data and metadata (xml/tei, pdf, tex, epub) | n/a                      |
+		| TextAPI 				 |  Data and metadata (jsonld)   | n/a | n/a | 
+		| *Carl Maria von Weber Gesamtausgabe* | Data and metadata (xml/tei, jsonld, html, txt) | Data and metadata (xml/tei, txt) |                        |
+		| *CorrespSearch*          | Metadata (xml/tei, json/tei, csv) | n/a                      | Metadata (xml/tei, json/tei, csv) |	
+		| *Der Sturm*              | Data and metadata (xml/tei, json/tei) | Data and metadata (xml/tei) |     |	
+		| *edition humboldt digital* | Metadata (oai-dc, xml)         | Data and metadata (xml/tei) | Data and metadata (xml/tei) |
+		| *Epigraphic Database Heidelberg*     | Data and metadata (json)                     | Data and metadata (xml/epidoc, json)          | Data and metadata (csv, xml/epidoc, cml/cidocCrm, bib, json, rdf)   |
+		| *Inscriptions of Israel and Palestine*  |  Data and metadata (xml/tei, json)                    | Data and metadata (xml/tei)                       |            |
+		| *Katabase*       			   | Data and metadata (json, xml/tei)                     | Data and metadata (xml/tei)                       |          |		
+		| *Registres de la Comédie-Française* | Metadata (json)                     |                        | Metadata (PostgreSQL)    |
+		| *Sandrart.net*           | Metadata (xml, json)                   |                        | Data and metadata (xml/tei, rdf) |
+		| *SCTA (Scholastic commentaries and Texts Archive)* | Data and metadata (rdf) |  |  |
+		| *The Folger Shakespeare* | Data and metadata (txt, html)          | Data and metadata (xml/tei, html, txt, pdf, doc) | Data and metadata (xml/tei, html, txt, pdf, doc) |
+		| *The Proceedings of the Old Bailey* | Data and metadata (xml/tei, json, zip) | Data and metadata (xml/tei, print) | Data and metadata (xml-tei) |
+		| *The School of Salamanca* | Data and metadata (xml/tei, txt, rdf, html) | Data and metadata (xml/tei, txt, rdf, pdf) | Data and metadata (xml/tei, txt) |
+
+			
+			</textarea>
+			
+			
+			
+			</section>
+			<section data-markdown style="font-size: 0.4em">
+				<textarea data-template>
+					## API endpoints
+
+					|         API                 |  Scope of endpoints |
+					| ------------------------ | ------------------------------------- | 
+					| CTS                     | structure (down to fragment) |
+					| DTS                      | structure (down to fragment) |
+					| EventSearch API 			| content (event) |
+					| OAI-PMH | structure (down to document) |
+					| TEI Publisher            | structure (down fragment) and content (facets) |
+					| TextAPI 				 | structure (down to textual item)  |
+					| *Carl Maria von Weber Gesamtausgabe* | structure (down to elements) and content (author, date, reference, facets)  |
+					| *CorrespSearch*          | content (correspondance metadata) |
+					| *Der Sturm*              | content (letters, places, persons, works, files) |
+					| *edition humboldt digital* |  content (correspondence metadata) |
+					| *Epigraphic Database Heidelberg*     | content (inscriptions, photos, bibliography, places)  |
+					| *Inscriptions of Israel and Palestine*  |  content (inscription) |
+					| *Katabase*       			   |   content (item, catalogue, date, name) |		
+					| *Registres de la Comédie-Française* |  content (people, performances, tickets, plays, register, etc.) |
+					| *Sandrart.net*           | content (artwork, person, place, bibliograpy) |
+					| *SCTA (Scholastic commentaries and Texts Archive)* | structure (down to fragment)  |
+					| *The Folger Shakespeare* |  content (play, scenes, monologues, sounds, characters, words, etc.) |
+					| *The Proceedings of the Old Bailey* |  content (term, trial) |
+					| *The School of Salamanca* |  structure (down to page and fragment) |					
+				
+				</textarea>
+				
+				
+				
+				</section>
+
+				<section data-markdown style="font-size: 0.4em">
+					<textarea data-template>
+						## Accepted IDs
+
+						|         API                 |  Accepted IDs |
+						| ------------------------ | ------------------------------------- | 
+						| CTS                     | internal |
+						| DTS                      |  internal |
+						| EventSearch API 			|  internal |
+						| OAI-PMH |  internal |
+						| TEI Publisher            |  internal |
+						| TextAPI 				 |  internal |
+						| *Carl Maria von Weber Gesamtausgabe* | internal, GND, VIAF, Wikidata  |
+						| *CorrespSearch*          | GND, VIAF, BNF, LC, NDL, Geonames |
+						| *Der Sturm*              | internal |
+						| *edition humboldt digital* |  internal |
+						| *Epigraphic Database Heidelberg*     | internal, Pleiades, Geonames |
+						| *Inscriptions of Israel and Palestine*  |  internal |
+						| *Katabase*       			   |   internal |
+						| *Registres de la Comédie-Française* |  internal |
+						| *Sandrart.net*           | Arachne, BritishMuseum, Census, GeoNames, GKD, GoogleBooks, KHM, NationalGallery, PND, Rijksmuseum, SWD, TGN, ULAN, VD16, VD17, VIAF, VKK |
+						| *SCTA (Scholastic commentaries and Texts Archive)* | internal |
+						| *The Folger Shakespeare* |  internal |
+						| *The Proceedings of the Old Bailey* |  internal |
+						| *The School of Salamanca* | internal |
+
+					</textarea>
+
+					</section>
+					
+
+<!------------------------ REUSING DATA ------------------------------>
+
+		<section data-markdown>
+		
+		<textarea data-template>
+		## Reusing data
+		
+		
+		</textarea>
+		</section>
+
+		<section data-markdown>
+		<textarea data-template>
+			### What to reuse → goal
+
+			- Text (documentary, diplomatic, critical, etc.) *→* Text analysis (literary, linguistic, training data,...)
+			- Text *→* scholarly editing (collation, complete works,...)
+			- Archival documents (manuscripts, publications, etc.) *→* catalogues 
+			- Entities *→* prosopography, gazetteers
+			- All *→* replication (peer review, update)
+		
+		</textarea>
+		</section>
+
+			<section data-markdown>
+				<textarea data-template>
+## Scenarios
+
+- Editions data in dictionaries
+- Combining digital editions and gazetteers
+- Detecting intertextuality in drama
+- Search multiple data sets with the same authority record
+
+<br><br>
+<span style="font-size: 0.8em;">Elena Spadini, José Luis Losada Palenzuela, "Reusing data from editions", in James O'Sullivan (ed.), _Digital Editing & Publishing in the Twenty-First Century_ [2023].</span>
+	
+				</textarea>
+				</section>
+			
+			<section data-markdown>
+			<textarea data-template>
+			## Scenario 1
+			
+			### Editions data in dictionaries
+
+			- Scholarly editions within dictionaries (not the another way around).
+			- Digital historical dictionaries ([OED](https://www.oed.com), [TLIO](http://tlio.ovi.cnr.it/TLIO), [DA](https://apps2.rae.es/DA.html)) still citing printed editions.
+			- Digital edition not fully integrated in academia; technical reasons against stable referencing (lack of PI); text sections (sentence, a paragraph, or a word in context).
+			- ☞ Distributed Text Services (DTS).
+
+			
+			</textarea>
+			</section>
+
+			<section data-markdown style="font-size: 0.90em">
+				<textarea data-template>
+			
+			### _Goethe-Wörterbuch_ ([GWb](https://www.woerterbuchnetz.de/GWB)) ← _Faust Edition_ ([FA](https://www.faustedition.net))
+
+			<div class="cita" style="font-size: 100%">"The references from Goethe's writings cited in the dictionary should be directly accessible as digital resources in the best currently available digital form, supplemented by further digitally accessible references from modern scholarly editions of Goethe's works." <span class="fuente">(Müller and Niedermeier 2022: 153)</span></div>
+
+				</textarea>
+				</section>
+
+
+				<section data-markdown style="font-size: 0.70em">
+					<textarea data-template>
+						<h3 style="font-size: 25px;">“<a href="https://www.woerterbuchnetz.de/GWB?lemid=F00806"><i>Faust</i></a>”, <i>Goethe-Wörterbuch</i>, digitalisierte Fassung im Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/23.</h3>
+						<img style="width: 95%; box-shadow: none;" src="imagenes/graz2023_GW_Faust_WA.png"/>
+					</textarea>
+					</section>
+		
+				<section data-markdown style="font-size: 0.70em">
+					<textarea data-template>
+						### _Dictionnaire Étymologique de l'Ancien Français ([DEAF](https://www.hadw-bw.de/deaf))_ ← _Documents linguistiques galloromans_ 
+						<img style="width: 75%; box-shadow: none;" src="imagenes/graz2023_conseil.png"/>
+					</textarea>
+					</section>
+
+
+				<section data-markdown style="font-size: 0.70em">
+					<textarea data-template>
+						### Dictionary of Old Norse Prose ([ONP](https://onp.ku.dk/onp/onp.php)) ← ONP [Reader](https://onp.ku.dk/onp/onp.php?q32)
+						<img style="width: 90%; box-shadow: none;" src="imagenes/graz2023_ONP.png"/>
+					</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Scenario 2
+
+							### Digital editions and gazetteers: _ToposText_
+
+							- Ancient texts and mapped places.
+							- Beyond the scholarly community:
+							<div class="cita" style="font-size: 0.8em">“[texts] have been stripped of footnotes and other scholarly apparatus, [...] ToposText is not a substitute for the most recent scholarly edition of a given work”. <span class="fuente"><a href="https://topostext.org">ToposText</a>, version 3.0, Aikaterini Laskaridis Foundation</span></div>
+							- Data from: [Perseus Digital Library](http://www.perseus.tufts.edu/hopper/) and [Pleiades](https://pleiades.stoa.org/home).
+							
+						</textarea>
+						</section>
+
+						<section data-markdown style="font-size: 0.70em">
+							<textarea data-template>
+
+								### [ToposText](https://topostext.org), version 3.0, Aikaterini Laskaridis Foundation
+								<img style="width: 75%; box-shadow: none;" src="imagenes/graz2023_topostext.png"/>
+								
+							</textarea>
+							</section>
+
+
+
+
+
+<!------------------------ CONCLUSIONS ------------------------------>	
+	<section data-markdown>
+		<textarea data-template>
+			## Conclusions
+
+			Potential for remediation of contents at the crossroads of disciplines
+
+			Technical infrastructure, from minimal (data dump or single resource download in XML-TEI) to ideal (multiple formats and access points, external persistent identifiers, documentation)
+			
+			**Planning in advance for reuse**
+		</textarea>
+	</section>
+
+	<section data-markdown>
+		<textarea data-template>
+
+<div>José Luis Losada Palenzuela, "Scholarly Digital Editions: APIs and Reuse Scenarios", Presentation. DH2023 'Collaboration as Opportunity', Graz, 2023. </div><a style = "border-bottom: none" href="https://doi.org/10.5281/zenodo.8140728"><img class="DOI" alt="Deposited at Zenodo" src="https://zenodo.org/badge/DOI/10.5281/zenodo.8140728.svg"></a>
+
+<a style = "border-bottom: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a>
+		
+		</textarea>
+	</section>
+
+
+
+
+	
+	</div>
+	<!--End of slides container-->
+
+	</div>
+
+	<script src="reveal.js-5.1.0/dist/reveal.js"></script>
+		<script src="reveal.js-5.1.0/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js-5.1.0/plugin/notes/notes.js"></script>
+		<script src="reveal.js-5.1.0/plugin/search/search.js"></script>
+		<script src="reveal.js-5.1.0/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
+		<script src="reveal.js-menu-2.1.0/menu.js"></script>
+	<script>
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			slideNumber: 'c/t',
+			
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu],
+
+			// Preferencias del menu 
+			menu: {
+				numbers: 'c',
+				openSlideNumber: true,
+				themes:
+					[
+        { name: 'Black', theme: 'reveal.js-5.1.0/dist/theme/black.css', highlightTheme: 'reveal.js-5.1.0/plugin/highlight/monokai.css'},
+        { name: 'White', theme: 'reveal.js-5.1.0/dist/theme/simple.css', highlightTheme: 'css/github.css'},
+    ]
+					,
+				themesPath: 'reveal.js-5.1.0/dist/theme/',
+				transitions: false,
+				markers: false,
+				custom: [
+					{
+					title: 'download',  // debe estar online 
+					icon: '<i class="fa fa-bookmark">',
+					src: 'panorama_dh_datos_download.html'
+					},
+
+					{
+        title: 'About',
+        icon: '<i class="fa fa-info">',
+        content: '<p>Presentacion de José Luis Losada. Repositorio en  <a href="https://github.com/editio">https://github.com/editio</a></p>'
+      }
+
+					
+				]
+	}
+		});
+
+	</script>
+
+	<!-- Logo & footer for all slides -->
+
+	<div id="logo">
+		<a href="http://www.unibas.ch"><img src="imagenes/UnibasLogotransparentDE.png" title="University of Basel" /></a>
+	</div>
+
+</body>
+</html>

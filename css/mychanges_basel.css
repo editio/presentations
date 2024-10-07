@@ -31,7 +31,8 @@
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-    background: rgba(0, 0, 0, 0.2);
+   background: transparent;
+    /*background: rgba(0, 0, 0, 0.2);*/
     color: #A5D7D2;
 	height: 12px;
 }

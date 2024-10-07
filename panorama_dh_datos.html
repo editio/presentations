@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
 	<meta charset="utf-8">
 	<title>Investigación en HH.DD basada en datos</title>
-	<!-- Dublin Core tags for better indexing -->
+
+	<!-- Dublin Core tags for better indexing, for example, Zotero connector -->
 	<meta name="DC.Title" content="Panorama de la investigación en Humanidades basada en datos">
 	<meta name="DC.Description" content="Slides for the presentation on Research Data in the Humanities for the conference 'Entre lo social y lo digital', Basel, 10-11 October 2004 ">
 	<meta name="DC.Creator" content="José Luis Losada Palenzuela" />
@@ -13,6 +14,7 @@
 	<meta name="DC.Format" content="text/html" />
 	<meta name="DC.Type" content="Presentation"/>
 	<meta name="DC.publisher" content='RISE (Research and Infrastructure Support), University of Basel'>
+
 	<!-- portable devices -->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -74,23 +76,69 @@
 <!-- INTRO -->
 <section data-markdown>
 <textarea data-template>
-
 	## Introducción
 
 </textarea>
 </section>
 
+<!-- FAIR -->
+
+<section data-markdown>
+<textarea data-template>
+## FAIR
+
+<span class="fuente"><a href="https://doi.org/10.1038/sdata.2016.18">(Wilkinson et al. 2016)</a></span>
+
+## Data Cycles
+<span class="fuente"><a href="https://data.clsinfra.io/3.Lifecycle.html">Carolin Odebrecht (2024)</a></span>
+
+</textarea>
+</section>
+
+
+<section data-markdown>
+<textarea data-template>
+- **Part III: Annotating Linguistic Structure**
+  - 17: Sequence Labeling for Parts of Speech and Named Entities (Intro only) [pptx] [pdf]
+  - 18: Context-Free Grammars and Constituency Parsing
+  - 19: Dependency Parsing
+  - 20: Information Extraction: Relations, Events, and Time
+  - 21: Semantic Role Labeling and Argument Structure
+  - 22: Lexicons for Sentiment, Affect, and Connotation
+  - 23: Coreference Resolution and Entity Linking
+  - 24: Discourse Coherence
+</textarea>
+</section>
+
+
+
+
+
+
 
 <section>
 	<h4></h4>
-	<img style="width: 50%; height: 50%; box-shadow: none; border-bottom: none" src="http://wp.unil.ch/swissds-env/files/2023/10/DS_Taches_FINAL_CC-BY_legend_E.png"/>
+<!--	<img style="width: 50%; height: 50%; box-shadow: none; border-bottom: none" src=""/>-->
+	<img src="imagenes/rise_sahle_dh_small.png"/>
+</section>
+
+<section data-markdown>
+<textarea data-template>
+"La gestión de datos de investigación es un proceso explícito que abarca la creación y administración de materiales de investigación para permitir su uso mientras tengan valor."
+
+	https://data.clsinfra.io/3.Lifecycle.html#ref-wilkinson_fair_2016
+
+	<img style="width: 50%; height: 60%" src="http://wp.unil.ch/swissds-env/files/2023/10/DS_Taches_FINAL_CC-BY_legend_E.png"/>
+</textarea>
+	</section>
+
+<section data-background-iframe="https://www.re3data.org/browse/by-subject/#browse-subject-graphical" data-background-interactive>
 </section>
 
 
 <section data-markdown style="font-size: 0.70em">
 <textarea data-template>
-<h3 style="font-size: 25px;">“<a href="https://www.woerterbuchnetz.de/GWB?lemid=F00806"><i>Faust</i></a>”, <i>Goethe-Wörterbuch</i>, digitalisierte Fassung im Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/23.</h3>
-<img style="width: 95%; box-shadow: none;" src="imagenes/graz2023_GW_Faust_WA.png"/>
+
 </textarea>
 </section>
 
@@ -103,14 +151,8 @@
 </section>
 <section data-markdown>
 <textarea data-template>
-	## Scenario 2
 
-	### Digital editions and gazetteers: _ToposText_
-
-	- Ancient texts and mapped places.
-	- Beyond the scholarly community:
 	<div class="cita" style="font-size: 0.8em">“[texts] have been stripped of footnotes and other scholarly apparatus, [...] ToposText is not a substitute for the most recent scholarly edition of a given work”. <span class="fuente"><a href="https://topostext.org">ToposText</a>, version 3.0, Aikaterini Laskaridis Foundation</span></div>
-	- Data from: [Perseus Digital Library](http://www.perseus.tufts.edu/hopper/) and [Pleiades](https://pleiades.stoa.org/home).
 
 </textarea>
 </section>
@@ -159,6 +201,7 @@
 		<script src="reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
 		<script src="reveal.js-menu-2.1.0/menu.js"></script>
 	<script>
+
 
 		// Also available as an ES module, see:
 		// https://revealjs.com/initialization/

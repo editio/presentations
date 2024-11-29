@@ -142,15 +142,6 @@
 </textarea>
 </section>
 
-<section data-markdown data-transition="none">
-	<textarea data-template>
-	
-	<div class="cita" style="font-size: 0.8em">“la Lingüística computacional no necesita de la Lingüística convencional no computacional, ya sea para proporcionar credibilidad intelectual o para garantizar el progreso. La lingüística computacional no es simplemente lingüística con algunos complementos frikis, prácticos, pero teóricamente irrelevantes y confusos.”</div>
-	
-	</textarea>
-	</section>
-
-
 <section data-markdown>
 <textarea data-template>
 
@@ -188,6 +179,26 @@ Espacio natural de las HH.DD.
 </textarea>
 	</section>
 
+	<section data-markdown> <!-- Corpora RAE -->
+		<textarea data-template>
+		### Corpus: coapariciones
+<img style="width: 55%; box-shadow: none; border-bottom: none" src="imagenes/datos_corpes.png"/>
+<br>
+<span class="fuente"><a href="https://www.rae.es/banco-de-datos/corpes-xxi">Corpes XXI</a></span>
+</textarea>
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+### Corpus en la práctica docente
+
+- Uso real del idioma
+- Colocaciones y combinaciones
+- Registro y variación léxicas
+- Análisis de errores comunes
+	</textarea>
+</section>
+
 <section data-markdown>
 <textarea data-template>
 ### Corpus específicos de EL/E
@@ -206,14 +217,16 @@ Espacio natural de las HH.DD.
 		</textarea>
 			</section>
 
+
 <section data-markdown>
 <textarea data-template>
-### Visualización de datos textuales
-<img style="width: 80%; box-shadow: none; border-bottom: none" src=""/> 
+### Anotación Multimodal (audio, video)
+<img style="width: 80%; box-shadow: none; border-bottom: none" src="imagenes/datos_PE_Joey.png"/> 
 <br>
-<span class="fuente"><a href="https://voyant-tools.org">https://voyant-tools.org</a></span>
+<span class="fuente">Interfaz de <a href="https://exmaralda.org/en/">EXMARaLDa Editor</a></span>
 </textarea>
-	</section>	
+</section>	
+
 
 <section data-markdown>
 <textarea data-template>
@@ -228,8 +241,7 @@ Espacio natural de las HH.DD.
 <textarea data-template>
 
 - NLP, NLU, NLG
-- Anotación multimodal (audio, video, texto)
-- Visualización de datos, análisis de redes
+- Análisis de redes
 - Video, sonidos, partituras (MEI)
 - Edición crítica digital (TEI)
 - Colación automática
@@ -243,6 +255,10 @@ Espacio natural de las HH.DD.
 
 <section data-markdown> <!-- Representation of data  -->
 <textarea data-template>
+
+### Necesidad de asociar datos a un propósito
+<br>
+<br>
 
 <div class="cita"> "Instead of measuring things, finding patterns, and then finally asking what they mean, we need to start with an interpretive hypothesis (a "meaning" to investigate) and invent a way to test it."<span class="fuente">[Underwood 2019: 17]</span>
 </div>
@@ -307,49 +323,79 @@ Espacio natural de las HH.DD.
 
 <section> <!-- Repositorios -->
 <h2>Repositorios de investigación</h2>
-    <a href="https://www.dasch.swiss" target="_blank">
-        <img src="imagenes/dasch-logo.webp" alt="DaSCH" style="width: 40%;">
-    </a>
-	<a href="https://www.swissubase.ch/en/" target="_blank">
-        <img src="imagenes/swissubase-logo.png" alt="SwissUbase" style="width: 40%;  padding-left: 50px">
-    </a>
-	<br>
-	<a href="https://zenodo.org" target="_blank">
-        <img src="imagenes/zenodo-logo.png" alt="Zenodo" style="width: 30%; ">
-    </a>
-	<a href="https://osf.io" target="_blank">
-        <img src="imagenes/osf-logo.png" alt="OSF" style="width: 30%; padding-left: 50px">
-    </a>
+    <a href="https://www.dasch.swiss" target="_blank">DaSCH</a>, 
+	<a href="https://www.swissubase.ch/en/" target="_blank">SwissUbase</a>, 
+	<a href="https://zenodo.org" target="_blank">Zenodo</a>, 
+	<a href="https://osf.io" target="_blank">OSF</a>
+<h2>¿Repositorios institucionales?</h2>	
+<h2>¿Repositorios docentes?</h2>	
 </section>
 	</section>
 
-<section>
-<section data-markdown> <!-- AI Generativa y datos en humanidades -->
+<section>  <!-- AI Generativa y datos en humanidades -->
+	<section data-markdown> 
+	<textarea data-template>
+	## AI Generativa: posibilidades
+	###	OpenAi, Claude, Llama, Gemini, Perplexity...
+	- Analizar textos: resúmenes, multilingüismo, NER.
+	- Analizar imágenes: figuras, texto, transcripción, OCR, HTR.
+	- Analizar Multimedia: conversión audio a texto a audio.
+	- Conversación en lenguaje natural hablado y escrito.
+	- Codificación y lenguajes de programación.
+	- […]
+	</textarea>
+	</section>
+
+	<section data-markdown> 
+	<textarea data-template>
+	
+	<img src="imagenes/datos_claude.png"/>
+
+	</textarea>
+	</section>
+
+	<section data-markdown> 
+		<textarea data-template>
+		
+		<img src="imagenes/datos_codestral.png"/>
+	
+		</textarea>
+		</section>
+
+	<section data-markdown> 
+	<textarea data-template>
+	### Problemas
+	- <em>Hallucination</em> (Alucinación/Imprecisión)
+	- Datos sensibles, personales.
+	- Datos y procesos como caja negra.
+	- Dificultades de adaptación al nivel del aprendiz (Roman 2023)
+	- Sesgo monocultural (Roman 2023)
+	- Recelo (Velda y Calvo 2022)
+
+	</textarea>
+	</section>
+
+	<section data-markdown> 
+		<textarea data-template>
+		### Control de problemas
+		
+		- <em>Prompting</em>.
+		- <em>Pre-training</em>.
+		- <em>Fine Tuning</em>.
+		- <em>RAGs (Retrieval Augmented Generation)</em>.
+		- LLM abiertos y locales.	
+		</textarea>	
+	</section>
+
+<section data-markdown> 
 <textarea data-template>
-## AI Generativa: posibilidades
-###	OpenAi, Claude, Llama, Gemini, Perplexity...
-- Analizar textos: resúmenes, multilingüismo, NER.
-- Analizar imágenes: figuras, texto, transcripción, OCR, HTR.
-- Analizar Multimedia: conversión audio a texto a audio.
-- Conversación y diálogo en lenguaje natural hablado y escrito.
-- Codificación y lenguajes de programación.
-- […]
+
+<img src="imagenes/datos_notebook.png"/>
+
+<span class="fuente"><a href="https://notebooklm.google.com">https://notebooklm.google.com</a></span>
+
 </textarea>
 </section>
-<section data-markdown> <!-- AI Generativa y datos en humanidades -->
-<textarea data-template>
-### Problemas y control de problemas
-
-- <em>Hallucination</em>.
-- <em>Prompting</em>.
-- <em>Pre-training</em>.
-- <em>Fine Tuning</em>.
-- <em>RAGs (Retrieval Augmented Generation)</em>.
-- Datos sensibles, personales: LLM abiertos y locales.
-
-</textarea>
-</section>
-
 
 </section>
 
@@ -372,10 +418,6 @@ Espacio natural de las HH.DD.
 		
 		</textarea>
 	</section>
-
-
-
-
 
 	</div>
 	<!--End of slides container-->

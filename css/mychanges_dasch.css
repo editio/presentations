@@ -2,18 +2,18 @@
 
 /*#0072a7 :: color corporativo de la Universidad de Wroclaw para cambiar en el theme (serif) correspondiente   */
 /*#A5D7D2 :: color corporativo de la Universidad de Basel para cambiar en el theme (serif) correspondiente   */
-/*#1e81b0 :: color corporativo (aprox( de DaSCH para cambiar en el theme (serif) correspondiente   */
+/*#336790 :: color corporativo (aprox( de DaSCH para cambiar en el theme (serif) correspondiente   */
 
 /*Copio y modifico aquí algunos de los elementos del css del them serif.   miscambios.css overwrites it porque está el úlitmo en el header*/
 
 .reveal .controls .controls-arrow {
-    color: #1e81b0;
+    color: #336790;
 }
 .reveal .controls .controls-arrow:hover {
-    color: #1e81b0;
+    color: #336790;
 }
 .reveal .controls .controls-arrow:active {
-    color: #1e81b0;
+    color: #336790;
 }
 
 /*.reveal .navigate-right .controls-arrow {*/
@@ -38,7 +38,7 @@
 .reveal .progress {
    background: transparent;
     /*background: rgba(0, 0, 0, 0.2);*/
-    color: #1e81b0;
+    color: #336790;
 	height: 12px;
 }
 
@@ -57,7 +57,7 @@
 */
 
 .reveal .slide-number {
-  color: orange;
+  color: #E39E22;
   background-color: inherit;
   }
 
@@ -76,7 +76,7 @@ border-bottom: 1px gray dotted;
 }
 
 .reveal a:not(.image):hover {
-  color: #1e81b0;
+  color: #336790;
   text-shadow: none;
   border: none;
 }
@@ -148,7 +148,7 @@ font-size: 1.3em;
 
 #menu a:hover {
 
-	color: #1e81b0;
+	color: #336790;
 }
 
 

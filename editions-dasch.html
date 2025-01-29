@@ -68,6 +68,9 @@
 	<img src="imagenes/dasch_qr-editions-dasch.png"/>
 	<br>
 	<a href="https://editio.github.io/presentations/editions-dasch" target="_blank">https://editio.github.io/presentations/editions-dasch</a>
+<aside class="notes">
+Hier sehen Sie einen QR-Code, der direkt zu dieser Präsentation führt. Die Präsentation bleibt online, Sie können sie in eigenem Tempo durchsehen, falls Sie dies bevorzugen.
+    </aside>
 </section>
 
 <section data-markdown> <!-- ToC -->
@@ -78,6 +81,12 @@
 - Granularity
 - Example of an edition
 
+Note:
+In dieser Präsentation möchte ich mich mit den folgenden Punkten befassen:
+1. **DaSCH Überblick** – Kurz, was ist DaSCH, und welche Funktionen bietet es?
+2. **Datenmodelle** – Einfache und komplexe Datenmodelle in DSP.
+3. **Granularität** – Die Tiefe der Archivierungsmöglichtkeiten.
+4. Einige **Beispiele** werde ich zeigen, dazwischen
 </textarea>
 </section>
 
@@ -88,6 +97,11 @@
 - National infrastructure for Humanities’ research data
 - Open data repository and simple virtual research environment
 - Repository for long-term preservation and reuse of research data
+
+Note:
+**DaSCH** steht für das „Swiss National Data and Service Center for the Humanities“. Es handelt sich um eine nationale Infrastruktur speziell für Forschungsdaten in den Geisteswissenschaften.
+- DaSCH hat das Ziel, Forschungsdaten langfristig zu archivieren und ihre Wiederverwendung zu ermöglichen.
+- Die Plattform bietet ein offenes Data-Repository und eine virtuelle Forschungsumgebung
 </textarea>
 </section>
 
@@ -100,6 +114,13 @@
 - Editing of data possible at any time
 - Providing access to data through APIs
 - Display of data and search in generic web application: https://app.dasch.swiss
+
+Note:
+Einige Eigenschaften der DaSCH-Plattform:
+- Der Fokus liegt auf der Speicherung von Textdaten (z. B. XML) sowie Bitstream-Daten wie Bilder, Audio oder Videos.
+- Präzise Zitierbarkeit auf Objektebene wird durch ARKs gewährleistet, also nicht nur für das ganze Dataset.
+- Daten können auch nach Projektabschluss bearbeitet werden.
+- Zugriff erfolgt über APIs oder die generische Webanwendung: [https://app.dasch.swiss](https://app.dasch.swiss).
 </textarea>
 </section>
 <section data-markdown data-menu-title="DSP example"> <!-- DaSCH -->
@@ -107,6 +128,14 @@
 <img style="width: 80%; box-shadow: none;" src="imagenes/dasch_incunabula.png"/>
 	<br>
 <span class="fuente"><a href="https://ark.dasch.swiss/ark:/72163/1/0803/f6pSYFILX1OT1uqXBXotnA8">https://ark.dasch.swiss/ark:/72163/1/0803/f6pSYFILX1OT1uqXBXotnA8</a></span>
+
+Note:
+[Hier sehen Sie ein Beispiel der Webanwendung, sogennante DSP-APP]
+[Extra content] DaSCH bietet darüber hinaus andere technische Merkmale:
+- Nutzung eines **Triplestores**, wodurch Daten in Form von Graphen gespeichert werden.
+- **RDF** (Resource Description Framework) wird verwendet, um Relationen zu beschreiben.
+- Abfragen erfolgen mit einen Subset der SPARQL-Abfragesprache (Gravsearch)
+- Ein **IIIF Medienserver** ermöglicht  die Anzeige von Bildern.
 </textarea>
 </section>
 <section data-markdown> <!-- DaSCH -->
@@ -115,6 +144,12 @@
 - TEI-XML's role as the core of digital scholarly editions
 - Reductionist, as it omits visualization and publication
 - Every DSE has implicit or explicit a data model
+
+Note:
+Was sind digitale Editionen?
+Für den Kontext dieses kurzen Vortrags können wir uns darauf einigen, dass
+- **TEI-XML** oft eine zentrale Rolle spielt und in vielen Fällen als "Kern" einer Digitale Editionen angesehen wird: dies ist vereinfachend, da es keine Visualisierung, Publikation oder andere Standards integriert.
+- In dieser Zusammenhang, jede digitale Edition hat ein implizites oder explizites **Datenmodell**, das die Struktur und die Beziehungen der Daten definiert (das ist relevant für DSP)
 </textarea>
 </section>
 <section data-markdown> <!-- DaSCH -->
@@ -123,6 +158,11 @@
 #### How edition data is represented in DSP
 - RDF-based representation
 - **Data Model** (classes and properties)
+
+Note:
+Welche Anforderungen gelten speziell für Editionsdaten in DSP? Im Prinzip dieselben wie für andere Daten:
+- Die Plattform basiert auf **RDF**.
+- Es muss ein **Datenmodell** definiert werden, das Klassen (z.B. Dokumente oder Personen) und deren Eigenschaften enthält, um Beziehungen darzustellen.
 </textarea>
 </section>
 
@@ -130,11 +170,20 @@
 <section data-menu-title="data model" data-markdown data-transition="none-out"> <!-- Data Models -->
 <textarea data-template>
 <img style="width: 50%; box-shadow: none;" src="imagenes/dasch_datamodel_1.png"/>
+
+Note:
+Das folgende Diagramm stellt ein einfaches **Datenmodell** dar, das die Beziehungen zwischen verschiedenen Entitäten beschreibt:
+- Hauptentitäten sind **Person**, **Document**, und **Brief** (eine spezifische Unterklasse von "Document").
+- Auch Beziehungen bestehen, hier beispielsweise zwischen Autor und Empfänger eines Briefes.
+- Die digitale Edition, oder the xml representation, wird als **TEIEdition** modelliert. Diese Verbindung  ermöglicht die Speicherung von XML-Dateien
 </textarea>
 </section>
 <section data-menu-title="Simple Data Model (image)" data-markdown data-transition="none-in"> <!-- Data Models -->
 <textarea data-template>
 <img style="width: 50%; box-shadow: none;" src="imagenes/dasch_datamodel_2.png"/>
+
+Note:
+Es ist aber auch möglich, dieses Datenmodell weiter zu vereinfachen und nur die XML-Datei mit den gewünschten Metadaten bei DaSCH zu archivieren.
 </textarea>
 </section>
 <section data-markdown> <!-- DaSCH -->
@@ -145,22 +194,39 @@
   - Data export for external tools and systems: xml download
   - Direct citacion at object level via ARK
   - Versioning if decided to track the versions
+
+Note:
+Was gibt das?  Was bringt so ein minimales Setting?
+- Export der Daten für externe Werkzeuge oder Systeme (z. B. XML-Download).
+- Direkte Zitierbarkeit von Objekten dank ARKs
+- Optionale Versionierung, falls dies gewünscht ist.
 </textarea>
 </section>
 <section data-menu-title="XML download" data-markdown> <!-- Data Models -->
 <textarea data-template>
 <img style="width: 70%; box-shadow: none;" src="imagenes/dasch_xml.png"/>
+
+Note:
+So sieht es in der sogenannten DSP-APP aus: oben rechts die PI, darunter links der Datei-Download, Metadaten etc.
 </textarea>
 </section>
 
 <section data-menu-title="Complex data model" data-markdown> <!-- Data Models -->
 <textarea data-template>
 <img style="width: 60%; box-shadow: none;" src="imagenes/dasch_datamodel_3.png"/>
+Note:
+Nichts hindert uns selbsverständlich daran, das Datenmodell weiter auszubauen, um eine tiefere Granularität zu erreichen.
+Was gewinnt man dadurch?
+- Neben den Vorteilen des einfachen Modells wird hier zusätzlich die Beziehung zwischen den Daten explizit modelliert.
+- Auch z.B. Digitalisate können in das Modell integriert und über einen IIIF-Server bereitgestellt werden.
 </textarea>
 </section>
 <section data-menu-title="DSP example" data-markdown> <!-- Data Models -->
 <textarea data-template>
 <img style="width: 80%; box-shadow: none;" src="imagenes/dasch_gotthelf.png"/>
+
+Note:
+In der DSP-APP besteht nun auch die Möglichkeit, Bilder aus einem externe IIIF-Server zu integrieren.
 </textarea>
 </section>
 
@@ -172,6 +238,11 @@
 - Archive XML with selection of data of interest
 - Content is still preserved in the XML
 - Downloads and persistent identifiers
+
+Note:
+**Zusammenfassend:**
+- Projekte haben die Freiheit, selbst über die Granularität ihrer Archivierung in DSP zu entscheiden – sei es auf einfacher oder komplexer Ebene.
+- Es wird jedoch stets empfohlen, den Kern der Editionen – also XML-Dateien oder verwandte Schemas – zu archivieren. Dadurch bleiben die Inhalte langfristig gesichert und zugänglich, ergänzt durch präzise Zitiermöglichkeiten.
 </textarea>
 </section>
 

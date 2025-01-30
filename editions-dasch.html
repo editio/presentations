@@ -69,7 +69,7 @@
 	<br>
 	<a href="https://editio.github.io/presentations/editions-dasch" target="_blank">https://editio.github.io/presentations/editions-dasch</a>
 <aside class="notes">
-Hier sehen Sie einen QR-Code, der direkt zu dieser Präsentation führt. Die Präsentation bleibt online, Sie können sie in eigenem Tempo durchsehen, falls Sie dies bevorzugen.
+Hier haben Sie einen QR-Code, der direkt zu dieser Präsentation führt. Die Präsentation bleibt online, Sie können sie in eigenem Tempo durchsehen, falls Sie dies bevorzugen.
     </aside>
 </section>
 
@@ -90,7 +90,7 @@ In dieser Präsentation möchte ich mich mit den folgenden Punkten befassen:
 </textarea>
 </section>
 
-<section data-markdown> <!-- DaSCH -->
+<section data-markdown> <!-- 4 -->
 <textarea data-template>
 ## What is DaSCH?
 - DaSCH - Swiss National Data and Service Center for the Humanities
@@ -105,7 +105,7 @@ Note:
 </textarea>
 </section>
 
-<section data-markdown> <!-- DaSCH -->
+<section data-markdown> <!-- 5 -->
 <textarea data-template>
 ## Characteristics of DSP
 #### DaSCH Service Platform (DSP)
@@ -117,13 +117,13 @@ Note:
 
 Note:
 Einige Eigenschaften der DaSCH-Plattform:
-- Der Fokus liegt auf der Speicherung von Textdaten (z. B. XML) sowie Bitstream-Daten wie Bilder, Audio oder Videos.
-- Präzise Zitierbarkeit auf Objektebene wird durch ARKs gewährleistet, also nicht nur für das ganze Dataset.
+- Der Fokus liegt auf der Speicherung von Textdaten (z.B. XML) sowie Bitstream-Daten wie Bilder, Audio oder Videos.
+- Präzise Zitierbarkeit auf Objektebene, sie wird durch ARKs gewährleistet, also nicht nur für das ganze Dataset.
 - Daten können auch nach Projektabschluss bearbeitet werden.
 - Zugriff erfolgt über APIs oder die generische Webanwendung: [https://app.dasch.swiss](https://app.dasch.swiss).
 </textarea>
 </section>
-<section data-markdown data-menu-title="DSP example"> <!-- DaSCH -->
+<section data-markdown data-menu-title="DSP example"> <!-- 6 -->
 <textarea data-template>
 <img style="width: 80%; box-shadow: none;" src="imagenes/dasch_incunabula.png"/>
 	<br>
@@ -138,7 +138,7 @@ Note:
 - Ein **IIIF Medienserver** ermöglicht  die Anzeige von Bildern.
 </textarea>
 </section>
-<section data-markdown> <!-- DaSCH -->
+<section data-markdown> <!-- 7 -->
 <textarea data-template>
 ## Digital Scholarly Editions
 - TEI-XML's role as the core of digital scholarly editions
@@ -148,11 +148,11 @@ Note:
 Note:
 Was sind digitale Editionen?
 Für den Kontext dieses kurzen Vortrags können wir uns darauf einigen, dass
-- **TEI-XML** oft eine zentrale Rolle spielt und in vielen Fällen als "Kern" einer Digitale Editionen angesehen wird: dies ist vereinfachend, da es keine Visualisierung, Publikation oder andere Standards integriert.
-- In dieser Zusammenhang, jede digitale Edition hat ein implizites oder explizites **Datenmodell**, das die Struktur und die Beziehungen der Daten definiert (das ist relevant für DSP)
+- **TEI-XML** oft eine zentrale Rolle spielt und in vielen Fällen als "Kern" einer Digitalen Edition angesehen wird: dies ist vereinfachend, da es keine Visualisierung, Publikation oder andere Standards integriert.
+- In dieser Zusammenhang, jede digitale Edition hat ein implizites oder explizites **Datenmodell**, das die Struktur und die Beziehungen der Daten definiert (das ist hilfreich für DSP)
 </textarea>
 </section>
-<section data-markdown> <!-- DaSCH -->
+<section data-markdown> <!-- 8 -->
 <textarea data-template>
 ## DSP Specific Requirements
 #### How edition data is represented in DSP
@@ -167,15 +167,15 @@ Welche Anforderungen gelten speziell für Editionsdaten in DSP? Im Prinzip diese
 </section>
 
 
-<section data-menu-title="data model" data-markdown data-transition="none-out"> <!-- Data Models -->
+<section data-menu-title="data model" data-markdown data-transition="none-out"> <!-- 9 -->
 <textarea data-template>
 <img style="width: 50%; box-shadow: none;" src="imagenes/dasch_datamodel_1.png"/>
 
 Note:
 Das folgende Diagramm stellt ein einfaches **Datenmodell** dar, das die Beziehungen zwischen verschiedenen Entitäten beschreibt:
 - Hauptentitäten sind **Person**, **Document**, und **Brief** (eine spezifische Unterklasse von "Document").
-- Auch Beziehungen bestehen, hier beispielsweise zwischen Autor und Empfänger eines Briefes.
-- Die digitale Edition, oder the xml representation, wird als **TEIEdition** modelliert. Diese Verbindung  ermöglicht die Speicherung von XML-Dateien
+- Auch Beziehungen bestehen, hier beispielsweise, Autor und Empfänger eines Briefes.
+- Die digitale Edition, oder the xml representation, wird als **TEIEdition** modelliert. Diese Verbindung  ermöglicht die Speicherung von XML-Dateien.
 </textarea>
 </section>
 <section data-menu-title="Simple Data Model (image)" data-markdown data-transition="none-in"> <!-- Data Models -->
@@ -188,7 +188,7 @@ Es ist aber auch möglich, dieses Datenmodell weiter zu vereinfachen und nur die
 </section>
 <section data-markdown> <!-- DaSCH -->
 <textarea data-template>
-## Simple Data Model
+## Minimal Data Model
 - Archiving the XML files with the desired basic metadata
 - What do I have:
   - Data export for external tools and systems: xml download

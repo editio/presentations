@@ -126,10 +126,10 @@
 <section data-markdown> <!-- 8 -->
 <textarea data-template>
 ## DSP Specific Requirements
-#### How edition data is represented in DSP
+#### How data is represented in DSP
 - RDF-based representation
 - **Data Model** (classes and properties)
-
+- DSP Knora Data Model + Project Data Model
 </textarea>
 </section>
 
@@ -237,6 +237,30 @@
 </textarea>
 </section>
 
+<section data-menu-title="DaSCH Projects" data-markdown style="font-size: 70%">
+	<textarea data-template>
+
+		## File Format
+
+	
+		| Category     | Accepted format                                     | Converted during ingest?                     |
+		|--------------|-----------------------------------------------------|----------------------------------------------|
+		| Text, XML   | ODD, RNG, TXT, XML, XSD, XSL                        | No                                           |
+		| Tables       | CSV, XLS, XLSX                                      | No                                           |
+		| 2D Images    | JPG, JPEG, JP2, PNG, TIF, TIFF                      | Yes, converted to JPEG 2000          |
+		| Audio        | MPEG (MP3), WAV                                     | No                                           |
+		| Video        | MP4                                                 | No                                           |
+		| Office       | PDF, DOC, DOCX, PPT, PPTX                           | No                                           |
+		| Archives     | ZIP, TAR, GZ, Z, TAR.GZ, TGZ, GZIP, 7Z              | No                                              |	
+	
+	</textarea>
+	</section>
+
+<section data-menu-title="Knora representation class" data-markdown style="font-size: 70%">
+<textarea data-template>
+<img style="width: 60%; box-shadow: none;" src="imagenes/dasch_knora_representation.png"/>			
+</textarea>
+</section>
 	</div>
 	<!--End of slides container-->
 

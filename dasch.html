@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Long-term archiving of digital edition data in the DaSCH Service Platform (DSP)</title>
+
+	<!-- Dublin Core tags for better indexing, for example, Zotero connector -->
+	<meta name="DC.Title" content="Long-term archiving of digital edition data in the DaSCH Service Platform (DSP)">
+	<meta name="DC.Description" content="The DaSCH long-term archiving service is based on the adaptation of the original data model to an importable data model in a triple-store database. In the case of digital edition data, this customisation is flexible depending on the requirements of the project in question and can range from a simple model that archives only TEI-XML files with encoding and schemas, for example, to a mapping of the edition structure with index of persons, internal references, teiHeader, etc. The use of ARKs at every level of granularity enables the permanent citation of every resource.">
+	<meta name="DC.Creator" content="José Luis Losada Palenzuela" />
+	<meta name="DC.Date" content="2025-05-21" />
+	<meta name="DC.Rights" content="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" />
+	<meta name="DC.Format" content="text/html" />
+	<meta name="DC.Type" content="Presentation"/>
+	<meta name="DC.publisher" content="DaSCH">
+
+	<!-- portable devices -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="apple-touch-icon" type="image/png" href="../manual/imagen/edigital.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../manual/imagen/favicon.ico">
+
+	<!-- Hojas de estilo-->
+	<link rel="stylesheet" href="reveal.js-5.1.0/dist/reset.css">
+	<link rel="stylesheet" href="reveal.js-5.1.0/dist/reveal.css">
+	<link rel="stylesheet" href="reveal.js-5.1.0/dist/theme/simple.css" id="theme">
+	<link rel="stylesheet" href="css/mychanges_dasch.css">
+
+	<!-- code syntax highlighting -->
+	<link rel="stylesheet" href="css/github.css" id="highlight-theme">
+	<!-- <link rel="stylesheet" href="reveal.js-5.1.0/plugin/highlight/monokai.css" id="highlight-theme"> -->
+
+	<!-- <style>
+		.reveal .pre .code {
+			text-transform: none;
+		}
+	</style> -->
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'reveal.js-5.1.0/css/print/pdf.scss' : 'reveal.js-5.1.0/css/print/paper.scss';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+
+<section> <!-- Cover  -->
+<h2>Presentación de la infraestructura DaSCH</h2> <br>
+<h4>José Luis Losada Palenzuela</h4>
+<h4>DaSCH / RISE (Universidad de Basilea)</h4>
+<br>
+<h4 style="color: grey; font-size: large;">Humanidades Digitales: dificultades y nuevos horizontes en la investigación académica, Basilea, 21.05.2025</h4>
+</section>
+
+<section data-markdown> <!-- ToC -->
+<textarea data-template>
+## ToC
+- DaSCH Overview
+- Data Models
+- Granularity
+- Examples (edition)
+</textarea>
+</section>
+
+<section data-markdown> <!--  -->
+<textarea data-template>
+## What is DaSCH?
+- DaSCH - Swiss National Data and Service Center for the Humanities.
+- National infrastructure for Humanities’ research data.
+- Open data repository and virtual research environment.
+- Repository for long-term preservation and reuse of research data.
+</textarea>
+</section>
+
+<section data-markdown> <!--  -->
+<textarea data-template>
+## Characteristics of DSP
+#### DaSCH Service Platform (DSP)
+- Focus on text data and bitstream data.
+- Persistent identifiers (ARKs) not only at dataset level but also at object level.
+- Editing of data possible at any time (changes ahead).
+- Providing access to data through APIs.
+- Display of data and search in generic web application: DSP-APP https://app.dasch.swiss.
+</textarea>
+</section>
+<section data-markdown data-menu-title="DSP example"> <!--  -->
+<textarea data-template>
+<img style="width: 80%; box-shadow: none;" src="imagenes/dasch_incunabula.png"/>
+	<br>
+<span class="fuente"><a href="https://ark.dasch.swiss/ark:/72163/1/0803/f6pSYFILX1OT1uqXBXotnA8">https://ark.dasch.swiss/ark:/72163/1/0803/f6pSYFILX1OT1uqXBXotnA8</a></span>
+
+</textarea>
+</section>
+
+<section data-markdown> <!--   -->
+	<textarea data-template>
+## Characteristics of DSP
+#### DaSCH Service Platform (DSP)	
+- Use of a triplestore: data is stored in the form of graphs.
+- RDF (Resource Description Framework) is used to describe relations.
+- Queries are made using a subset of the SPARQL query language (Gravsearch)
+- An IIIF media server enables the display of images.
+	</textarea>
+	</section>
+
+<section data-markdown> <!-- 7 -->
+<textarea data-template>
+## Digital Scholarly Editions
+- TEI-XML's role as the core of digital scholarly editions
+- Reductionist, as it omits visualization and publication
+- Every DSE has implicit or explicit a data model
+</textarea>
+</section>
+<section data-markdown> <!-- 8 -->
+<textarea data-template>
+## DSP Specific Requirements
+#### How edition data is represented in DSP
+- RDF-based representation
+- **Data Model** (classes and properties)
+
+</textarea>
+</section>
+
+
+<section data-menu-title="data model" data-markdown data-transition="none-out"> <!-- 9 -->
+<textarea data-template>
+<img style="width: 50%; box-shadow: none;" src="imagenes/dasch_datamodel_1.png"/>
+
+</textarea>
+</section>
+<section data-menu-title="Simple Data Model (image)" data-markdown data-transition="none-in"> <!-- Data Models -->
+<textarea data-template>
+<img style="width: 50%; box-shadow: none;" src="imagenes/dasch_datamodel_2.png"/>
+
+</textarea>
+</section>
+<section data-markdown> <!-- DaSCH -->
+<textarea data-template>
+## Minimal Data Model
+- Archiving the XML files with the desired basic metadata
+- What do I have:
+  - Data export for external tools and systems: xml download
+  - Direct citacion at object level via ARK
+  - Versioning if decided to track the versions
+
+</textarea>
+</section>
+<section data-menu-title="XML download" data-markdown> <!-- Data Models -->
+<textarea data-template>
+<img style="width: 70%; box-shadow: none;" src="imagenes/dasch_xml.png"/>
+
+</textarea>
+</section>
+
+<section data-menu-title="Complex data model" data-markdown> <!-- Data Models -->
+<textarea data-template>
+<img style="width: 60%; box-shadow: none;" src="imagenes/dasch_datamodel_3.png"/>
+</textarea>
+</section>
+<section data-menu-title="DSP example" data-markdown> <!-- Data Models -->
+<textarea data-template>
+<img style="width: 70%; box-shadow: none;" src="imagenes/dasch_gotthelf.png"/>
+</textarea>
+</section>
+
+<!------------------------ CONCLUSIONS ------------------------------>
+<section data-menu-title="How to" data-markdown>
+<textarea data-template>
+## How to do it
+#### Do it yourself
+- DSP-APP in a browser (manually)
+- Simple virtual research environment
+	<br>
+	<br>
+#### Mass import via DSP-TOOLS
+- Set of python scripts
+</textarea>
+</section>
+
+<!------------------------ CONCLUSIONS ------------------------------>
+<section data-menu-title="Conclusion" data-markdown>
+<textarea data-template>
+## Conclusion
+- Archive granularity up to the project
+- Archive XML with selection of data of interest
+- Content is still preserved in the XML
+- Metadata, downloads and persistent identifiers
+</textarea>
+</section>
+
+<section data-menu-title="DaSCH Projects" data-markdown>
+	<textarea data-template>
+		Browse DaSCH projects
+		<br>
+		<br>
+		https://app.dasch.swiss
+	
+	</textarea>
+	</section>
+
+<section data-menu-title="DaSCH links" data-markdown>
+<textarea data-template>
+
+	Search for projects at DaSCH Metadata Browser
+	<br>
+	https://meta.dasch.swiss
+	<br>
+	<br>
+	Do You Want To Know More?
+	<br>
+	https://www.dasch.swiss/our-manuals
+	<br>
+	<br>
+	DaSCH Service Platform Documentation
+	<br>
+	https://docs.dasch.swiss
+	<br>
+	<br>
+	DSP source code and documentation
+	<br>
+	https://github.com/dasch-swiss
+
+<a style = "border-bottom: none" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a>
+
+</textarea>
+</section>
+
+	</div>
+	<!--End of slides container-->
+
+	</div>
+
+	<script src="reveal.js-5.1.0/dist/reveal.js"></script>
+		<script src="reveal.js-5.1.0/plugin/zoom/zoom.js"></script>
+		<script src="reveal.js-5.1.0/plugin/notes/notes.js"></script>
+		<script src="reveal.js-5.1.0/plugin/search/search.js"></script>
+		<script src="reveal.js-5.1.0/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js-5.1.0/plugin/highlight/highlight.js"></script>
+		<script src="reveal.js-menu-2.1.0/menu.js"></script>
+	<script>
+
+
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			center: true,
+			hash: true,
+			slideNumber: 'c/t',
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMenu],
+
+			// Preferencias del menu
+			menu: {
+				numbers: 'c',
+				openSlideNumber: true,
+				themes:
+					[
+        { name: 'Black', theme: 'reveal.js-5.1.0/dist/theme/black.css', highlightTheme: 'reveal.js-5.1.0/plugin/highlight/monokai.css'},
+        { name: 'White', theme: 'reveal.js-5.1.0/dist/theme/simple.css', highlightTheme: 'css/github.css'},
+    ]
+					,
+				themesPath: 'reveal.js-5.1.0/dist/theme/',
+				transitions: false,
+				markers: false,
+				custom: [
+					{
+					title: 'download',  // debe estar online
+					icon: '<i class="fa fa-bookmark">',
+					src: 'editions-dasch-download.html'
+					},
+
+					{
+        title: 'About',
+        icon: '<i class="fa fa-info">',
+        content: '<p>Slides by José Luis Losada. See his Github repo <a href="https://github.com/editio">https://github.com/editio</a></p>'
+      }
+
+
+				]
+	}
+		});
+
+	</script>
+
+	<!-- Logo & footer for all slides -->
+
+	<div id="logo">
+		<a href="https://www.dasch.swiss"><img src="imagenes/DaSCH_Logo_Coloured.png" title="DaSCH: Data and Service Center for the Humanities" /></a>
+	</div>
+
+</body>
+</html>

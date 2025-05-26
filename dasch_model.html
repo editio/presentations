@@ -85,27 +85,40 @@
 - National infrastructure for Humanities’ research data.
 - Open data repository and virtual research environment.
 - Repository for long-term preservation and reuse of research data.
+- Mainly funded by SNSF (Swiss National Science Foundation)
+	- in-kind contributions of University of Basel (host university)
 </textarea>
 </section>
 
-<section data-markdown> <!--  -->
+<section data-markdown> 			<!-- Preservation -->
 	<textarea data-template>
-	## What is DaSCH?
-	- mainly funded by SNSF (Swiss National Science Foundation)
-		- in-kind contributions of University of Basel (host university)
-	- use of repository free of charge (data volume not exceeding 500 GB)
+	## Preservation
+	<div class="cita">"Common myths about the digital environment are that it is stable, even archival (e.g. permanent) and that it is “immaterial” (e.g. not instantiated in analogue reality). Every actual engagement with digital technology demonstrates the opposite." <span class="fuente">[Drucker 2014: 9]</span></div>
 	</textarea>
 	</section>
+
+	<section data-markdown> 			<!-- Preservation -->
+		<textarea data-template>
+		## Best Practices
+	
+		- File Formats: DaSCH accepts mostly durable formats based on open standards and may convert submitted files if needed.
+		- Regular Review: ongoing management including migration and integrity checks.
+		- Data Curation: DaSCH aims for high-quality curated datasets.
+
+		</textarea>
+		</section>
+
 
 <section data-markdown> <!--  -->
 <textarea data-template>
 ## Characteristics of DSP
 #### DaSCH Service Platform (DSP)
-- Focus on text data and bitstream data.
+- FAIR repository: direct accessibility and searchability of the data: live archive.
 - Persistent identifiers (ARKs) not only at dataset level but also at object level.
-- Editing of data possible at any time (changes ahead).
-- Providing access to data through APIs.
-- Display of data and search in generic web application: DSP-APP https://app.dasch.swiss.
+- Permissions not only at dataset level but also at object level.
+- Focus on text data and bitstream data.
+- Editing of data possible at any time.
+- Data display and search in generic web application: [DSP-APP](https://app.dasch.swiss)
 </textarea>
 </section>
 <section data-markdown data-menu-title="DSP example"> <!--  -->
@@ -125,17 +138,11 @@
 - RDF (Resource Description Framework) is used to describe relations.
 - Queries are made using a subset of the SPARQL query language (Gravsearch)
 - An IIIF media server enables the display of images.
+- Providing access to data through APIs.
 	</textarea>
 	</section>
 
-<section data-markdown> <!-- 7 -->
-<textarea data-template>
-## Digital Scholarly Editions
-- TEI-XML's role as the core of digital scholarly editions
-- Reductionist, as it omits visualization and publication
-- Every DSE has implicit or explicit a data model
-</textarea>
-</section>
+
 <section data-markdown> <!-- 8 -->
 <textarea data-template>
 ## DSP Specific Requirements
@@ -147,6 +154,20 @@
 </textarea>
 </section>
 
+<section data-markdown> <!-- 7 -->
+	<textarea data-template>
+	## Digital Scholarly Editions
+	- TEI-XML's role as the core of digital scholarly editions
+	- Reductionist, as it omits visualization and publication
+	- Every DSE has implicit or explicit a data model
+	</textarea>
+	</section>
+
+	<section data-menu-title="XML example" data-markdown> <!-- Data Models -->
+		<textarea data-template>
+		<img style="width: 85%; box-shadow: none;" src="imagenes/dasch_letter_xml.png"/>		
+		</textarea>
+		</section>
 
 <section data-menu-title="data model" data-markdown data-transition="none-out"> <!-- 9 -->
 <textarea data-template>
@@ -174,7 +195,6 @@
 <section data-menu-title="XML download" data-markdown> <!-- Data Models -->
 <textarea data-template>
 <img style="width: 70%; box-shadow: none;" src="imagenes/dasch_xml.png"/>
-
 </textarea>
 </section>
 
@@ -198,7 +218,7 @@
 <section data-menu-title="How to" data-markdown>
 <textarea data-template>
 ## How to do it
-#### Do it yourself
+#### GUI
 - DSP-APP in a browser (manually)
 - Simple virtual research environment
 	<br>
@@ -216,25 +236,23 @@
 </textarea>
 </section>
 
+<section data-menu-title="Ontology GUI" data-markdown> <!-- Data Models -->
 
-<!------------------------ CONCLUSIONS ------------------------------>
-<section data-menu-title="Conclusion" data-markdown>
-<textarea data-template>
-## Conclusion
-- Archive granularity up to the project
-- Archive XML with selection of data of interest
-- Content is still preserved in the XML
-- Metadata, downloads and persistent identifiers
-</textarea>
-</section>
+	<textarea data-template>	
+	<img style="width: 100%; box-shadow: none;" src="imagenes/dasch_onto_editor.png"/>
+	</textarea>
+	</section>
+
+<section data-menu-title="Ontology Extended" data-markdown> <!-- Data Models -->
+	<textarea data-template>	
+	<img style="width: 80%; box-shadow: none;" src="imagenes/dasch_ontology_max.png"/>
+	</textarea>
+	</section>	
 
 <section data-menu-title="DaSCH Projects" data-markdown>
 	<textarea data-template>
-		Browse DaSCH projects
-		<br>
-		<br>
-		https://app.dasch.swiss
-	
+		### Browse [DaSCH](https://app.dasch.swiss) projects
+		<img style="width: 90%; box-shadow: none;" src="imagenes/dasch_overview.png" alt="DaSCH">							
 	</textarea>
 	</section>
 
@@ -265,7 +283,7 @@
 </textarea>
 </section>
 
-<section data-menu-title="DaSCH Projects" data-markdown style="font-size: 70%">
+<section data-menu-title="File Format" data-markdown style="font-size: 70%">
 	<textarea data-template>
 
 		## File Format

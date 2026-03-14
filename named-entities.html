@@ -28,6 +28,7 @@
     .reveal .pre .code {
                   text-transform: none;
 		  }
+    .reveal .slides section { font-size: 0.9em; }
 </style>
 
 	<!-- Printing and PDF exports -->
@@ -68,10 +69,10 @@
 						<h3>Content</h3>
 						<div>
 							<ul>
-								<li><a href="#names">Names. Persons</a><span class="weiter">↡(3-21)</span></li>
-								<li><a href="#places">Names. Places</a><span class="weiter">↡(22-28)</span></li>
-								<li><a href="#dates">Dates</a><span class="weiter">↡(29-32)</span></li>
-								<li><a href="#biblio">References</a><span class="weiter">↡(33)</span></li>
+								<li><a href="#names">Names. Persons</a></li>
+								<li><a href="#places">Names. Places</a></li>
+								<li><a href="#dates">Dates</a></li>
+								<li><a href="#biblio">References</a></li>
 							</ul>
 						</div>
 
@@ -130,7 +131,7 @@
 						<div class="fuente">Daniel Defoe, <i>The Life and Adventures of Robinson Crusoe</i>, 1719</div>
 					</section>
 
-				<section>
+				<section style="font-size: 0.8em">
 						<h3>Names in TEI</h3>
 						<h4>The TEI provides several ways of marking up names and nominal expressions.</h4>
 						<ul>
@@ -146,21 +147,21 @@
 						</ul>
 				</section>
 
-					<section>
+					<section style="font-size: 0.8em">
 
 <h3>Encoding of names using the element <span class="color_blue">&lt;name&gt;</span></h3>
 <br>
 						<pre class="xml" style="font-size: 0.8em;"><code style="word-break: keep-all;">I was born in the year 1632, in the city of <name>York</name>, of a good family, though not of that country, my father being a foreigner of <name>Bremen</name>, who settled first at <name>Hull</name>. He got a good estate by merchandise, and leaving off his trade, lived afterwards at <name>York</name>, from whence he had married my mother, whose relations were named Robinson, a very good family in that country, and from whom I was called <name>Robinson Kreutznaer</name></code></pre>
 						</section>
 
-				<section>
-<h3>Add the attribute <span class="color_orange">@type</span> to differenciate types of names</h3>
+				<section style="font-size: 0.8em">
+<h3>Add the attribute <span class="color_orange">@type</span> to differentiate types of names</h3>
 <br>
 
 						<pre class="xml" style="font-size: 0.8em;"><code style="word-break: keep-all;">I was born in the year 1632, in the city of <name type="place">York</name>, of a good family, though not of that country, my father being a foreigner of <name type="place">Bremen</name>, who settled first at <name type="place">Hull</name>. He got a good estate by merchandise, and leaving off his trade, lived afterwards at <name type="place">York</name>, from whence he had married my mother, whose relations were named Robinson, a very good family in that country, and from whom I was called <name
 							type="person">Robinson Kreutznaer</name></code></pre>
 						</section>
-			<section>
+			<section style="font-size: 0.8em">
 
 <h3>More precise tagging: <i>namesdates</i> module</h3>
 <br>
@@ -175,7 +176,7 @@
 
 			</section> 
 
-<section>
+<section style="font-size: 0.8em">
 
 <h3>Components of personal names</h3>
 
@@ -207,9 +208,9 @@
 
 </section>  
 
-<section>
+<section style="font-size: 0.8em">
 
-<h3>TEI distintion: <span class="color_blue">&lt;persName&gt;</span> vs. <span class="color_blue">&lt;person&gt;</span></h3>
+<h3>TEI distinction: <span class="color_blue">&lt;persName&gt;</span> vs. <span class="color_blue">&lt;person&gt;</span></h3>
 
 <h4>Encoding of references</h4>
 
@@ -230,7 +231,7 @@
 
 </section>
 
-<section data-markdown>
+<section data-markdown style="font-size: 0.8em">
 	<textarea data-template>
 		### Reason for encoding **entities**
 
@@ -238,7 +239,7 @@
 - To facilitate a more detailed encoding of source documents (historical materials).
 - To represent implicit data in a uniform way.
 - To enable fine-grained searching of data-centric projects:
-	- to set references to authority files and gazeteers (INSI, GeoNames, VIAF);
+	- to set references to authority files and gazetteers (ISNI, GeoNames, VIAF);
 	- biographical dictionaries;
 	- geographical dictionaries; 
 	- extracted indices.
@@ -246,7 +247,7 @@
 	</textarea>
 </section>
 
-<section>
+<section style="font-size: 0.8em">
 
 		<h3>Organising named entities</h3>
 
@@ -319,8 +320,11 @@
 			
 			<li>VIAF: <a href="https://viaf.org">Virtual International Authority</a></li>
 			<li>ISNI: <a href="http://www.isni.org">International Standard Name Identifier</a> (ISO Standard)</li>
+			<li>GND: <a href="https://d-nb.info/gnd/">Gemeinsame Normdatei</a> (Deutsche Nationalbibliothek)</li>
+			<li><a href="https://www.wikidata.org">Wikidata</a> — open, multilingual, linked data</li>
 			<li>Most national libraries: <a href="https://data.bnf.fr">Bibliothèque nationale de France</a>; <a href="http://d-nb.info">Deutsche Nationalbibliothek</a></li>
 			<li>Perseus Digital Library: <a href="http://data.perseus.org">Classic authors</a></li>
+			<li><a href="https://www.trismegistos.org">Trismegistos</a> (ancient world texts, persons and places)</li>
 
 			</ul>
 			
@@ -347,7 +351,7 @@
 </section>
 
 <section>
-	<h3>more info for person?</h3>
+	<h3>Additional elements for &lt;person&gt;</h3>
 
 	<span class="color_blue">&lt;birth&gt;, &lt;death&gt;, &lt;event&gt;, &lt;langKnowledge&gt;, &lt;faith&gt;, &lt;nationality&gt;, &lt;sex&gt;, &lt;age&gt;, &lt;occupation&gt;, &lt;note&gt;</span>, ...
 
@@ -366,7 +370,7 @@
 
 <section>
 
-<h3>TEI distintion: <span class="color_blue">&lt;placeName&gt;</span> vs. <span class="color_blue">&lt;place&gt;</span></h3>
+<h3>TEI distinction: <span class="color_blue">&lt;placeName&gt;</span> vs. <span class="color_blue">&lt;place&gt;</span></h3>
 
 <h4>Encoding of references</h4>
 
@@ -415,9 +419,9 @@
 	<h3>Components of place names</h3>
 	<br>
 <ul><li><span class="color_blue">&lt;bloc&gt;</span> geo-political unit containing two or more nation states: <b>Europe</b>.</li> 
-<li><span class="color_blue">&lt;country&gt;</span> geo-political unite: <b>Italy</b>.</li> 
-<li><span class="color_blue">&lt;region&gt;</span> administrative unite: <b>Lazio</b>. </li>
-<li><span class="color_blue">&lt;settelment&gt;</span> name of a settlement: <b>Rome</b>. </li>
+<li><span class="color_blue">&lt;country&gt;</span> geo-political unit: <b>Italy</b>.</li> 
+<li><span class="color_blue">&lt;region&gt;</span> administrative unit: <b>Lazio</b>. </li>
+<li><span class="color_blue">&lt;settlement&gt;</span> name of a settlement: <b>Rome</b>. </li>
 <li><span class="color_blue">&lt;district&gt;</span>  subdivision of a settlement: <b>Trastevere</b>.</li></ul>
 
 </section>
@@ -442,8 +446,8 @@
 	 <ul>
 	 	<li><a href="https://www.geonames.org">GeoNames</a></li>
 	 	<li><a href="https://pleiades.stoa.org">Pleiades</a> (ancient places)</li>
-	 	<li><a href="https://peripleo.pelagios.org">Peripleo</a> (hub of gazetteers)</li>
-	 	<li><a href="http://europa.eu/webtools/rest/gisco/batchgeocoding/index_en.htm">European Comision</a> (batch geocoding)</li>
+	 	
+
 <li>Geolocation via gazetteers APIs</li>
 	 </ul>
 
@@ -494,7 +498,7 @@
 
 
 <ul>
-<h4>To normalize elements that contain dates, times, etc. <b>in standard form (jjjj-mm-dd)</b>:</h4>
+<h4>To normalize elements that contain dates, times, etc. <b>in standard form (YYYY-MM-DD)</b>:</h4>
 <li><span class="color_orange">@when</span> value of the date or time.</li>
 <li><span class="color_orange">@notBefore</span> the earliest possible date.</li>
 <li><span class="color_orange">@notAfter</span> the latest possible date.</li>
@@ -513,7 +517,8 @@
 <pre class="xml"><code>	&lt;birth when=&quot;1788-02-22&quot;&gt;22 February 1788&lt;/birth&gt;
 	&lt;birth when=&quot;1788-02-22&quot;&gt;22 de febrero de 1788&lt;/birth&gt;
 	&lt;birth when=&quot;1788-02-22&quot;&gt;22 f&eacute;vrier 1788&lt;/birth&gt;
-	&lt;birth when=&quot;1788-02-22&quot;&gt;22/02/1788&lt;/birth&gt;</code></pre>
+	&lt;birth when=&quot;1788-02-22&quot;&gt;22/02/1788&lt;/birth&gt;
+	&lt;date notBefore=&quot;1500&quot; notAfter=&quot;1550&quot;&gt;early 16th century&lt;/date&gt;</code></pre>
 
 </section>
 
@@ -528,7 +533,7 @@
 
 <h3>References</h3>
 <ul style="font-size: 0.7em;">
-<li><i>A Gentle Introduction to XML, </i><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html">Guidelines for Electronic Text Encoding and Interchange</a>, TEI P5: Version 3.5.0. </li>
+<li><i>A Gentle Introduction to XML, </i><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html">Guidelines for Electronic Text Encoding and Interchange</a>, TEI P5: Version 4.11.0 </li>
 <li><i>digital.humanities @ Oxford, </i><a href="http://tei.it.ox.ac.uk/Talks/">TEI @ Oxford Teaching Pages</a>.</li>
 <li>Lou Burnard (2014), </i><a href="http://books.openedition.org/oep/426"><i>What is the Text Encoding Initiative? How to add intelligent markup to digital resources </i></a>, Marseille: OpenEdition Press.</li>
 <li>Christof Schöch (2014), <i>Digitale Textedition mit TEI</i>, <a href="https://de.dariah.eu/tei-tutorial">DARIAH TEI-Tutorial</a>.</li>
@@ -545,16 +550,7 @@
 										*****CREDITOS****   
 										*****************
 									-->
-									<section id="impressum">
 
-										<div><a href="http://www.ifr.uni.wroc.pl/pl/nasz-instytut/pracownicy/dr-jose-luis-losada-palenzuela">José Luis Losada Palenzuela</a>, <i>Named Entities.
-Encoding Names, Persons, Places and Dates</i>, <a href="http://editio.github.io/presentations/named-entities.html">&lt;http://editio.github.io/presentations/named-entities.html&gt;</a>, 2019.</div>			 
-										<h2 id="filete"><a href="http://editio.github.io/presentations/named-entities?print-pdf" title="To export to PDF. Go to this link and use the print dialog in your browser (CTRL/CMD+P)"><i style="font-size:24px;" class="fa">&#xf1c1;</i></a></h2>
-
-										<div ><a href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="licencia" alt="License Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"></a></div>
-									</div>	
-
-								</section>  <!--impressum-->
 
 							</div> <!--End of slides container-->
 
@@ -592,18 +588,14 @@ Reveal.initialize({
 
 		<!--ESQUINAS MENU en TODAS DIAS-->
 
-		<div class="footer">
-
-			<p>José Luis Losada Palenzuela · 2019</p>
-			
-		</div> <!--FIN FOOTER FIRMA-->
+		 <!--FIN FOOTER FIRMA-->
 
 		<div id="menu">
 			<a href="#/indice" title="Content">☰</a> 
 		</div>   <!--FIN INDICE-->
 
 		<div id="logo">
-			<a href="http://www.uni.wroc.pl"><img src="imagenes/logo_UWr_ang.png" title="Universty of Wrocław"/></a> 
+			<a href="http://www.unibas.ch"><img src="imagenes/Logo_Unibas_BraPan_EN.png" title="University of Basel" /></a>
 		</div> <!--FIN LOGO-->
 
 	</body>
